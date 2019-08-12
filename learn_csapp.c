@@ -7,9 +7,9 @@ int main()
     int i = 0x80000001;
     //shift left 
     //shift a large num
-    int sleft_i = i << 2;
-    int slarge = i >> 33;
-    printf("%d %d",&i,&sleft_i,&slarge);
+    int s_left_i = i << 2;
+    int s_large = i >> 3;
+    printf("%80x\n%80x\n%80x",i,s_left_i,s_large);
     return 0;
 }
 
