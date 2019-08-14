@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <wchar.h>
 #define SIZE 1024
+static void file_error_handler(FILE * f,const char * msg)
+{
+    perror(msg);
+    fclose(f);
+    exit(1);
+}
+
 
 int main()
 {   
@@ -37,7 +44,7 @@ int main()
 
     //getc fgetc getchar [put]
     //also ferror feol check specific error
-    
+    /*
     FILE * f = fopen("IO_TEST","w");
     int i = 0;
     int ret_val=0;
@@ -51,6 +58,22 @@ int main()
     }else{
         fprintf(stdout,"succ");
     }
+    fclose(f);
+    */
+
+    //note that 10 contains a '/0'
+    FILE  * f = fopen("IO_TEST","r");
+    if(!fgets(buff,10,f))
+    {
+        file_error_handler(f,"fgets()");
+    }
+    
+    FILE * o = fopen("OUT_TEST","w");
+    if(!fputs(buff,o))
+    {
+        file_error_handler(o,"fputs()");
+    }
+
     //not a marco
     exit(0);
 }
