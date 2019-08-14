@@ -18,6 +18,7 @@ int main()
     //
 
     // usage for fopen open a stream 打开流
+    /*
     FILE * f = fopen("README.md","r");
     if(f==NULL)
     {
@@ -27,7 +28,30 @@ int main()
 
     fgets(buff,20,f);
     fprintf(stdout,"%s",buff);
+    int r = fclose(f); 
+    if(r==EOF)
+    {
+        perror("fclose()");
+    }
+    */
+
+    //getc fgetc getchar [put]
+    //also ferror feol check specific error
     
-    return 0;
+    FILE * f = fopen("IO_TEST","w");
+    int i = 0;
+    int ret_val=0;
+    for(;i<13&&(ret_val=fputc('*',f))!=EOF;++i)
+    {
+        ;
+    }
+    if(ret_val==EOF)
+    {
+        perror("fputc()");
+    }else{
+        fprintf(stdout,"succ");
+    }
+    //not a marco
+    exit(0);
 }
 
