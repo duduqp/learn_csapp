@@ -21,7 +21,7 @@ int main(int argc,char **argv)
         fprintf(stderr,"%s old-file new-file\n",argv[0]);
         exit(0);
     }
-
+    
     /*open input file and output file*/
     in_fd = open(argv[1],O_RDONLY);
     /*check error*/
