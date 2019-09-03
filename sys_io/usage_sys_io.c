@@ -33,9 +33,13 @@ int main()
     fprintf(stdout,"%d",fd);
     */
 
+
+
+
     //read return -1:err 0:EOF
     //note read never append a '\0'!
-    ssize_t rd_num = read(fd,buf,MAXN);
+    /*
+     ssize_t rd_num = read(fd,buf,MAXN);
     if(rd_num == -1)
     {
         perror("read()");
@@ -45,6 +49,17 @@ int main()
     //must append a '\0' if a str read-in
     buf[rd_num] = '\0';
     printf("read-in data %s\n",buf);
+    */
+
+
+
+
+    //lseek
+    //to calc file length
+    off_t size = lseek(fd,0,SEEK_END);
+    off_t start = 0;
+    printf("file size: %ld BYTES",(size-start));
+
 
 
     exit(0);
