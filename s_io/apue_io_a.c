@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <wchar.h>
+
 #define SIZE 1024
 static void file_error_handler(FILE * f,const char * msg)
 {
@@ -12,7 +13,6 @@ static void file_error_handler(FILE * f,const char * msg)
 
 int main()
 {   
-    char buff[SIZE];
     /* fwide  freopen fopen fflush
     
     
@@ -62,19 +62,47 @@ int main()
     */
 
     //note that 10 contains a '/0'
-    FILE  * f = fopen("IO_TEST","r");
-    if(!fgets(buff,10,f))
+    /* if the line more than >9 characters(exclude the '/0') fgets will only read 9 and next exec will start at 10th charc
+    */
+    FILE  * f = fopen("IO_TEST","rw");
+    
+    if(!f)
+    {
+        perror("fopen()");
+    }
+
+    char buff[20] ;
+    char txt[20] = "1234567890";
+    if(!fputs(txt,f))
     {
         file_error_handler(f,"fgets()");
     }
     
+    
+    if(!fgets(buff,5,f))
+    {
+        file_error_handler(f,"fgets()");
+    }
+   
+    fprintf(stdout,"after first  call fgets(5) : %s",buff);
+
+    if(!fgets(buff,5,f))
+    {
+        file_error_handler(f,"fgets()");
+    }
+   
+    fprintf(stdout,"after second  call fgets(5) : %s",buff);
+
     FILE * o = fopen("OUT_TEST","w");
     if(!fputs(buff,o))
     {
         file_error_handler(o,"fputs()");
     }
 
-    //not a marco
+    fclose(f);
+    fclose(o);
+    
+    
     exit(0);
 }
 
