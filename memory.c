@@ -44,7 +44,9 @@ int main()
     void * new_pp = realloc(pp,10e5);
     printf("before realloc %p after realloc %p",pp,new_pp);
     
-    
+    free(pp);
+    free(new_pp);
+    free(p_st); 
     
     
     
