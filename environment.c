@@ -16,6 +16,7 @@ int main(int argc,char ** argv)
 }
 */
 
+//2ed method
 int main(int argc,char ** argv,char **envp)
 {
     char ** ep;
@@ -46,7 +47,7 @@ int main(int argc,char ** argv,char **envp)
 
 
     //setenv() unsetenv() would be more convenient
-    //return -1 on error
+    //return -1 on error,also it just copy ,so a stack_var can be pass to func
     //never add a "=" ,setenv will do it for you
     int res = setenv("DATE","TUESDAY",1);// 1 != 0 means override existed one
     if(res==-1)
@@ -55,6 +56,9 @@ int main(int argc,char ** argv,char **envp)
         exit(0);
     }
     printf("now visit env-var DATE after setenv:%s",getenv("DATE"));
+    
+    
+    
     exit(0);
 
 }
