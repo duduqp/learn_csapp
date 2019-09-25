@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS := -g -Wall -I./ -L./
+CFLAGS := -g -Wall  -I./ -L./ 
 EXEC=app
 SRCS = $(wildcard ./*.c)
 OBJS = $(patsubst ./%.c,./%.o,$(SRCS))
