@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <map>
 constexpr int MONTHS = 12;
-const int months[MONTHS+1] = { 0,31,29,31,30,31,30,31,31,30,31,30,31 };
+const int months[MONTHS+1] = { 0,31,29,31,30,31,30,31,31,30,31,30,31 };//dummy months[0] for convenience
 static int isleap(int year)
 {
     //return 0 if year is leap ,otherwise -1
