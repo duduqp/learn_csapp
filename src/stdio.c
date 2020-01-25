@@ -7,10 +7,10 @@
 #include <fcntl.h>
 #include "../header/wrap.h"
 #define BUFSIZE 4096
-
+/*
 int main(int argc,char ** argv)
 {
-    /*
+ 
     if(argc < 3)
     {
         perror("argument invalid");
@@ -59,9 +59,9 @@ int main(int argc,char ** argv)
 
 
     printf("file %s copy to %s success!\n",argv[1],argv[2]);
-    */
+ 
 
-    /*make a hole file and copy the same*/
+    //make a hole file and copy the same
      
      int fdin,fdout;
      fdin=Open_r(argv[1],O_RDONLY);
@@ -73,7 +73,8 @@ int main(int argc,char ** argv)
     char buf[BUFSIZE];
     int numrd;
     while((numrd=)
-     
+    
+    
      
      
      
@@ -89,4 +90,4 @@ int main(int argc,char ** argv)
     
     return 0;
 }
-
+*/
