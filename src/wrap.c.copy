@@ -47,35 +47,3 @@ FILE * Fopen(const char * path,const char * mode)
  }
  return stream;
 }
-
-int Open_r(const char * path,int flags)
-{
-    int fd_in;
-    fd_in=open(path,flags);
-    if(fd_in<0)
-    {
-        perror("open error");
-        exit(-1);
-    }
-
-    return fd_in;
-
-}
-
-
-int Open_w(const char * path,int flags,int mode)
-{
-    int fd_out;
-    fd_out=open(path,flags,mode);
-    if(fd_out<0)
-    {
-        perror("open error");
-        exit(-1);
-    }
-
-    return fd_out;
-
-}
-
-
-
