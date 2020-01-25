@@ -1,0 +1,1458 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ADDRSTRLEN	tlpi/tlpi-dist/sockets/is_seqnum_sv.c	41;"	d	file:
+ALT_FUNCTIONS_H	tlpi/tlpi-dist/lib/alt_functions.h	18;"	d
+ALT_hstrerror	tlpi/tlpi-dist/lib/alt_functions.c	/^ALT_hstrerror(int err)$/;"	f
+ALT_posix_openpt	tlpi/tlpi-dist/lib/alt_functions.c	/^ALT_posix_openpt(int flags)$/;"	f
+ALT_strsignal	tlpi/tlpi-dist/lib/alt_functions.c	/^ALT_strsignal(int sig)$/;"	f
+AccessControlEntry	tlpi/tlpi-dist/acl/acl_update.c	/^struct AccessControlEntry {     \/* Represent a single ACL entry *\/$/;"	s	file:
+AddNamespace	tlpi/tlpi-dist/namespaces/userns_overview.go	/^func AddNamespace(namespaceFD int, pid int) NamespaceID {$/;"	f
+BACKLOG	tlpi/tlpi-dist/sockets/is_seqnum_sv.c	28;"	d	file:
+BACKLOG	tlpi/tlpi-dist/sockets/us_xfr_sv.c	21;"	d	file:
+BD_MAX_CLOSE	tlpi/tlpi-dist/daemons/become_daemon.h	28;"	d
+BD_MAX_CLOSE	tlpi/tlpi-dist/lib/become_daemon.h	28;"	d
+BD_NO_CHDIR	tlpi/tlpi-dist/daemons/become_daemon.h	22;"	d
+BD_NO_CHDIR	tlpi/tlpi-dist/lib/become_daemon.h	22;"	d
+BD_NO_CLOSE_FILES	tlpi/tlpi-dist/daemons/become_daemon.h	23;"	d
+BD_NO_CLOSE_FILES	tlpi/tlpi-dist/lib/become_daemon.h	23;"	d
+BD_NO_REOPEN_STD_FDS	tlpi/tlpi-dist/daemons/become_daemon.h	24;"	d
+BD_NO_REOPEN_STD_FDS	tlpi/tlpi-dist/lib/become_daemon.h	24;"	d
+BD_NO_UMASK0	tlpi/tlpi-dist/daemons/become_daemon.h	26;"	d
+BD_NO_UMASK0	tlpi/tlpi-dist/lib/become_daemon.h	26;"	d
+BECOME_DAEMON_H	tlpi/tlpi-dist/daemons/become_daemon.h	18;"	d
+BECOME_DAEMON_H	tlpi/tlpi-dist/lib/become_daemon.h	18;"	d
+BINARY_SEMS_H	tlpi/tlpi-dist/lib/binary_sems.h	18;"	d
+BINARY_SEMS_H	tlpi/tlpi-dist/svsem/binary_sems.h	18;"	d
+BUFSIZE	src/main.c	4;"	d	file:
+BUF_LEN	tlpi/tlpi-dist/inotify/demo_inotify.c	59;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/altio/select_mq.c	37;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/dirs_links/t_unlink.c	25;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/dirs_links/view_symlink.c	22;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/filebuff/copy.c	22;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/fileio/copy.c	22;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/filelock/create_pid_file.c	25;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/lib/alt_functions.c	29;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/lib/create_pid_file.c	25;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/lib/curr_time.c	20;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/lib/error_functions.c	57;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/namespaces/hostname.c	27;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/pipes/change_case.c	25;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/pipes/simple_pipe.c	28;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/pty/script.c	29;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/pty/unbuffer.c	31;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/sockets/i6d_ucase.h	23;"	d
+BUF_SIZE	tlpi/tlpi-dist/sockets/id_echo.h	22;"	d
+BUF_SIZE	tlpi/tlpi-dist/sockets/is_echo_cl.c	46;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/sockets/is_echo_inetd_sv.c	22;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/sockets/is_echo_sv.c	32;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/sockets/is_echo_v2_sv.c	42;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/sockets/scm_rights_recv.c	30;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/sockets/sendfile.c	18;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/sockets/ud_ucase.h	31;"	d
+BUF_SIZE	tlpi/tlpi-dist/sockets/us_xfr.h	32;"	d
+BUF_SIZE	tlpi/tlpi-dist/sockets/us_xfr_v2.h	22;"	d
+BUF_SIZE	tlpi/tlpi-dist/svshm/svshm_xfr.h	39;"	d
+BUF_SIZE	tlpi/tlpi-dist/time/curr_time.c	20;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/time/show_time.c	29;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/timers/timed_read.c	21;"	d	file:
+BUF_SIZE	tlpi/tlpi-dist/tty/no_echo.c	21;"	d	file:
+BUILD_DIRS	tlpi/tlpi-dist/Makefile	/^BUILD_DIRS = ${DIRS}$/;"	m
+Boolean	tlpi/tlpi-dist/lib/tlpi_hdr.h	/^typedef enum { FALSE, TRUE } Boolean;$/;"	t	typeref:enum:__anon1
+CC	Makefile	/^CC = gcc$/;"	m
+CC	s_io/Makefile	/^CC = gcc$/;"	m
+CC	src/Makefile	/^CC = gcc$/;"	m
+CC	sys_io/Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS := -g -Wall  -I.\/ -L.\/ $/;"	m
+CFLAGS	s_io/Makefile	/^CFLAGS := -g -Wall -I.\/ -L.\/$/;"	m
+CFLAGS	src/Makefile	/^CFLAGS := -g  -Wall $/;"	m
+CFLAGS	sys_io/Makefile	/^CFLAGS := -g -Wall -I.\/ -L.\/$/;"	m
+CFLAGS	tlpi/tlpi-dist/psem/Makefile	/^CFLAGS = ${IMPL_CFLAGS} ${IMPL_THREAD_FLAGS}$/;"	m
+CFLAGS	tlpi/tlpi-dist/threads/Makefile	/^CFLAGS = ${IMPL_CFLAGS} ${IMPL_THREAD_FLAGS}$/;"	m
+CHILD_SIG	tlpi/tlpi-dist/procexec/demo_clone.c	37;"	d	file:
+CHILD_SIG	tlpi/tlpi-dist/procexec/t_clone.c	25;"	d	file:
+CLIENT_FIFO_NAME_LEN	tlpi/tlpi-dist/pipes/fifo_seqnum.h	35;"	d
+CLIENT_FIFO_TEMPLATE	tlpi/tlpi-dist/pipes/fifo_seqnum.h	33;"	d
+CLONE_NEWCGROUP	tlpi/tlpi-dist/namespaces/ns_child_exec.c	31;"	d	file:
+CLONE_NEWCGROUP	tlpi/tlpi-dist/namespaces/unshare.c	28;"	d	file:
+CLONE_NEWCGROUP	tlpi/tlpi-dist/namespaces/userns_child_exec.c	37;"	d	file:
+CMD_SIZE	tlpi/tlpi-dist/dirs_links/t_unlink.c	24;"	d	file:
+CMD_SIZE	tlpi/tlpi-dist/namespaces/simple_init.c	110;"	d	file:
+CMD_SIZE	tlpi/tlpi-dist/procexec/make_zombie.c	24;"	d	file:
+CMD_SIZE	tlpi/tlpi-dist/vmem/t_mprotect.c	27;"	d	file:
+CONFIG_FILE	tlpi/tlpi-dist/daemons/daemon_SIGHUP.c	/^static const char *CONFIG_FILE = "\/tmp\/ds.conf";$/;"	v	file:
+CPF_CLOEXEC	tlpi/tlpi-dist/filelock/create_pid_file.h	20;"	d
+CPF_CLOEXEC	tlpi/tlpi-dist/lib/create_pid_file.h	20;"	d
+CPPFLAGS	src/Makefile	/^CPPFLAGS:= -I..\/header -lpthread$/;"	m
+CREATE_PID_FILE_H	tlpi/tlpi-dist/filelock/create_pid_file.h	18;"	d
+CREATE_PID_FILE_H	tlpi/tlpi-dist/lib/create_pid_file.h	18;"	d
+CSEC_STEP	tlpi/tlpi-dist/procpri/demo_sched_fifo.c	31;"	d	file:
+CURR_TIME_H	tlpi/tlpi-dist/lib/curr_time.h	18;"	d
+CURR_TIME_H	tlpi/tlpi-dist/time/curr_time.h	18;"	d
+ChildParams	tlpi/tlpi-dist/procexec/demo_clone.c	/^} ChildParams;$/;"	t	typeref:struct:__anon2	file:
+DIRS	tlpi/tlpi-dist/Makefile	/^DIRS = 	lib \\$/;"	m
+DIR_PERMS	tlpi/tlpi-dist/files/t_umask.c	25;"	d	file:
+DLIM	tlpi/tlpi-dist/inotify/rand_dtree.c	30;"	d	file:
+D_INCR	tlpi/tlpi-dist/inotify/rand_dtree.c	/^static const int D_INCR = 1000;$/;"	v	file:
+DisplayNamespaceTree	tlpi/tlpi-dist/namespaces/userns_overview.go	/^func DisplayNamespaceTree(ns NamespaceID, level int) {$/;"	f
+ERROR_FUNCTIONS_H	tlpi/tlpi-dist/lib/error_functions.h	18;"	d
+EVENT_FLAGS_H	tlpi/tlpi-dist/lib/event_flags.h	28;"	d
+EVENT_FLAGS_H	tlpi/tlpi-dist/svsem/event_flags.h	28;"	d
+EXE	tlpi/tlpi-dist/acl/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/altio/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/cap/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/daemons/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/dirs_links/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/filebuff/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/fileio/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/filelock/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/files/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/filesys/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE} $/;"	m
+EXE	tlpi/tlpi-dist/getopt/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/inotify/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/loginacct/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/memalloc/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/mmap/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/namespaces/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/pgsjc/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/pipes/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/pmsg/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/proc/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/proccred/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/procexec/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/procpri/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/procres/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/progconc/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/psem/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/pshm/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/pty/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/seccomp/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/shlibs/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/signals/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/sockets/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/svipc/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/svmsg/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/svsem/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/svshm/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/sysinfo/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/syslim/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/threads/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/time/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/timers/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/tty/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/users_groups/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/vdso/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/vmem/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXE	tlpi/tlpi-dist/xattr/Makefile	/^EXE = ${GEN_EXE} ${LINUX_EXE}$/;"	m
+EXEC	Makefile	/^EXEC=main$/;"	m
+EXEC	s_io/Makefile	/^EXEC=app$/;"	m
+EXEC	src/Makefile	/^EXEC=main$/;"	m
+EXEC	sys_io/Makefile	/^EXEC=app$/;"	m
+FALSE	tlpi/tlpi-dist/lib/tlpi_hdr.h	/^typedef enum { FALSE, TRUE } Boolean;$/;"	e	enum:__anon1
+FALSE	tlpi/tlpi-dist/lib/tlpi_hdr.h	41;"	d
+FILE_PERMS	tlpi/tlpi-dist/files/t_umask.c	24;"	d	file:
+FILE_PERMS_H	tlpi/tlpi-dist/files/file_perms.h	18;"	d
+FILE_PERMS_H	tlpi/tlpi-dist/lib/file_perms.h	18;"	d
+FORK_PTY_H	tlpi/tlpi-dist/lib/pty_fork.h	18;"	d
+FORK_PTY_H	tlpi/tlpi-dist/pty/pty_fork.h	18;"	d
+FP_SPECIAL	tlpi/tlpi-dist/files/file_perms.h	22;"	d
+FP_SPECIAL	tlpi/tlpi-dist/lib/file_perms.h	22;"	d
+F_OFD_GETLK	tlpi/tlpi-dist/filelock/i_fcntl_locking.c	41;"	d	file:
+F_OFD_SETLK	tlpi/tlpi-dist/filelock/i_fcntl_locking.c	42;"	d	file:
+F_OFD_SETLKW	tlpi/tlpi-dist/filelock/i_fcntl_locking.c	43;"	d	file:
+Fopen	src/wrap.c	/^FILE * Fopen(const char * path,const char * mode)$/;"	f
+GEN_EXE	tlpi/tlpi-dist/acl/Makefile	/^GEN_EXE = $/;"	m
+GEN_EXE	tlpi/tlpi-dist/altio/Makefile	/^GEN_EXE = demo_sigio poll_pipes select_mq self_pipe t_select$/;"	m
+GEN_EXE	tlpi/tlpi-dist/cap/Makefile	/^GEN_EXE = $/;"	m
+GEN_EXE	tlpi/tlpi-dist/daemons/Makefile	/^GEN_EXE = daemon_SIGHUP t_syslog test_become_daemon$/;"	m
+GEN_EXE	tlpi/tlpi-dist/dirs_links/Makefile	/^GEN_EXE = bad_symlink file_type_stats list_files list_files_readdir_r \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/filebuff/Makefile	/^GEN_EXE = copy mix23_linebuff mix23io \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/fileio/Makefile	/^GEN_EXE = atomic_append bad_exclusive_open copy \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/filelock/Makefile	/^GEN_EXE = i_fcntl_locking t_flock$/;"	m
+GEN_EXE	tlpi/tlpi-dist/files/Makefile	/^GEN_EXE = t_chown t_stat t_umask t_utime t_utimes$/;"	m
+GEN_EXE	tlpi/tlpi-dist/filesys/Makefile	/^GEN_EXE = t_statvfs$/;"	m
+GEN_EXE	tlpi/tlpi-dist/getopt/Makefile	/^GEN_EXE = t_getopt$/;"	m
+GEN_EXE	tlpi/tlpi-dist/inotify/Makefile	/^GEN_EXE =$/;"	m
+GEN_EXE	tlpi/tlpi-dist/loginacct/Makefile	/^GEN_EXE = $/;"	m
+GEN_EXE	tlpi/tlpi-dist/memalloc/Makefile	/^GEN_EXE = free_and_sbrk$/;"	m
+GEN_EXE	tlpi/tlpi-dist/mmap/Makefile	/^GEN_EXE = anon_mmap mmcat mmcopy t_mmap$/;"	m
+GEN_EXE	tlpi/tlpi-dist/namespaces/Makefile	/^GEN_EXE = orphan $/;"	m
+GEN_EXE	tlpi/tlpi-dist/pgsjc/Makefile	/^GEN_EXE = catch_SIGHUP disc_SIGHUP job_mon \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/pipes/Makefile	/^GEN_EXE = change_case fifo_seqnum_client fifo_seqnum_server \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/pmsg/Makefile	/^GEN_EXE = mq_notify_sig mq_notify_sigwaitinfo mq_notify_thread \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/proc/Makefile	/^GEN_EXE = bad_longjmp display_env longjmp \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/proccred/Makefile	/^GEN_EXE =$/;"	m
+GEN_EXE	tlpi/tlpi-dist/procexec/Makefile	/^GEN_EXE = acct_on acct_view child_status closeonexec envargs exit_handlers \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/procpri/Makefile	/^GEN_EXE = sched_set sched_view t_setpriority $/;"	m
+GEN_EXE	tlpi/tlpi-dist/procres/Makefile	/^GEN_EXE = rusage rusage_wait$/;"	m
+GEN_EXE	tlpi/tlpi-dist/progconc/Makefile	/^GEN_EXE = syscall_speed$/;"	m
+GEN_EXE	tlpi/tlpi-dist/psem/Makefile	/^GEN_EXE = psem_getvalue psem_create psem_post psem_unlink \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/pshm/Makefile	/^GEN_EXE = pshm_create pshm_read pshm_write pshm_unlink$/;"	m
+GEN_EXE	tlpi/tlpi-dist/pty/Makefile	/^GEN_EXE = script unbuffer$/;"	m
+GEN_EXE	tlpi/tlpi-dist/seccomp/Makefile	/^GEN_EXE = $/;"	m
+GEN_EXE	tlpi/tlpi-dist/shlibs/Makefile	/^GEN_EXE = dynload$/;"	m
+GEN_EXE	tlpi/tlpi-dist/signals/Makefile	/^GEN_EXE = catch_rtsigs demo_SIGFPE ignore_pending_sig intquit \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/sockets/Makefile	/^GEN_EXE = i6d_ucase_sv i6d_ucase_cl \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/svipc/Makefile	/^GEN_EXE = svmsg_demo_server t_ftok$/;"	m
+GEN_EXE	tlpi/tlpi-dist/svmsg/Makefile	/^GEN_EXE = svmsg_chqbytes svmsg_file_client svmsg_file_server \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/svsem/Makefile	/^GEN_EXE = svsem_create svsem_demo svsem_mon svsem_op svsem_rm svsem_setall $/;"	m
+GEN_EXE	tlpi/tlpi-dist/svshm/Makefile	/^GEN_EXE = svshm_attach svshm_create svshm_mon svshm_rm \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/sysinfo/Makefile	/^GEN_EXE = t_uname$/;"	m
+GEN_EXE	tlpi/tlpi-dist/syslim/Makefile	/^GEN_EXE = t_fpathconf t_sysconf$/;"	m
+GEN_EXE	tlpi/tlpi-dist/threads/Makefile	/^GEN_EXE = detached_attrib one_time_init prod_condvar prod_no_condvar \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/time/Makefile	/^GEN_EXE = calendar_time show_time process_time strtime t_stime$/;"	m
+GEN_EXE	tlpi/tlpi-dist/timers/Makefile	/^GEN_EXE = ptmr_null_evp ptmr_sigev_signal ptmr_sigev_thread \\$/;"	m
+GEN_EXE	tlpi/tlpi-dist/tty/Makefile	/^GEN_EXE = demo_SIGWINCH new_intr no_echo test_tty_functions $/;"	m
+GEN_EXE	tlpi/tlpi-dist/users_groups/Makefile	/^GEN_EXE = t_getpwent t_getpwnam_r$/;"	m
+GEN_EXE	tlpi/tlpi-dist/vdso/Makefile	/^GEN_EXE = $/;"	m
+GEN_EXE	tlpi/tlpi-dist/vmem/Makefile	/^GEN_EXE = memlock madvise_dontneed$/;"	m
+GEN_EXE	tlpi/tlpi-dist/xattr/Makefile	/^GEN_EXE = $/;"	m
+GET_NUM_H	tlpi/tlpi-dist/lib/get_num.h	18;"	d
+GLIBC_DEFINES_ACCT_V3	tlpi/tlpi-dist/procexec/acct_v3_view.c	36;"	d	file:
+GN_ANY_BASE	tlpi/tlpi-dist/lib/get_num.h	24;"	d
+GN_BASE_16	tlpi/tlpi-dist/lib/get_num.h	26;"	d
+GN_BASE_8	tlpi/tlpi-dist/lib/get_num.h	25;"	d
+GN_GT_0	tlpi/tlpi-dist/lib/get_num.h	21;"	d
+GN_NONNEG	tlpi/tlpi-dist/lib/get_num.h	20;"	d
+HAVE_ON_EXIT	tlpi/tlpi-dist/procexec/exit_handlers.c	25;"	d	file:
+INET_SOCKETS_H	tlpi/tlpi-dist/lib/inet_sockets.h	18;"	d
+INET_SOCKETS_H	tlpi/tlpi-dist/sockets/inet_sockets.h	18;"	d
+INOTIFY_READ_BUF_LEN	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static const int INOTIFY_READ_BUF_LEN =$/;"	v	file:
+INT_LEN	tlpi/tlpi-dist/sockets/is_seqnum.h	25;"	d
+INT_LEN	tlpi/tlpi-dist/sockets/is_seqnum_v2.h	26;"	d
+IS_ADDR_STR_LEN	tlpi/tlpi-dist/lib/inet_sockets.h	32;"	d
+IS_ADDR_STR_LEN	tlpi/tlpi-dist/sockets/inet_sockets.h	32;"	d
+ITIMERSPEC_FROM_STR_H	tlpi/tlpi-dist/lib/itimerspec_from_str.h	18;"	d
+ITIMERSPEC_FROM_STR_H	tlpi/tlpi-dist/timers/itimerspec_from_str.h	18;"	d
+KEY_FILE	tlpi/tlpi-dist/svipc/svmsg_demo_server.c	23;"	d	file:
+LDLIBS	tlpi/tlpi-dist/acl/Makefile	/^LDLIBS = ${IMPL_LDLIBS} ${LINUX_LIBACL}$/;"	m
+LDLIBS	tlpi/tlpi-dist/cap/Makefile	/^LDLIBS = ${IMPL_LDLIBS} ${LINUX_LIBCAP} ${LINUX_LIBCRYPT}$/;"	m
+LDLIBS	tlpi/tlpi-dist/pmsg/Makefile	/^LDLIBS = ${IMPL_LDLIBS} ${LINUX_LIBRT}$/;"	m
+LDLIBS	tlpi/tlpi-dist/procpri/Makefile	/^LDLIBS = ${IMPL_LDLIBS} #CF[ ${LINUX_LIBRT} ]$/;"	m
+LDLIBS	tlpi/tlpi-dist/psem/Makefile	/^LDLIBS = ${IMPL_LDLIBS} ${IMPL_THREAD_FLAGS}$/;"	m
+LDLIBS	tlpi/tlpi-dist/pshm/Makefile	/^LDLIBS = ${IMPL_LDLIBS} ${LINUX_LIBRT}$/;"	m
+LDLIBS	tlpi/tlpi-dist/threads/Makefile	/^LDLIBS = ${IMPL_LDLIBS} ${IMPL_THREAD_FLAGS}$/;"	m
+LDLIBS	tlpi/tlpi-dist/timers/Makefile	/^LDLIBS = ${IMPL_LDLIBS} ${LINUX_LIBRT}$/;"	m
+LEN	tlpi/tlpi-dist/vmem/t_mprotect.c	24;"	d	file:
+LINUX_EXE	tlpi/tlpi-dist/acl/Makefile	/^LINUX_EXE = acl_update acl_view$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/altio/Makefile	/^LINUX_EXE = epoll_input$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/cap/Makefile	/^LINUX_EXE = cap_text check_password_caps$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/dirs_links/Makefile	/^LINUX_EXE =$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/filebuff/Makefile	/^LINUX_EXE = direct_read$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/fileio/Makefile	/^LINUX_EXE = large_file$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/files/Makefile	/^LINUX_EXE = chiflag$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/filesys/Makefile	/^LINUX_EXE = t_statfs t_mount t_umount$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/getopt/Makefile	/^LINUX_EXE = $/;"	m
+LINUX_EXE	tlpi/tlpi-dist/inotify/Makefile	/^LINUX_EXE = demo_inotify dnotify inotify_dtree rand_dtree$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/loginacct/Makefile	/^LINUX_EXE = dump_utmpx utmpx_login view_lastlog $/;"	m
+LINUX_EXE	tlpi/tlpi-dist/memalloc/Makefile	/^LINUX_EXE =$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/mmap/Makefile	/^LINUX_EXE = t_remap_file_pages$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/namespaces/Makefile	/^LINUX_EXE = \\$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/pmsg/Makefile	/^LINUX_EXE =$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/proc/Makefile	/^LINUX_EXE = modify_env$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/proccred/Makefile	/^LINUX_EXE = idshow$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/procexec/Makefile	/^LINUX_EXE = demo_clone t_clone acct_v3_view$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/procpri/Makefile	/^LINUX_EXE = demo_sched_fifo t_sched_setaffinity t_sched_getaffinity$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/procres/Makefile	/^LINUX_EXE = rlimit_nproc$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/progconc/Makefile	/^LINUX_EXE =$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/psem/Makefile	/^LINUX_EXE =$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/pshm/Makefile	/^LINUX_EXE =$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/pty/Makefile	/^LINUX_EXE = $/;"	m
+LINUX_EXE	tlpi/tlpi-dist/seccomp/Makefile	/^LINUX_EXE = libseccomp_demo \\$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/shlibs/Makefile	/^LINUX_EXE =$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/signals/Makefile	/^LINUX_EXE = signalfd_sigval$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/sockets/Makefile	/^LINUX_EXE = list_host_addresses \\$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/svipc/Makefile	/^LINUX_EXE = $/;"	m
+LINUX_EXE	tlpi/tlpi-dist/svmsg/Makefile	/^LINUX_EXE = svmsg_info svmsg_ls $/;"	m
+LINUX_EXE	tlpi/tlpi-dist/svsem/Makefile	/^LINUX_EXE = svsem_info$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/svshm/Makefile	/^LINUX_EXE = svshm_info svshm_lock svshm_unlock$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/sysinfo/Makefile	/^LINUX_EXE = procfs_pidmax procfs_user_exe$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/syslim/Makefile	/^LINUX_EXE =$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/threads/Makefile	/^LINUX_EXE = strerror_test_tls$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/timers/Makefile	/^LINUX_EXE = demo_timerfd t_clock_nanosleep$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/users_groups/Makefile	/^LINUX_EXE = check_password idshow$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/vdso/Makefile	/^LINUX_EXE = vdso_gettimeofday syscall_gettimeofday$/;"	m
+LINUX_EXE	tlpi/tlpi-dist/vmem/Makefile	/^LINUX_EXE = t_mprotect $/;"	m
+LINUX_EXE	tlpi/tlpi-dist/xattr/Makefile	/^LINUX_EXE = t_setxattr xattr_view$/;"	m
+LOG_FILE	tlpi/tlpi-dist/daemons/daemon_SIGHUP.c	/^static const char *LOG_FILE = "\/tmp\/ds.log";$/;"	v	file:
+MAP_ANONYMOUS	tlpi/tlpi-dist/lib/tlpi_hdr.h	66;"	d
+MAP_SIZE	tlpi/tlpi-dist/vmem/madvise_dontneed.c	32;"	d	file:
+MARKER_STRING	tlpi/tlpi-dist/inotify/rand_dtree.c	110;"	d	file:
+MAX	nbit_str.cpp	/^constexpr int MAX = 256;$/;"	v
+MAXN	sys_io/sys_io.c	9;"	d	file:
+MAXN	sys_io/usage_sys_io.c	9;"	d	file:
+MAX_ALLOCS	tlpi/tlpi-dist/memalloc/free_and_sbrk.c	28;"	d	file:
+MAX_BUF	tlpi/tlpi-dist/altio/epoll_input.c	28;"	d	file:
+MAX_CMD_LEN	tlpi/tlpi-dist/procexec/t_system.c	21;"	d	file:
+MAX_ENTRIES	tlpi/tlpi-dist/acl/acl_update.c	27;"	d	file:
+MAX_ERROR_LEN	tlpi/tlpi-dist/threads/strerror.c	22;"	d	file:
+MAX_ERROR_LEN	tlpi/tlpi-dist/threads/strerror_tls.c	29;"	d	file:
+MAX_ERROR_LEN	tlpi/tlpi-dist/threads/strerror_tsd.c	30;"	d	file:
+MAX_EVENTS	tlpi/tlpi-dist/altio/epoll_input.c	29;"	d	file:
+MAX_LINE	tlpi/tlpi-dist/filelock/i_fcntl_locking.c	36;"	d	file:
+MAX_LINE	tlpi/tlpi-dist/sysinfo/procfs_pidmax.c	31;"	d	file:
+MAX_LINE	tlpi/tlpi-dist/sysinfo/procfs_user_exe.c	31;"	d	file:
+MAX_MTEXT	tlpi/tlpi-dist/altio/select_mq.c	43;"	d	file:
+MAX_MTEXT	tlpi/tlpi-dist/svmsg/svmsg_receive.c	27;"	d	file:
+MAX_MTEXT	tlpi/tlpi-dist/svmsg/svmsg_send.c	26;"	d	file:
+MAX_SEMOPS	tlpi/tlpi-dist/svsem/svsem_op.c	25;"	d	file:
+MAX_SNAME	tlpi/tlpi-dist/lib/pty_fork.c	41;"	d	file:
+MAX_SNAME	tlpi/tlpi-dist/pty/pty_fork.c	41;"	d	file:
+MAX_SNAME	tlpi/tlpi-dist/pty/script.c	30;"	d	file:
+MAX_SNAME	tlpi/tlpi-dist/pty/unbuffer.c	32;"	d	file:
+MEM_SIZE	tlpi/tlpi-dist/mmap/t_mmap.c	21;"	d	file:
+MS_BIND	tlpi/tlpi-dist/filesys/t_mount.c	36;"	d	file:
+MS_DIRSYNC	tlpi/tlpi-dist/filesys/t_mount.c	32;"	d	file:
+MS_LAZYTIME	tlpi/tlpi-dist/filesys/t_mount.c	64;"	d	file:
+MS_MOVE	tlpi/tlpi-dist/filesys/t_mount.c	40;"	d	file:
+MS_PRIVATE	tlpi/tlpi-dist/filesys/t_mount.c	52;"	d	file:
+MS_REC	tlpi/tlpi-dist/filesys/t_mount.c	44;"	d	file:
+MS_SHARED	tlpi/tlpi-dist/filesys/t_mount.c	60;"	d	file:
+MS_SLAVE	tlpi/tlpi-dist/filesys/t_mount.c	56;"	d	file:
+MS_UNBINDABLE	tlpi/tlpi-dist/filesys/t_mount.c	48;"	d	file:
+MYDIR	tlpi/tlpi-dist/files/t_umask.c	23;"	d	file:
+MYFILE	tlpi/tlpi-dist/files/t_umask.c	22;"	d	file:
+NORETURN	tlpi/tlpi-dist/lib/error_functions.h	30;"	d
+NORETURN	tlpi/tlpi-dist/lib/error_functions.h	32;"	d
+NOTIFY_SIG	tlpi/tlpi-dist/pmsg/mq_notify_sig.c	25;"	d	file:
+NOTIFY_SIG	tlpi/tlpi-dist/pmsg/mq_notify_siginfo.c	27;"	d	file:
+NOTIFY_SIG	tlpi/tlpi-dist/pmsg/mq_notify_sigwaitinfo.c	26;"	d	file:
+NOTIFY_SIG	tlpi/tlpi-dist/pmsg/mq_notify_via_signal.c	27;"	d	file:
+NO_POSIX_OPENPT	tlpi/tlpi-dist/lib/pty_master_open.c	34;"	d	file:
+NO_POSIX_OPENPT	tlpi/tlpi-dist/pty/pty_master_open.c	34;"	d	file:
+NR_mq_notify_i386	tlpi/tlpi-dist/seccomp/seccomp_multiarch.c	133;"	d	file:
+NR_mq_notify_x32	tlpi/tlpi-dist/seccomp/seccomp_multiarch.c	134;"	d	file:
+NR_mq_notify_x86_64	tlpi/tlpi-dist/seccomp/seccomp_multiarch.c	132;"	d	file:
+NSECS	tlpi/tlpi-dist/procres/rusage_wait.c	24;"	d	file:
+NSList	tlpi/tlpi-dist/namespaces/userns_overview.go	/^var NSList = make(map[NamespaceID]*NamespaceAttribs)$/;"	v
+NamespaceAttribs	tlpi/tlpi-dist/namespaces/userns_overview.go	/^type NamespaceAttribs struct {$/;"	t
+NamespaceID	tlpi/tlpi-dist/namespaces/userns_overview.go	/^type NamespaceID struct {$/;"	t
+OBJS	Makefile	/^OBJS = $(patsubst .\/%.c,.\/%.o,$(SRCS))$/;"	m
+OBJS	s_io/Makefile	/^OBJS = $(patsubst .\/%.c,.\/%.o,$(SRCS))$/;"	m
+OBJS	src/Makefile	/^OBJS = $(patsubst .\/%.c,..\/obj\/%.o,$(SRCS))$/;"	m
+OBJS	sys_io/Makefile	/^OBJS = $(patsubst .\/%.c,.\/%.o,$(SRCS))$/;"	m
+OBJ_PERMS	tlpi/tlpi-dist/svshm/svshm_xfr.h	29;"	d
+ONCE_INITIALISER	tlpi/tlpi-dist/threads/one_time_init.c	26;"	d	file:
+O_ASYNC	tlpi/tlpi-dist/lib/tlpi_hdr.h	61;"	d
+O_SYNC	tlpi/tlpi-dist/lib/tlpi_hdr.h	72;"	d
+PAT_SIZE	tlpi/tlpi-dist/pipes/popen_glob.c	27;"	d	file:
+PCMD_BUF_SIZE	tlpi/tlpi-dist/pipes/popen_glob.c	28;"	d	file:
+POPEN_FMT	tlpi/tlpi-dist/pipes/popen_glob.c	26;"	d	file:
+PORT_NUM	tlpi/tlpi-dist/sockets/i6d_ucase.h	26;"	d
+PORT_NUM	tlpi/tlpi-dist/sockets/is_seqnum.h	23;"	d
+PORT_NUM_STR	tlpi/tlpi-dist/sockets/is_seqnum_v2.h	24;"	d
+PRCAP_SHOW_ALL	tlpi/tlpi-dist/cap/cap_text.c	36;"	d	file:
+PRCAP_SHOW_UNRECOGNIZED	tlpi/tlpi-dist/cap/cap_text.c	38;"	d	file:
+PRINT_RLIMIT_H	tlpi/tlpi-dist/lib/print_rlimit.h	18;"	d
+PRINT_RLIMIT_H	tlpi/tlpi-dist/procres/print_rlimit.h	18;"	d
+PRINT_RUSAGE_H	tlpi/tlpi-dist/lib/print_rusage.h	18;"	d
+PRINT_RUSAGE_H	tlpi/tlpi-dist/procres/print_rusage.h	18;"	d
+PRINT_WAIT_STATUS_H	tlpi/tlpi-dist/lib/print_wait_status.h	18;"	d
+PRINT_WAIT_STATUS_H	tlpi/tlpi-dist/procexec/print_wait_status.h	18;"	d
+PTYM_PREFIX	tlpi/tlpi-dist/pty/pty_master_open_bsd.c	27;"	d	file:
+PTYS_PREFIX	tlpi/tlpi-dist/pty/pty_master_open_bsd.c	28;"	d	file:
+PTY_MASTER_OPEN_H	tlpi/tlpi-dist/lib/pty_master_open.h	18;"	d
+PTY_MASTER_OPEN_H	tlpi/tlpi-dist/pty/pty_master_open.h	18;"	d
+PTY_NAME_LEN	tlpi/tlpi-dist/pty/pty_master_open_bsd.c	30;"	d	file:
+PTY_PREFIX_LEN	tlpi/tlpi-dist/pty/pty_master_open_bsd.c	29;"	d	file:
+ProcessProcFile	tlpi/tlpi-dist/namespaces/userns_overview.go	/^func ProcessProcFile(name string) {$/;"	f
+RDWRN_H	tlpi/tlpi-dist/lib/rdwrn.h	18;"	d
+RDWRN_H	tlpi/tlpi-dist/sockets/rdwrn.h	18;"	d
+READ_LINE_BUF_H	tlpi/tlpi-dist/lib/read_line_buf.h	18;"	d
+READ_LINE_BUF_H	tlpi/tlpi-dist/sockets/read_line_buf.h	18;"	d
+READ_LINE_H	tlpi/tlpi-dist/lib/read_line.h	18;"	d
+READ_LINE_H	tlpi/tlpi-dist/sockets/read_line.h	18;"	d
+READ_SEM	tlpi/tlpi-dist/svshm/svshm_xfr.h	36;"	d
+REGION_LOCKING_H	tlpi/tlpi-dist/filelock/region_locking.h	18;"	d
+REGION_LOCKING_H	tlpi/tlpi-dist/lib/region_locking.h	18;"	d
+REQ_MSG_SIZE	tlpi/tlpi-dist/svmsg/svmsg_file.h	39;"	d
+RESP_MSG_SIZE	tlpi/tlpi-dist/svmsg/svmsg_file.h	42;"	d
+RESP_MT_DATA	tlpi/tlpi-dist/svmsg/svmsg_file.h	52;"	d
+RESP_MT_END	tlpi/tlpi-dist/svmsg/svmsg_file.h	53;"	d
+RESP_MT_FAILURE	tlpi/tlpi-dist/svmsg/svmsg_file.h	51;"	d
+RL_MAX_BUF	tlpi/tlpi-dist/lib/read_line_buf.h	24;"	d
+RL_MAX_BUF	tlpi/tlpi-dist/sockets/read_line_buf.h	24;"	d
+ReadLineBuf	tlpi/tlpi-dist/lib/read_line_buf.h	/^struct ReadLineBuf {$/;"	s
+ReadLineBuf	tlpi/tlpi-dist/sockets/read_line_buf.h	/^struct ReadLineBuf {$/;"	s
+SBUF_SIZE	tlpi/tlpi-dist/daemons/daemon_SIGHUP.c	102;"	d	file:
+SBUF_SIZE	tlpi/tlpi-dist/time/strtime.c	30;"	d	file:
+SECCOMP_RET_LOG	tlpi/tlpi-dist/seccomp/seccomp_logging.c	33;"	d	file:
+SECONDS_IN_TROPICAL_YEAR	tlpi/tlpi-dist/time/calendar_time.c	24;"	d	file:
+SEMUN_H	tlpi/tlpi-dist/lib/semun.h	19;"	d
+SEMUN_H	tlpi/tlpi-dist/svsem/semun.h	19;"	d
+SEM_KEY	tlpi/tlpi-dist/svshm/svshm_xfr.h	27;"	d
+SERVER_FIFO	tlpi/tlpi-dist/pipes/fifo_seqnum.h	31;"	d
+SERVER_KEY	tlpi/tlpi-dist/svmsg/svmsg_file.h	27;"	d
+SERVICE	tlpi/tlpi-dist/sockets/id_echo.h	20;"	d
+SERVICE	tlpi/tlpi-dist/sockets/is_echo_sv.c	31;"	d	file:
+SERVICE	tlpi/tlpi-dist/sockets/is_echo_v2_sv.c	41;"	d	file:
+SG_SIZE	tlpi/tlpi-dist/proccred/idshow.c	27;"	d	file:
+SHELL_FMT	tlpi/tlpi-dist/vmem/t_mprotect.c	26;"	d	file:
+SHELL_PATH	tlpi/tlpi-dist/procexec/execlp.c	32;"	d	file:
+SHM_KEY	tlpi/tlpi-dist/svshm/svshm_xfr.h	26;"	d
+SIG	tlpi/tlpi-dist/procres/rusage_wait.c	26;"	d	file:
+SIGNAL_FUNCTIONS_H	tlpi/tlpi-dist/lib/signal_functions.h	18;"	d
+SIGNAL_FUNCTIONS_H	tlpi/tlpi-dist/signals/signal_functions.h	18;"	d
+SIZE	s_io/apue_io_a.c	5;"	d	file:
+SOCK_PATH	tlpi/tlpi-dist/sockets/scm_cred.h	24;"	d
+SOCK_PATH	tlpi/tlpi-dist/sockets/scm_rights.h	23;"	d
+SRCS	Makefile	/^SRCS = $(wildcard .\/*.c)$/;"	m
+SRCS	s_io/Makefile	/^SRCS = $(wildcard .\/*.c)$/;"	m
+SRCS	src/Makefile	/^SRCS = $(wildcard .\/*.c)$/;"	m
+SRCS	sys_io/Makefile	/^SRCS = $(wildcard .\/*.c)$/;"	m
+STACK_SIZE	tlpi/tlpi-dist/namespaces/demo_userns.c	65;"	d	file:
+STACK_SIZE	tlpi/tlpi-dist/namespaces/demo_uts_namespaces.c	59;"	d	file:
+STACK_SIZE	tlpi/tlpi-dist/namespaces/multi_pidns.c	38;"	d	file:
+STACK_SIZE	tlpi/tlpi-dist/namespaces/ns_child_exec.c	65;"	d	file:
+STACK_SIZE	tlpi/tlpi-dist/namespaces/pidns_init_sleep.c	56;"	d	file:
+STACK_SIZE	tlpi/tlpi-dist/namespaces/userns_child_exec.c	188;"	d	file:
+STACK_SIZE	tlpi/tlpi-dist/namespaces/userns_setns_test.c	91;"	d	file:
+STR_SIZE	tlpi/tlpi-dist/fileio/t_readv.c	33;"	d	file:
+STR_SIZE	tlpi/tlpi-dist/files/file_perms.c	21;"	d	file:
+STR_SIZE	tlpi/tlpi-dist/lib/file_perms.c	21;"	d	file:
+SV_SOCK_PATH	tlpi/tlpi-dist/sockets/ud_ucase.h	34;"	d
+SV_SOCK_PATH	tlpi/tlpi-dist/sockets/us_xfr.h	30;"	d
+SV_SOCK_PATH	tlpi/tlpi-dist/sockets/us_xfr_v2.h	20;"	d
+SYNC_SIG	tlpi/tlpi-dist/procexec/fork_sig_sync.c	22;"	d	file:
+TESTSIG	tlpi/tlpi-dist/signals/sig_speed_sigsuspend.c	42;"	d	file:
+TIMER_SIG	tlpi/tlpi-dist/timers/ptmr_sigev_signal.c	36;"	d	file:
+TIME_BUF_SIZE	tlpi/tlpi-dist/procexec/acct_v3_view.c	34;"	d	file:
+TIME_BUF_SIZE	tlpi/tlpi-dist/procexec/acct_view.c	25;"	d	file:
+TLPI_HDR_H	tlpi/tlpi-dist/lib/tlpi_hdr.h	18;"	d
+TRUE	tlpi/tlpi-dist/lib/tlpi_hdr.h	/^typedef enum { FALSE, TRUE } Boolean;$/;"	e	enum:__anon1
+TRUE	tlpi/tlpi-dist/lib/tlpi_hdr.h	37;"	d
+TS_ALIVE	tlpi/tlpi-dist/threads/thread_multijoin.c	/^    TS_ALIVE,                   \/* Thread is alive *\/$/;"	e	enum:tstate	file:
+TS_BUF_SIZE	tlpi/tlpi-dist/daemons/daemon_SIGHUP.c	44;"	d	file:
+TS_JOINED	tlpi/tlpi-dist/threads/thread_multijoin.c	/^    TS_JOINED                   \/* Thread terminated, and joined *\/$/;"	e	enum:tstate	file:
+TS_TERMINATED	tlpi/tlpi-dist/threads/thread_multijoin.c	/^    TS_TERMINATED,              \/* Thread terminated, not yet joined *\/$/;"	e	enum:tstate	file:
+TTY_FUNCTIONS_H	tlpi/tlpi-dist/lib/tty_functions.h	18;"	d
+TTY_FUNCTIONS_H	tlpi/tlpi-dist/tty/tty_functions.h	18;"	d
+UGID_FUNCTIONS_H	tlpi/tlpi-dist/lib/ugid_functions.h	18;"	d
+UGID_FUNCTIONS_H	tlpi/tlpi-dist/users_groups/ugid_functions.h	18;"	d
+UMASK_SETTING	tlpi/tlpi-dist/files/t_umask.c	26;"	d	file:
+UNIX_SOCKETS_H	tlpi/tlpi-dist/lib/unix_sockets.h	18;"	d
+UNIX_SOCKETS_H	tlpi/tlpi-dist/sockets/unix_sockets.h	18;"	d
+VB_BASIC	tlpi/tlpi-dist/inotify/inotify_dtree.c	69;"	d	file:
+VB_NOISY	tlpi/tlpi-dist/inotify/inotify_dtree.c	70;"	d	file:
+VERSION	tlpi/tlpi-dist/shlibs/mod1.c	18;"	d	file:
+VERSION	tlpi/tlpi-dist/shlibs/mod2.c	18;"	d	file:
+VERSION	tlpi/tlpi-dist/shlibs/mod3.c	18;"	d	file:
+WRITE_SEM	tlpi/tlpi-dist/svshm/svshm_xfr.h	35;"	d
+WRITE_SIZE	tlpi/tlpi-dist/vmem/madvise_dontneed.c	33;"	d	file:
+X32_SYSCALL_BIT	tlpi/tlpi-dist/seccomp/seccomp_multiarch.c	130;"	d	file:
+XATTR_SIZE	tlpi/tlpi-dist/xattr/xattr_view.c	24;"	d	file:
+X_RANGE	tlpi/tlpi-dist/pty/pty_master_open_bsd.c	31;"	d	file:
+Y_RANGE	tlpi/tlpi-dist/pty/pty_master_open_bsd.c	32;"	d	file:
+_BSD	tlpi/tlpi-dist/files/t_stat.c	24;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/cap/check_password_caps.c	30;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/lib/inet_sockets.c	17;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/memalloc/free_and_sbrk.c	25;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/mmap/anon_mmap.c	20;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/namespaces/hostname.c	19;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/proc/mem_segments.c	18;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/procexec/acct_on.c	17;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/procexec/exit_handlers.c	20;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/procexec/footprint.c	23;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/procexec/t_vfork.c	17;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/procexec/vfork_fd_test.c	18;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/sockets/inet_sockets.c	17;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/sockets/is_seqnum_sv.c	23;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/sockets/t_gethostbyname.c	22;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/users_groups/check_password.c	22;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/vmem/madvise_dontneed.c	25;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/vmem/memlock.c	23;"	d	file:
+_BSD_SOURCE	tlpi/tlpi-dist/vmem/t_mprotect.c	20;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/filebuff/direct_read.c	22;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/filelock/i_fcntl_locking.c	31;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/files/chiflag.c	25;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/inotify/dnotify.c	27;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/inotify/inotify_dtree.c	47;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/lib/print_wait_status.c	18;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/lib/signal_functions.c	17;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/lib/userns_functions.c	17;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/loginacct/dump_utmpx.c	22;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/loginacct/utmpx_login.c	22;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/mmap/t_remap_file_pages.c	21;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/cred_launcher.c	26;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/demo_userns.c	22;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/demo_uts_namespaces.c	19;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/multi_pidns.c	19;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/ns_child_exec.c	22;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/ns_exec.c	22;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/ns_run.c	23;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/pidns_init_sleep.c	19;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/show_creds.c	17;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/simple_init.c	21;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/t_setns_userns.c	18;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/unshare.c	20;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/userns_child_exec.c	21;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/userns_functions.c	17;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/namespaces/userns_setns_test.c	23;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/pgsjc/disc_SIGHUP.c	26;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/pgsjc/job_mon.c	38;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/pgsjc/orphaned_pgrp_SIGHUP.c	34;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/proc/modify_env.c	22;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/proccred/idshow.c	20;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/procexec/demo_clone.c	26;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/procexec/print_wait_status.c	18;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/procexec/t_clone.c	17;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/procpri/demo_sched_fifo.c	25;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/procpri/t_sched_getaffinity.c	25;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/procpri/t_sched_setaffinity.c	30;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/seccomp/seccomp_arg64.c	30;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/seccomp/seccomp_control_open.c	18;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/seccomp/seccomp_deny_open.c	18;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/seccomp/seccomp_logging.c	23;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/seccomp/seccomp_multiarch.c	58;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/seccomp/seccomp_perf.c	22;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/signals/catch_rtsigs.c	36;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/signals/demo_SIGFPE.c	30;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/signals/ignore_pending_sig.c	23;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/signals/sig_receiver.c	22;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/signals/sigmask_longjmp.c	21;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/signals/signal_functions.c	17;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/signals/t_sigaltstack.c	18;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/signals/t_sigsuspend.c	30;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/signals/t_sigwaitinfo.c	17;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/sockets/list_host_addresses.c	17;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/sockets/scm_cred.h	17;"	d
+_GNU_SOURCE	tlpi/tlpi-dist/svmsg/svmsg_info.c	20;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/svmsg/svmsg_ls.c	19;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/svmsg/svmsg_receive.c	22;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/svsem/svsem_info.c	20;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/svshm/svshm_info.c	20;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/sysinfo/procfs_user_exe.c	23;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/sysinfo/t_uname.c	19;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/threads/strerror.c	17;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/threads/strerror_tls.c	23;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/threads/strerror_tsd.c	20;"	d	file:
+_GNU_SOURCE	tlpi/tlpi-dist/vdso/gettimeofday.c	57;"	d	file:
+_LARGEFILE64_SOURCE	tlpi/tlpi-dist/fileio/large_file.c	19;"	d	file:
+_POSIX_C_SOURCE	tlpi/tlpi-dist/pmsg/mq_notify_sigwaitinfo.c	20;"	d	file:
+_POSIX_C_SOURCE	tlpi/tlpi-dist/psem/psem_timedwait.c	22;"	d	file:
+_POSIX_C_SOURCE	tlpi/tlpi-dist/signals/t_sigqueue.c	22;"	d	file:
+_POSIX_C_SOURCE	tlpi/tlpi-dist/timers/ptmr_null_evp.c	22;"	d	file:
+_POSIX_C_SOURCE	tlpi/tlpi-dist/timers/ptmr_sigev_signal.c	29;"	d	file:
+_POSIX_C_SOURCE	tlpi/tlpi-dist/timers/t_nanosleep.c	20;"	d	file:
+_SVID_SOURCE	tlpi/tlpi-dist/time/t_stime.c	19;"	d	file:
+_USE_IRS	tlpi/tlpi-dist/sockets/t_gethostbyname.c	20;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/cap/check_password_caps.c	32;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/dirs_links/file_type_stats.c	19;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/dirs_links/file_type_stats.c	22;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/dirs_links/nftw_dir_tree.c	26;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/dirs_links/nftw_dir_tree.c	29;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/inotify/rand_dtree.c	22;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/inotify/rand_dtree.c	23;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/lib/pty_master_open.c	23;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/pgsjc/catch_SIGHUP.c	20;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/pgsjc/t_setsid.c	18;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/pty/pty_master_open.c	23;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/signals/nonreentrant.c	19;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/time/strtime.c	23;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/time/t_stime.c	22;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/timers/t_clock_nanosleep.c	23;"	d	file:
+_XOPEN_SOURCE	tlpi/tlpi-dist/users_groups/check_password.c	24;"	d	file:
+__WRAP_H_	header/wrap.h	2;"	d
+__buf	tlpi/tlpi-dist/lib/semun.h	/^    struct seminfo *    __buf;$/;"	m	union:semun	typeref:struct:semun::seminfo
+__buf	tlpi/tlpi-dist/svsem/semun.h	/^    struct seminfo *    __buf;$/;"	m	union:semun	typeref:struct:semun::seminfo
+abc	tlpi/tlpi-dist/shlibs/demo_Bsymbolic/foo1.c	/^abc(void)$/;"	f
+abc	tlpi/tlpi-dist/shlibs/demo_Bsymbolic/foo2.c	/^abc(void)$/;"	f
+abc	tlpi/tlpi-dist/shlibs/version_scripts/sv_libabc.c	/^abc(void)$/;"	f
+abortOnCacheProblem	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static int abortOnCacheProblem;$/;"	v	file:
+ac_btime	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    u_int32_t   ac_btime;$/;"	m	struct:acct_v3	file:
+ac_comm	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    char        ac_comm[ACCT_COMM];$/;"	m	struct:acct_v3	file:
+ac_etime	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    float       ac_etime;$/;"	m	struct:acct_v3	file:
+ac_exitcode	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    u_int32_t   ac_exitcode;$/;"	m	struct:acct_v3	file:
+ac_flag	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    char        ac_flag;$/;"	m	struct:acct_v3	file:
+ac_gid	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    u_int32_t   ac_gid;$/;"	m	struct:acct_v3	file:
+ac_io	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    comp_t      ac_io;$/;"	m	struct:acct_v3	file:
+ac_majflt	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    comp_t      ac_majflt;$/;"	m	struct:acct_v3	file:
+ac_mem	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    comp_t      ac_mem;$/;"	m	struct:acct_v3	file:
+ac_minflt	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    comp_t      ac_minflt;$/;"	m	struct:acct_v3	file:
+ac_pid	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    u_int32_t   ac_pid;$/;"	m	struct:acct_v3	file:
+ac_ppid	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    u_int32_t   ac_ppid;$/;"	m	struct:acct_v3	file:
+ac_rw	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    comp_t      ac_rw;$/;"	m	struct:acct_v3	file:
+ac_stime	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    comp_t      ac_stime;$/;"	m	struct:acct_v3	file:
+ac_swaps	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    comp_t      ac_swaps;$/;"	m	struct:acct_v3	file:
+ac_tty	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    u_int16_t   ac_tty;$/;"	m	struct:acct_v3	file:
+ac_uid	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    u_int32_t   ac_uid;$/;"	m	struct:acct_v3	file:
+ac_utime	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    comp_t      ac_utime;$/;"	m	struct:acct_v3	file:
+ac_version	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^    char        ac_version;$/;"	m	struct:acct_v3	file:
+acct_v3	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^struct acct_v3$/;"	s	file:
+addWatchToCache	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^addWatchToCache(int wd, const char *pathname)$/;"	f	file:
+alarmHandler	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^alarmHandler(int sig)$/;"	f	file:
+allDone	tlpi/tlpi-dist/signals/catch_rtsigs.c	/^static volatile int allDone = 0;$/;"	v	file:
+argv	tlpi/tlpi-dist/namespaces/userns_child_exec.c	/^    char **argv;        \/* Command to be executed by child, with args *\/$/;"	m	struct:child_args	file:
+array	tlpi/tlpi-dist/lib/semun.h	/^    unsigned short *    array;$/;"	m	union:semun
+array	tlpi/tlpi-dist/svsem/semun.h	/^    unsigned short *    array;$/;"	m	union:semun
+atexitFunc1	tlpi/tlpi-dist/procexec/exit_handlers.c	/^atexitFunc1(void)$/;"	f	file:
+atexitFunc2	tlpi/tlpi-dist/procexec/exit_handlers.c	/^atexitFunc2(void)$/;"	f	file:
+avail	tlpi/tlpi-dist/threads/prod_condvar.c	/^static int avail = 0;$/;"	v	file:
+avail	tlpi/tlpi-dist/threads/prod_no_condvar.c	/^static int avail = 0;$/;"	v	file:
+barrier	tlpi/tlpi-dist/threads/pthread_barrier_demo.c	/^static pthread_barrier_t barrier;$/;"	v	file:
+becomeDaemon	tlpi/tlpi-dist/daemons/become_daemon.c	/^becomeDaemon(int flags)$/;"	f
+becomeDaemon	tlpi/tlpi-dist/lib/become_daemon.c	/^becomeDaemon(int flags)$/;"	f
+bsRetryOnEintr	tlpi/tlpi-dist/lib/binary_sems.c	/^Boolean bsRetryOnEintr = TRUE;$/;"	v
+bsRetryOnEintr	tlpi/tlpi-dist/svsem/binary_sems.c	/^Boolean bsRetryOnEintr = TRUE;$/;"	v
+bsUseSemUndo	tlpi/tlpi-dist/lib/binary_sems.c	/^Boolean bsUseSemUndo = FALSE;$/;"	v
+bsUseSemUndo	tlpi/tlpi-dist/svsem/binary_sems.c	/^Boolean bsUseSemUndo = FALSE;$/;"	v
+buf	tlpi/tlpi-dist/lib/read_line_buf.h	/^    char    buf[RL_MAX_BUF];    \/* Current buffer from file *\/$/;"	m	struct:ReadLineBuf
+buf	tlpi/tlpi-dist/lib/semun.h	/^    struct semid_ds *   buf;$/;"	m	union:semun	typeref:struct:semun::semid_ds
+buf	tlpi/tlpi-dist/sockets/read_line_buf.h	/^    char    buf[RL_MAX_BUF];    \/* Current buffer from file *\/$/;"	m	struct:ReadLineBuf
+buf	tlpi/tlpi-dist/svsem/semun.h	/^    struct semid_ds *   buf;$/;"	m	union:semun	typeref:struct:semun::semid_ds
+buf	tlpi/tlpi-dist/svshm/svshm_xfr.h	/^    char buf[BUF_SIZE];         \/* Data being transferred *\/$/;"	m	struct:shmseg
+buf	tlpi/tlpi-dist/threads/strerror.c	/^static char buf[MAX_ERROR_LEN];     \/* Statically allocated return buffer *\/$/;"	v	file:
+buf	tlpi/tlpi-dist/threads/strerror_tls.c	/^static __thread char buf[MAX_ERROR_LEN];$/;"	v	file:
+cacheSize	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static int cacheSize = 0;       \/* Current size of the array *\/$/;"	v	file:
+called	tlpi/tlpi-dist/threads/one_time_init.c	/^    int called;$/;"	m	struct:once_struct	file:
+canJump	tlpi/tlpi-dist/signals/sigmask_longjmp.c	/^static volatile sig_atomic_t canJump = 0;$/;"	v	file:
+capIsEffective	tlpi/tlpi-dist/cap/cap_text.c	/^capIsEffective(cap_t capSets, cap_value_t cap)$/;"	f	file:
+capIsInheritable	tlpi/tlpi-dist/cap/cap_text.c	/^capIsInheritable(cap_t capSets, cap_value_t cap)$/;"	f	file:
+capIsPermitted	tlpi/tlpi-dist/cap/cap_text.c	/^capIsPermitted(cap_t capSets, cap_value_t cap)$/;"	f	file:
+capIsSet	tlpi/tlpi-dist/cap/cap_text.c	/^capIsSet(cap_t capSets, cap_value_t cap, cap_flag_t set)$/;"	f	file:
+checkCache	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static int checkCache;$/;"	v	file:
+checkCacheConsistency	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^checkCacheConsistency(void)$/;"	f	file:
+childFunc	tlpi/tlpi-dist/namespaces/demo_userns.c	/^childFunc(void *arg)$/;"	f	file:
+childFunc	tlpi/tlpi-dist/namespaces/demo_uts_namespaces.c	/^childFunc(void *arg)$/;"	f	file:
+childFunc	tlpi/tlpi-dist/namespaces/multi_pidns.c	/^childFunc(void *arg)$/;"	f	file:
+childFunc	tlpi/tlpi-dist/namespaces/ns_child_exec.c	/^childFunc(void *arg)$/;"	f	file:
+childFunc	tlpi/tlpi-dist/namespaces/pidns_init_sleep.c	/^childFunc(void *arg)$/;"	f	file:
+childFunc	tlpi/tlpi-dist/namespaces/userns_child_exec.c	/^childFunc(void *arg)$/;"	f	file:
+childFunc	tlpi/tlpi-dist/namespaces/userns_setns_test.c	/^childFunc(void *arg)$/;"	f	file:
+childFunc	tlpi/tlpi-dist/procexec/demo_clone.c	/^childFunc(void *arg)$/;"	f	file:
+childFunc	tlpi/tlpi-dist/procexec/t_clone.c	/^childFunc(void *arg)$/;"	f	file:
+childMon	tlpi/tlpi-dist/altio/select_mq.c	/^childMon(int msqid, int fd)$/;"	f	file:
+child_args	tlpi/tlpi-dist/namespaces/userns_child_exec.c	/^struct child_args {$/;"	s	file:
+child_handler	tlpi/tlpi-dist/namespaces/simple_init.c	/^child_handler(int sig)$/;"	f	file:
+cleanupHandler	tlpi/tlpi-dist/threads/thread_cleanup.c	/^cleanupHandler(void *arg)$/;"	f	file:
+clearEventFlag	tlpi/tlpi-dist/lib/event_flags.c	/^clearEventFlag(int semId, int semNum)$/;"	f
+clearEventFlag	tlpi/tlpi-dist/svsem/event_flags.c	/^clearEventFlag(int semId, int semNum)$/;"	f
+clientFifo	tlpi/tlpi-dist/pipes/fifo_seqnum_client.c	/^static char clientFifo[CLIENT_FIFO_NAME_LEN];$/;"	v	file:
+clientId	tlpi/tlpi-dist/svmsg/svmsg_file.h	/^    int  clientId;                      \/* ID of client's message queue *\/$/;"	m	struct:requestMsg
+clientId	tlpi/tlpi-dist/svmsg/svmsg_file_client.c	/^static int clientId;$/;"	v	file:
+cmdLineErr	tlpi/tlpi-dist/lib/error_functions.c	/^cmdLineErr(const char *format, ...)$/;"	f
+cmdNum	tlpi/tlpi-dist/pgsjc/job_mon.c	/^static int cmdNum;      \/* Our position in pipeline *\/$/;"	v	file:
+cnt	tlpi/tlpi-dist/svshm/svshm_xfr.h	/^    int cnt;                    \/* Number of bytes used in 'buf' *\/$/;"	m	struct:shmseg
+comptToLL	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^comptToLL(comp_t ct)$/;"	f	file:
+comptToLL	tlpi/tlpi-dist/procexec/acct_view.c	/^comptToLL(comp_t ct)$/;"	f	file:
+cond	tlpi/tlpi-dist/threads/prod_condvar.c	/^static pthread_cond_t cond = PTHREAD_COND_INITIALIZER;$/;"	v	file:
+cond	tlpi/tlpi-dist/threads/thread_cleanup.c	/^static pthread_cond_t cond = PTHREAD_COND_INITIALIZER;$/;"	v	file:
+cond	tlpi/tlpi-dist/timers/ptmr_sigev_thread.c	/^static pthread_cond_t cond = PTHREAD_COND_INITIALIZER;$/;"	v	file:
+copyRootDirPaths	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^copyRootDirPaths(char *argv[])$/;"	f	file:
+countFile	tlpi/tlpi-dist/dirs_links/file_type_stats.c	/^countFile(const char *path, const struct stat *sb, int flag, struct FTW *ftwb)$/;"	f	file:
+createKey	tlpi/tlpi-dist/threads/strerror_tsd.c	/^createKey(void)$/;"	f	file:
+createPidFile	tlpi/tlpi-dist/filelock/create_pid_file.c	/^createPidFile(const char *progName, const char *pidFile, int flags)$/;"	f
+createPidFile	tlpi/tlpi-dist/lib/create_pid_file.c	/^createPidFile(const char *progName, const char *pidFile, int flags)$/;"	f
+createStopFileAndAbort	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^createStopFileAndAbort(void)$/;"	f	file:
+currTime	tlpi/tlpi-dist/lib/curr_time.c	/^currTime(const char *format)$/;"	f
+currTime	tlpi/tlpi-dist/time/curr_time.c	/^currTime(const char *format)$/;"	f
+data	tlpi/tlpi-dist/svmsg/svmsg_file.h	/^    char data[RESP_MSG_SIZE];           \/* File content \/ response message *\/$/;"	m	struct:responseMsg
+dcnt	tlpi/tlpi-dist/inotify/rand_dtree.c	/^static int dcnt;$/;"	v	file:
+destructor	tlpi/tlpi-dist/threads/strerror_tsd.c	/^destructor(void *buf)$/;"	f	file:
+dirCnt	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static int dirCnt;      \/* Count of directories added to watch list *\/$/;"	v	file:
+dirList	tlpi/tlpi-dist/inotify/rand_dtree.c	/^static char **dirList = NULL;$/;"	v	file:
+dirTree	tlpi/tlpi-dist/dirs_links/nftw_dir_tree.c	/^dirTree(const char *pathname, const struct stat *sbuf, int type,$/;"	f	file:
+displayCmdFmt	tlpi/tlpi-dist/filelock/i_fcntl_locking.c	/^displayCmdFmt(int argc, char *argv[], const int fdList[])$/;"	f	file:
+displayInotifyEvent	tlpi/tlpi-dist/inotify/demo_inotify.c	/^displayInotifyEvent(struct inotify_event *i)$/;"	f	file:
+displayInotifyEvent	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^displayInotifyEvent(struct inotify_event *ev)$/;"	f	file:
+displayMincore	tlpi/tlpi-dist/vmem/memlock.c	/^displayMincore(char *addr, size_t length)$/;"	f	file:
+displayProcessTimes	tlpi/tlpi-dist/time/process_time.c	/^displayProcessTimes(const char *msg)$/;"	f	file:
+displayStatInfo	tlpi/tlpi-dist/files/t_stat.c	/^displayStatInfo(const struct stat *sb)$/;"	f	file:
+displayTimes	tlpi/tlpi-dist/timers/real_timer.c	/^displayTimes(const char *msg, Boolean includeTimer)$/;"	f	file:
+display_creds_and_caps	tlpi/tlpi-dist/lib/userns_functions.c	/^display_creds_and_caps(char *str)$/;"	f
+display_creds_and_caps	tlpi/tlpi-dist/namespaces/userns_functions.c	/^display_creds_and_caps(char *str)$/;"	f
+display_symlink	tlpi/tlpi-dist/namespaces/userns_setns_test.c	/^display_symlink(char *pname, char *link)$/;"	f	file:
+dlSize	tlpi/tlpi-dist/inotify/rand_dtree.c	/^static int dlSize = 0;$/;"	v	file:
+doCalc	tlpi/tlpi-dist/proc/mem_segments.c	/^doCalc(int val)                 \/* Allocated in frame for doCalc() *\/$/;"	f	file:
+doJump	tlpi/tlpi-dist/proc/bad_longjmp.c	/^doJump(void)$/;"	f	file:
+doJump	tlpi/tlpi-dist/proc/setjmp_vars.c	/^doJump(int nvar, int rvar, int vvar)$/;"	f	file:
+drainQueue	tlpi/tlpi-dist/pmsg/mq_notify_via_thread.c	/^drainQueue(mqd_t mqd)$/;"	f	file:
+dropAllCaps	tlpi/tlpi-dist/cap/check_password_caps.c	/^dropAllCaps(void)$/;"	f	file:
+dumpCache	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static int dumpCache;$/;"	v	file:
+dumpCacheToLog	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^dumpCacheToLog(void)$/;"	f	file:
+env	tlpi/tlpi-dist/proc/bad_longjmp.c	/^static jmp_buf env;     \/* Global buffer for saving environment *\/$/;"	v	file:
+env	tlpi/tlpi-dist/proc/longjmp.c	/^static jmp_buf env;$/;"	v	file:
+env	tlpi/tlpi-dist/proc/setjmp_vars.c	/^static jmp_buf env;$/;"	v	file:
+env	tlpi/tlpi-dist/signals/sigmask_longjmp.c	/^static jmp_buf env;$/;"	v	file:
+errExit	tlpi/tlpi-dist/inotify/inotify_dtree.c	64;"	d	file:
+errExit	tlpi/tlpi-dist/lib/error_functions.c	/^errExit(const char *format, ...)$/;"	f
+errExit	tlpi/tlpi-dist/namespaces/demo_userns.c	30;"	d	file:
+errExit	tlpi/tlpi-dist/namespaces/demo_uts_namespaces.c	31;"	d	file:
+errExit	tlpi/tlpi-dist/namespaces/multi_pidns.c	35;"	d	file:
+errExit	tlpi/tlpi-dist/namespaces/ns_child_exec.c	37;"	d	file:
+errExit	tlpi/tlpi-dist/namespaces/ns_exec.c	34;"	d	file:
+errExit	tlpi/tlpi-dist/namespaces/ns_run.c	34;"	d	file:
+errExit	tlpi/tlpi-dist/namespaces/pidns_init_sleep.c	34;"	d	file:
+errExit	tlpi/tlpi-dist/namespaces/simple_init.c	32;"	d	file:
+errExit	tlpi/tlpi-dist/namespaces/t_setns_userns.c	27;"	d	file:
+errExit	tlpi/tlpi-dist/namespaces/unshare.c	34;"	d	file:
+errExit	tlpi/tlpi-dist/namespaces/userns_child_exec.c	43;"	d	file:
+errExit	tlpi/tlpi-dist/namespaces/userns_setns_test.c	39;"	d	file:
+errExit	tlpi/tlpi-dist/seccomp/seccomp_multiarch.c	72;"	d	file:
+errExit	tlpi/tlpi-dist/seccomp/seccomp_perf.c	35;"	d	file:
+errExitEN	tlpi/tlpi-dist/lib/error_functions.c	/^errExitEN(int errnum, const char *format, ...)$/;"	f
+errMsg	tlpi/tlpi-dist/lib/error_functions.c	/^errMsg(const char *format, ...)$/;"	f
+err_exit	tlpi/tlpi-dist/lib/error_functions.c	/^err_exit(const char *format, ...)$/;"	f
+execShScript	tlpi/tlpi-dist/procexec/execlp.c	/^execShScript(int argc, char *argv[], char *envp[])$/;"	f	file:
+execlp	tlpi/tlpi-dist/procexec/execlp.c	/^execlp(const char *filename, const char *arg, ...)$/;"	f
+executeCommand	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^executeCommand(int *inotifyFd)$/;"	f	file:
+exitStatus	tlpi/tlpi-dist/procexec/demo_clone.c	/^    int    exitStatus;$/;"	m	struct:__anon2	file:
+expand_words	tlpi/tlpi-dist/namespaces/simple_init.c	/^expand_words(char *cmd)$/;"	f	file:
+expireCnt	tlpi/tlpi-dist/timers/ptmr_sigev_thread.c	/^static int expireCnt = 0;           \/* Number of expirations of all timers *\/$/;"	v	file:
+f1	tlpi/tlpi-dist/proc/longjmp.c	/^f1(int argc)$/;"	f	file:
+f2	tlpi/tlpi-dist/proc/longjmp.c	/^f2(void)$/;"	f	file:
+fatal	tlpi/tlpi-dist/lib/error_functions.c	/^fatal(const char *format, ...)$/;"	f
+fd	tlpi/tlpi-dist/lib/read_line_buf.h	/^    int     fd;                 \/* File descriptor from which to read *\/$/;"	m	struct:ReadLineBuf
+fd	tlpi/tlpi-dist/procexec/demo_clone.c	/^    int    fd;$/;"	m	struct:__anon2	file:
+fd	tlpi/tlpi-dist/sockets/read_line_buf.h	/^    int     fd;                 \/* File descriptor from which to read *\/$/;"	m	struct:ReadLineBuf
+file	tlpi/tlpi-dist/fileio/multi_descriptors.c	26;"	d	file:
+filePermStr	tlpi/tlpi-dist/files/file_perms.c	/^filePermStr(mode_t perm, int flags)$/;"	f
+filePermStr	tlpi/tlpi-dist/lib/file_perms.c	/^filePermStr(mode_t perm, int flags)$/;"	f
+file_error_handler	s_io/apue_io_a.c	/^static void file_error_handler(FILE * f,const char * msg)$/;"	f	file:
+findEmptyCacheSlot	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^findEmptyCacheSlot(void)$/;"	f	file:
+findEntry	tlpi/tlpi-dist/acl/acl_update.c	/^findEntry(acl_t acl, acl_tag_t tag, id_t qaul)$/;"	f	file:
+findRootDirPath	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^findRootDirPath(const char *path)$/;"	f	file:
+findWatch	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^findWatch(int wd)$/;"	f	file:
+findWatchChecked	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^findWatchChecked(int wd)$/;"	f	file:
+fpathconfPrint	tlpi/tlpi-dist/syslim/t_fpathconf.c	/^fpathconfPrint(const char *msg, int fd, int name)$/;"	f	file:
+fpe	tlpi/tlpi-dist/acl/acl_update.c	50;"	d	file:
+fpe	tlpi/tlpi-dist/files/chiflag.c	35;"	d	file:
+fpe	tlpi/tlpi-dist/filesys/t_mount.c	75;"	d	file:
+fpe	tlpi/tlpi-dist/namespaces/userns_child_exec.c	67;"	d	file:
+fpe	tlpi/tlpi-dist/procexec/demo_clone.c	87;"	d	file:
+fpe2	tlpi/tlpi-dist/filesys/t_mount.c	80;"	d	file:
+freeCache	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^freeCache(void)$/;"	f	file:
+func	tlpi/tlpi-dist/procexec/footprint.c	/^func(int arg)$/;"	f	file:
+func1	tlpi/tlpi-dist/shlibs/demo_Bsymbolic/foo1.c	/^func1(int x)$/;"	f
+func2	tlpi/tlpi-dist/shlibs/demo_Bsymbolic/foo2.c	/^func2(int x)$/;"	f
+func3	tlpi/tlpi-dist/shlibs/demo_Bsymbolic/foo3.c	/^func3(int x)$/;"	f
+getDirList	tlpi/tlpi-dist/inotify/rand_dtree.c	/^getDirList(const char *pathname)$/;"	f	file:
+getFlagState	tlpi/tlpi-dist/lib/event_flags.c	/^getFlagState(int semId, int semNum, Boolean *isSet)$/;"	f
+getFlagState	tlpi/tlpi-dist/svsem/event_flags.c	/^getFlagState(int semId, int semNum, Boolean *isSet)$/;"	f
+getInt	tlpi/tlpi-dist/lib/get_num.c	/^getInt(const char *arg, int flags, const char *name)$/;"	f
+getLong	tlpi/tlpi-dist/lib/get_num.c	/^getLong(const char *arg, int flags, const char *name)$/;"	f
+getNum	tlpi/tlpi-dist/lib/get_num.c	/^getNum(const char *fname, const char *arg, int flags, const char *name)$/;"	f	file:
+glob	tlpi/tlpi-dist/psem/thread_incr_psem.c	/^static int glob = 0;$/;"	v	file:
+glob	tlpi/tlpi-dist/threads/thread_cleanup.c	/^static int glob = 0;                    \/* Predicate variable *\/$/;"	v	file:
+glob	tlpi/tlpi-dist/threads/thread_incr.c	/^static volatile int glob = 0;   \/* "volatile" prevents compiler optimizations$/;"	v	file:
+glob	tlpi/tlpi-dist/threads/thread_incr_mutex.c	/^static volatile int glob = 0;$/;"	v	file:
+glob	tlpi/tlpi-dist/threads/thread_incr_rwlock.c	/^static volatile int glob = 0;$/;"	v	file:
+glob	tlpi/tlpi-dist/threads/thread_incr_spinlock.c	/^static volatile int glob = 0;$/;"	v	file:
+glob	tlpi/tlpi-dist/threads/thread_lock_speed.c	/^static volatile int glob = 0;$/;"	v	file:
+globBuf	tlpi/tlpi-dist/proc/mem_segments.c	/^char globBuf[65536];            \/* Uninitialized data segment *\/$/;"	v
+gnFail	tlpi/tlpi-dist/lib/get_num.c	/^gnFail(const char *fname, const char *msg, const char *arg, const char *name)$/;"	f	file:
+gotAlarm	tlpi/tlpi-dist/timers/real_timer.c	/^static volatile sig_atomic_t gotAlarm = 0;$/;"	v	file:
+gotSig	tlpi/tlpi-dist/pmsg/mq_notify_siginfo.c	/^static volatile sig_atomic_t gotSig = 1;        \/* See comment in main() *\/$/;"	v	file:
+gotSig	tlpi/tlpi-dist/pmsg/mq_notify_via_signal.c	/^static volatile sig_atomic_t gotSig = 1;        \/* See comment in main() *\/$/;"	v	file:
+gotSigint	tlpi/tlpi-dist/signals/sig_receiver.c	/^static volatile sig_atomic_t gotSigint = 0;$/;"	v	file:
+gotSigio	tlpi/tlpi-dist/altio/demo_sigio.c	/^static volatile sig_atomic_t gotSigio = 0;$/;"	v	file:
+gotSigquit	tlpi/tlpi-dist/signals/t_sigsuspend.c	/^static volatile sig_atomic_t gotSigquit = 0;$/;"	v	file:
+grimReaper	tlpi/tlpi-dist/procexec/demo_clone.c	/^grimReaper(int sig)$/;"	f	file:
+grimReaper	tlpi/tlpi-dist/sockets/is_echo_sv.c	/^grimReaper(int sig)$/;"	f	file:
+grimReaper	tlpi/tlpi-dist/sockets/is_echo_v2_sv.c	/^grimReaper(int sig)$/;"	f	file:
+grimReaper	tlpi/tlpi-dist/svmsg/svmsg_file_server.c	/^grimReaper(int sig)$/;"	f	file:
+groupIdFromName	tlpi/tlpi-dist/lib/ugid_functions.c	/^groupIdFromName(const char *name)$/;"	f
+groupIdFromName	tlpi/tlpi-dist/users_groups/ugid_functions.c	/^groupIdFromName(const char *name)$/;"	f
+groupNameFromId	tlpi/tlpi-dist/lib/ugid_functions.c	/^groupNameFromId(gid_t gid)$/;"	f
+groupNameFromId	tlpi/tlpi-dist/users_groups/ugid_functions.c	/^groupNameFromId(gid_t gid)$/;"	f
+handleRequest	tlpi/tlpi-dist/sockets/is_echo_sv.c	/^handleRequest(int cfd)$/;"	f	file:
+handleRequest	tlpi/tlpi-dist/sockets/is_echo_v2_sv.c	/^handleRequest(int cfd)$/;"	f	file:
+handled	tlpi/tlpi-dist/signals/nonreentrant.c	/^static int handled = 0;         \/* Counts number of calls to handler *\/$/;"	v	file:
+handler	tlpi/tlpi-dist/altio/self_pipe.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/inotify/dnotify.c	/^handler(int sig, siginfo_t *si, void *ucontext)$/;"	f	file:
+handler	tlpi/tlpi-dist/pgsjc/catch_SIGHUP.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/pgsjc/disc_SIGHUP.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/pgsjc/job_mon.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/pgsjc/orphaned_pgrp_SIGHUP.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/pmsg/mq_notify_sig.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/pmsg/mq_notify_siginfo.c	/^handler(int sig, siginfo_t *si, void *ucontext)$/;"	f	file:
+handler	tlpi/tlpi-dist/pmsg/mq_notify_via_signal.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/procexec/fork_sig_sync.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/procres/rusage_wait.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/signals/ignore_pending_sig.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/signals/nonreentrant.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/signals/sig_receiver.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/signals/sig_speed_sigsuspend.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/signals/sigmask_longjmp.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/signals/t_sigsuspend.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/timers/ptmr_null_evp.c	/^handler(int sig, siginfo_t *si, void *uc)$/;"	f	file:
+handler	tlpi/tlpi-dist/timers/ptmr_sigev_signal.c	/^handler(int sig, siginfo_t *si, void *uc)$/;"	f	file:
+handler	tlpi/tlpi-dist/timers/timed_read.c	/^handler(int sig)$/;"	f	file:
+handler	tlpi/tlpi-dist/tty/test_tty_functions.c	/^handler(int sig)$/;"	f	file:
+handlerSleepTime	tlpi/tlpi-dist/signals/catch_rtsigs.c	/^static volatile int handlerSleepTime;$/;"	v	file:
+hstrerror	tlpi/tlpi-dist/lib/alt_functions.h	27;"	d
+hupReceived	tlpi/tlpi-dist/daemons/daemon_SIGHUP.c	/^static volatile sig_atomic_t hupReceived = 0;$/;"	v	file:
+idata	tlpi/tlpi-dist/procexec/t_fork.c	/^static int idata = 111;             \/* Allocated in data segment *\/$/;"	v	file:
+ifd	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static int ifd;         \/* Inotify file descriptor *\/$/;"	v	file:
+ignoreRootDirs	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static int ignoreRootDirs;  \/* Number of command-line pathnames that$/;"	v	file:
+inetAddressStr	tlpi/tlpi-dist/lib/inet_sockets.c	/^inetAddressStr(const struct sockaddr *addr, socklen_t addrlen,$/;"	f
+inetAddressStr	tlpi/tlpi-dist/sockets/inet_sockets.c	/^inetAddressStr(const struct sockaddr *addr, socklen_t addrlen,$/;"	f
+inetBind	tlpi/tlpi-dist/lib/inet_sockets.c	/^inetBind(const char *service, int type, socklen_t *addrlen)$/;"	f
+inetBind	tlpi/tlpi-dist/sockets/inet_sockets.c	/^inetBind(const char *service, int type, socklen_t *addrlen)$/;"	f
+inetConnect	tlpi/tlpi-dist/lib/inet_sockets.c	/^inetConnect(const char *host, const char *service, int type)$/;"	f
+inetConnect	tlpi/tlpi-dist/sockets/inet_sockets.c	/^inetConnect(const char *host, const char *service, int type)$/;"	f
+inetListen	tlpi/tlpi-dist/lib/inet_sockets.c	/^inetListen(const char *service, int backlog, socklen_t *addrlen)$/;"	f
+inetListen	tlpi/tlpi-dist/sockets/inet_sockets.c	/^inetListen(const char *service, int backlog, socklen_t *addrlen)$/;"	f
+inetPassiveSocket	tlpi/tlpi-dist/lib/inet_sockets.c	/^inetPassiveSocket(const char *service, int type, socklen_t *addrlen,$/;"	f	file:
+inetPassiveSocket	tlpi/tlpi-dist/sockets/inet_sockets.c	/^inetPassiveSocket(const char *service, int type, socklen_t *addrlen,$/;"	f	file:
+initSemAvailable	tlpi/tlpi-dist/lib/binary_sems.c	/^initSemAvailable(int semId, int semNum)$/;"	f
+initSemAvailable	tlpi/tlpi-dist/svsem/binary_sems.c	/^initSemAvailable(int semId, int semNum)$/;"	f
+initSemInUse	tlpi/tlpi-dist/lib/binary_sems.c	/^initSemInUse(int semId, int semNum)$/;"	f
+initSemInUse	tlpi/tlpi-dist/svsem/binary_sems.c	/^initSemInUse(int semId, int semNum)$/;"	f
+init_func	tlpi/tlpi-dist/threads/one_time_init.c	/^init_func()$/;"	f	file:
+initialNS	tlpi/tlpi-dist/namespaces/userns_overview.go	/^var initialNS NamespaceID$/;"	v
+inotifyReadCnt	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static int inotifyReadCnt = 0;          \/* Counts number of read()s from$/;"	v	file:
+install_filter	tlpi/tlpi-dist/seccomp/seccomp_arg64.c	/^install_filter(void)$/;"	f	file:
+install_filter	tlpi/tlpi-dist/seccomp/seccomp_control_open.c	/^install_filter(void)$/;"	f	file:
+install_filter	tlpi/tlpi-dist/seccomp/seccomp_deny_open.c	/^install_filter(void)$/;"	f	file:
+install_filter	tlpi/tlpi-dist/seccomp/seccomp_logging.c	/^install_filter(void)$/;"	f	file:
+install_filter	tlpi/tlpi-dist/seccomp/seccomp_multiarch.c	/^install_filter(void)$/;"	f	file:
+install_filter	tlpi/tlpi-dist/seccomp/seccomp_perf.c	/^install_filter(void)$/;"	f	file:
+isRootDirPath	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^isRootDirPath(const char *path)$/;"	f	file:
+itimerspecFromStr	tlpi/tlpi-dist/lib/itimerspec_from_str.c	/^itimerspecFromStr(char *str, struct itimerspec *tsp)$/;"	f
+itimerspecFromStr	tlpi/tlpi-dist/timers/itimerspec_from_str.c	/^itimerspecFromStr(char *str, struct itimerspec *tsp)$/;"	f
+len	tlpi/tlpi-dist/altio/select_mq.c	/^    int len;                    \/* Number of bytes used in mtext *\/$/;"	m	struct:pbuf	file:
+len	tlpi/tlpi-dist/lib/read_line_buf.h	/^    ssize_t len;                \/* Number of characters in 'buf' *\/$/;"	m	struct:ReadLineBuf
+len	tlpi/tlpi-dist/sockets/read_line_buf.h	/^    ssize_t len;                \/* Number of characters in 'buf' *\/$/;"	m	struct:ReadLineBuf
+listFiles	tlpi/tlpi-dist/dirs_links/list_files.c	/^listFiles(const char *dirpath)$/;"	f	file:
+listFiles	tlpi/tlpi-dist/dirs_links/list_files_readdir_r.c	/^listFiles(const char *dirpath)$/;"	f	file:
+lockReg	tlpi/tlpi-dist/filelock/region_locking.c	/^lockReg(int fd, int cmd, int type, int whence, int start, off_t len)$/;"	f	file:
+lockReg	tlpi/tlpi-dist/lib/region_locking.c	/^lockReg(int fd, int cmd, int type, int whence, int start, off_t len)$/;"	f	file:
+lockRegion	tlpi/tlpi-dist/filelock/region_locking.c	/^lockRegion(int fd, int type, int whence, int start, int len)$/;"	f
+lockRegion	tlpi/tlpi-dist/lib/region_locking.c	/^lockRegion(int fd, int type, int whence, int start, int len)$/;"	f
+lockRegionWait	tlpi/tlpi-dist/filelock/region_locking.c	/^lockRegionWait(int fd, int type, int whence, int start, int len)$/;"	f
+lockRegionWait	tlpi/tlpi-dist/lib/region_locking.c	/^lockRegionWait(int fd, int type, int whence, int start, int len)$/;"	f
+logClose	tlpi/tlpi-dist/daemons/daemon_SIGHUP.c	/^logClose(void)$/;"	f	file:
+logMessage	tlpi/tlpi-dist/daemons/daemon_SIGHUP.c	/^logMessage(const char *format, ...)$/;"	f	file:
+logMessage	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^logMessage(int vb_mask, const char *format, ...)$/;"	f	file:
+logMessage	tlpi/tlpi-dist/inotify/rand_dtree.c	/^logMessage(const char *format, ...)$/;"	f	file:
+logOpen	tlpi/tlpi-dist/daemons/daemon_SIGHUP.c	/^logOpen(const char *logFilename)$/;"	f	file:
+logfp	tlpi/tlpi-dist/daemons/daemon_SIGHUP.c	/^static FILE *logfp;                 \/* Log file stream *\/$/;"	v	file:
+logfp	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static FILE *logfp = NULL;$/;"	v	file:
+logfp	tlpi/tlpi-dist/inotify/rand_dtree.c	/^static FILE *logfp = NULL;$/;"	v	file:
+main	mem.cpp	/^int main()$/;"	f
+main	nbit_str.cpp	/^int main()$/;"	f
+main	s_io/apue_io_a.c	/^int main()$/;"	f
+main	src/main.c	/^int main()$/;"	f
+main	sys_io/sys_io.c	/^int main(int argc,char **argv)$/;"	f
+main	sys_io/usage_sys_io.c	/^int main()$/;"	f
+main	tlpi/tlpi-dist/acl/acl_update.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/acl/acl_view.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/altio/demo_sigio.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/altio/epoll_input.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/altio/poll_pipes.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/altio/select_mq.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/altio/self_pipe.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/altio/t_select.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/cap/cap_text.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/cap/check_password_caps.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/cap/view_cap_xattr.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/daemons/daemon_SIGHUP.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/daemons/t_syslog.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/daemons/test_become_daemon.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/dirs_links/bad_symlink.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/dirs_links/file_type_stats.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/dirs_links/list_files.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/dirs_links/list_files_readdir_r.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/dirs_links/nftw_dir_tree.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/dirs_links/t_dirbasename.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/dirs_links/t_unlink.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/dirs_links/view_symlink.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/filebuff/copy.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/filebuff/direct_read.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/filebuff/mix23_linebuff.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/filebuff/mix23io.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/filebuff/write_bytes.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/fileio/atomic_append.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/fileio/bad_exclusive_open.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/fileio/copy.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/fileio/large_file.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/fileio/multi_descriptors.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/fileio/seek_io.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/fileio/t_readv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/fileio/t_truncate.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/filelock/i_fcntl_locking.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/filelock/t_flock.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/files/chiflag.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/files/t_chown.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/files/t_stat.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/files/t_umask.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/files/t_utime.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/files/t_utimes.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/filesys/t_mount.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/filesys/t_statfs.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/filesys/t_statvfs.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/filesys/t_umount.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/getopt/t_getopt.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/inotify/demo_inotify.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/inotify/dnotify.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/inotify/rand_dtree.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/loginacct/dump_utmpx.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/loginacct/utmpx_login.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/loginacct/view_lastlog.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/memalloc/free_and_sbrk.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/mmap/anon_mmap.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/mmap/mmcat.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/mmap/mmcopy.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/mmap/t_mmap.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/mmap/t_remap_file_pages.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/cred_launcher.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/demo_userns.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/demo_uts_namespaces.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/hostname.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/multi_pidns.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/ns_child_exec.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/ns_exec.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/ns_run.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/orphan.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/pidns_init_sleep.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/show_creds.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/simple_init.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/t_setns_userns.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/unshare.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/userns_child_exec.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/namespaces/userns_overview.go	/^func main() {$/;"	f
+main	tlpi/tlpi-dist/namespaces/userns_overview.go	/^package main$/;"	p
+main	tlpi/tlpi-dist/namespaces/userns_setns_test.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pgsjc/catch_SIGHUP.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pgsjc/disc_SIGHUP.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pgsjc/handling_SIGTSTP.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pgsjc/job_mon.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pgsjc/orphaned_pgrp_SIGHUP.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pgsjc/t_setsid.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pipes/change_case.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pipes/fifo_seqnum_client.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pipes/fifo_seqnum_server.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pipes/pipe_ls_wc.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pipes/pipe_sync.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pipes/popen_glob.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pipes/simple_pipe.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pmsg/mq_notify_sig.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pmsg/mq_notify_siginfo.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pmsg/mq_notify_sigwaitinfo.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pmsg/mq_notify_thread.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pmsg/mq_notify_via_signal.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pmsg/mq_notify_via_thread.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pmsg/pmsg_create.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pmsg/pmsg_getattr.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pmsg/pmsg_receive.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pmsg/pmsg_send.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pmsg/pmsg_unlink.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/proc/bad_longjmp.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/proc/display_env.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/proc/longjmp.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/proc/mem_segments.c	/^main(int argc, char *argv[])    \/* Allocated in frame for main() *\/$/;"	f
+main	tlpi/tlpi-dist/proc/modify_env.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/proc/necho.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/proc/setenv.c	/^main()$/;"	f
+main	tlpi/tlpi-dist/proc/setjmp_vars.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/proc/t_getenv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/proccred/idshow.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/acct_on.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/acct_v3_view.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/acct_view.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/child_status.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/closeonexec.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/demo_clone.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/envargs.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/exit_handlers.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/footprint.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/fork_file_sharing.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/fork_sig_sync.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/fork_stdio_buf.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/fork_whos_on_first.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/make_zombie.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/multi_SIGCHLD.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/multi_wait.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/necho.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/orphan.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/t_clone.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/t_execl.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/t_execle.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/t_execlp.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/t_execve.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/t_fork.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/t_system.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/t_vfork.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procexec/vfork_fd_test.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procpri/demo_sched_fifo.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procpri/sched_set.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procpri/sched_view.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procpri/t_sched_getaffinity.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procpri/t_sched_setaffinity.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procpri/t_setpriority.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procres/rlimit_nproc.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procres/rusage.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/procres/rusage_wait.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/progconc/syscall_speed.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/psem/psem_create.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/psem/psem_getvalue.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/psem/psem_post.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/psem/psem_timedwait.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/psem/psem_trywait.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/psem/psem_unlink.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/psem/psem_wait.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/psem/thread_incr_psem.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pshm/pshm_create.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pshm/pshm_read.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pshm/pshm_unlink.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pshm/pshm_write.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pty/script.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/pty/unbuffer.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/seccomp/libseccomp_demo.c	/^int main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/seccomp/seccomp_arg64.c	/^main(int argc, char **argv)$/;"	f
+main	tlpi/tlpi-dist/seccomp/seccomp_control_open.c	/^main(int argc, char **argv)$/;"	f
+main	tlpi/tlpi-dist/seccomp/seccomp_deny_open.c	/^main(int argc, char **argv)$/;"	f
+main	tlpi/tlpi-dist/seccomp/seccomp_logging.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/seccomp/seccomp_multiarch.c	/^main(int argc, char **argv)$/;"	f
+main	tlpi/tlpi-dist/seccomp/seccomp_perf.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/shlibs/demo_Bsymbolic/prog.c	/^main(int argc, char*argv[])$/;"	f
+main	tlpi/tlpi-dist/shlibs/dynload.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/shlibs/prog.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/shlibs/version_scripts/sv_prog.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/shlibs/version_scripts/sv_prog_abc.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/shlibs/version_scripts/sv_prog_complex.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	tlpi/tlpi-dist/signals/catch_rtsigs.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/demo_SIGFPE.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/ignore_pending_sig.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/intquit.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/nonreentrant.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/ouch.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/sig_receiver.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/sig_sender.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/sig_speed_sigsuspend.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/sigmask_longjmp.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/signalfd_sigval.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/t_kill.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/t_sigaltstack.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/t_sigqueue.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/t_sigsuspend.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/signals/t_sigwaitinfo.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/i6d_ucase_cl.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/i6d_ucase_sv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/id_echo_cl.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/id_echo_sv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/is_echo_cl.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/is_echo_inetd_sv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/is_echo_sv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/is_echo_v2_sv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/is_seqnum_cl.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/is_seqnum_sv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/is_seqnum_v2_cl.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/is_seqnum_v2_sv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/list_host_addresses.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/scm_cred_recv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/scm_cred_send.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/scm_rights_recv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/scm_rights_send.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/socknames.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/t_gethostbyname.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/t_getservbyname.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/ud_ucase_cl.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/ud_ucase_sv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/us_abstract_bind.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/us_xfr_cl.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/us_xfr_sv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/us_xfr_v2_cl.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sockets/us_xfr_v2_sv.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svipc/svmsg_demo_server.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svipc/t_ftok.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svmsg/svmsg_chqbytes.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svmsg/svmsg_create.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svmsg/svmsg_file_client.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svmsg/svmsg_file_server.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svmsg/svmsg_info.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svmsg/svmsg_ls.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svmsg/svmsg_receive.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svmsg/svmsg_rm.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svmsg/svmsg_send.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svsem/svsem_bad_init.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svsem/svsem_create.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svsem/svsem_demo.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svsem/svsem_good_init.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svsem/svsem_info.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svsem/svsem_mon.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svsem/svsem_op.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svsem/svsem_rm.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svsem/svsem_setall.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svshm/svshm_attach.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svshm/svshm_create.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svshm/svshm_info.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svshm/svshm_lock.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svshm/svshm_mon.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svshm/svshm_rm.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svshm/svshm_unlock.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svshm/svshm_xfr_reader.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/svshm/svshm_xfr_writer.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sysinfo/procfs_pidmax.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sysinfo/procfs_user_exe.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/sysinfo/t_uname.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/syslim/t_fpathconf.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/syslim/t_sysconf.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/detached_attrib.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/one_time_init.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/prod_condvar.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/prod_no_condvar.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/pthread_barrier_demo.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/simple_thread.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/strerror_test.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/thread_cancel.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/thread_cleanup.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/thread_incr.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/thread_incr_mutex.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/thread_incr_rwlock.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/thread_incr_spinlock.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/thread_lock_speed.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/threads/thread_multijoin.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/time/calendar_time.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/time/process_time.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/time/show_time.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/time/strtime.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/time/t_stime.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/timers/demo_timerfd.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/timers/ptmr_null_evp.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/timers/ptmr_sigev_signal.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/timers/ptmr_sigev_thread.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/timers/real_timer.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/timers/t_clock_nanosleep.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/timers/t_nanosleep.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/timers/timed_read.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/tty/demo_SIGWINCH.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/tty/new_intr.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/tty/no_echo.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/tty/test_tty_functions.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/users_groups/check_password.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/users_groups/t_getpwent.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/users_groups/t_getpwnam_r.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/vdso/gettimeofday.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/vmem/madvise_dontneed.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/vmem/memlock.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/vmem/t_mprotect.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/xattr/t_setxattr.c	/^main(int argc, char *argv[])$/;"	f
+main	tlpi/tlpi-dist/xattr/xattr_view.c	/^main(int argc, char *argv[])$/;"	f
+mandLockingEnabled	tlpi/tlpi-dist/filelock/i_fcntl_locking.c	/^mandLockingEnabled(int fd)$/;"	f	file:
+markCacheSlotEmpty	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^markCacheSlotEmpty(int slot)$/;"	f	file:
+max	tlpi/tlpi-dist/lib/tlpi_hdr.h	47;"	d
+max	tlpi/tlpi-dist/procexec/execlp.c	31;"	d	file:
+mbuf	tlpi/tlpi-dist/svmsg/svmsg_receive.c	/^struct mbuf {$/;"	s	file:
+mbuf	tlpi/tlpi-dist/svmsg/svmsg_send.c	/^struct mbuf {$/;"	s	file:
+min	tlpi/tlpi-dist/lib/tlpi_hdr.h	46;"	d
+modifyCap	tlpi/tlpi-dist/cap/check_password_caps.c	/^modifyCap(int capability, int setting)$/;"	f	file:
+msqid	tlpi/tlpi-dist/altio/select_mq.c	/^    int msqid;                  \/* Origin of message *\/$/;"	m	struct:pbuf	file:
+mtext	tlpi/tlpi-dist/altio/select_mq.c	/^    char mtext[MAX_MTEXT];      \/* Message body *\/$/;"	m	struct:pbuf	file:
+mtext	tlpi/tlpi-dist/svmsg/svmsg_receive.c	/^    char mtext[MAX_MTEXT];      \/* Message body *\/$/;"	m	struct:mbuf	file:
+mtext	tlpi/tlpi-dist/svmsg/svmsg_send.c	/^    char mtext[MAX_MTEXT];              \/* Message body *\/$/;"	m	struct:mbuf	file:
+mtx	tlpi/tlpi-dist/threads/one_time_init.c	/^    pthread_mutex_t mtx;$/;"	m	struct:once_struct	file:
+mtx	tlpi/tlpi-dist/threads/prod_condvar.c	/^static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+mtx	tlpi/tlpi-dist/threads/prod_no_condvar.c	/^static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+mtx	tlpi/tlpi-dist/threads/thread_cleanup.c	/^static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+mtx	tlpi/tlpi-dist/threads/thread_incr_mutex.c	/^static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+mtx	tlpi/tlpi-dist/threads/thread_lock_speed.c	/^static pthread_mutex_t mtx;$/;"	v	file:
+mtx	tlpi/tlpi-dist/timers/ptmr_sigev_thread.c	/^static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+mtype	tlpi/tlpi-dist/altio/select_mq.c	/^    long mtype;                 \/* Message type *\/$/;"	m	struct:pbuf	file:
+mtype	tlpi/tlpi-dist/svmsg/svmsg_file.h	/^    long mtype;                         \/* One of RESP_MT_* values below *\/$/;"	m	struct:responseMsg
+mtype	tlpi/tlpi-dist/svmsg/svmsg_file.h	/^    long mtype;                         \/* Unused *\/$/;"	m	struct:requestMsg
+mtype	tlpi/tlpi-dist/svmsg/svmsg_receive.c	/^    long mtype;                 \/* Message type *\/$/;"	m	struct:mbuf	file:
+mtype	tlpi/tlpi-dist/svmsg/svmsg_send.c	/^    long mtype;                         \/* Message type *\/$/;"	m	struct:mbuf	file:
+myfunc	tlpi/tlpi-dist/progconc/syscall_speed.c	/^static int myfunc() { return 1; }$/;"	f	file:
+newuid	tlpi/tlpi-dist/namespaces/userns_child_exec.c	/^static int newuid = -1;         \/* If set to value other than -1, then set$/;"	v	file:
+next	tlpi/tlpi-dist/lib/read_line_buf.h	/^    int     next;               \/* Index of next unread character in 'buf' *\/$/;"	m	struct:ReadLineBuf
+next	tlpi/tlpi-dist/sockets/read_line_buf.h	/^    int     next;               \/* Index of next unread character in 'buf' *\/$/;"	m	struct:ReadLineBuf
+notifySetup	tlpi/tlpi-dist/pmsg/mq_notify_thread.c	/^notifySetup(mqd_t *mqdp)$/;"	f	file:
+notifySetup	tlpi/tlpi-dist/pmsg/mq_notify_via_thread.c	/^notifySetup(mqd_t *mqdp)$/;"	f	file:
+numBarriers	tlpi/tlpi-dist/threads/pthread_barrier_demo.c	/^static int numBarriers;         \/* Number of times the threads will$/;"	v	file:
+numBlock	tlpi/tlpi-dist/dirs_links/file_type_stats.c	/^           numFifo = 0, numChar = 0, numBlock = 0,$/;"	v	file:
+numChar	tlpi/tlpi-dist/dirs_links/file_type_stats.c	/^           numFifo = 0, numChar = 0, numBlock = 0,$/;"	v	file:
+numDir	tlpi/tlpi-dist/dirs_links/file_type_stats.c	/^static int numReg = 0, numDir = 0, numSymLk = 0, numSocket = 0,$/;"	v	file:
+numFifo	tlpi/tlpi-dist/dirs_links/file_type_stats.c	/^           numFifo = 0, numChar = 0, numBlock = 0,$/;"	v	file:
+numInnerLoops	tlpi/tlpi-dist/threads/thread_lock_speed.c	/^static int numInnerLoops;$/;"	v	file:
+numLive	tlpi/tlpi-dist/threads/thread_multijoin.c	/^static int numLive = 0;         \/* Total number of threads still alive or$/;"	v	file:
+numLiveChildren	tlpi/tlpi-dist/procexec/multi_SIGCHLD.c	/^static volatile int numLiveChildren = 0;$/;"	v	file:
+numNonstatable	tlpi/tlpi-dist/dirs_links/file_type_stats.c	/^           numNonstatable = 0;$/;"	v	file:
+numOuterLoops	tlpi/tlpi-dist/threads/thread_lock_speed.c	/^static int numOuterLoops;$/;"	v	file:
+numReg	tlpi/tlpi-dist/dirs_links/file_type_stats.c	/^static int numReg = 0, numDir = 0, numSymLk = 0, numSocket = 0,$/;"	v	file:
+numRootDirs	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static int numRootDirs;     \/* Number of pathnames supplied on command line *\/$/;"	v	file:
+numSocket	tlpi/tlpi-dist/dirs_links/file_type_stats.c	/^static int numReg = 0, numDir = 0, numSymLk = 0, numSocket = 0,$/;"	v	file:
+numSymLk	tlpi/tlpi-dist/dirs_links/file_type_stats.c	/^static int numReg = 0, numDir = 0, numSymLk = 0, numSocket = 0,$/;"	v	file:
+numUnjoined	tlpi/tlpi-dist/threads/thread_multijoin.c	/^static int numUnjoined = 0;     \/* Number of terminated threads that$/;"	v	file:
+once	tlpi/tlpi-dist/threads/one_time_init.c	/^struct once_struct once = ONCE_INITIALISER;$/;"	v	typeref:struct:once_struct
+once	tlpi/tlpi-dist/threads/strerror_tsd.c	/^static pthread_once_t once = PTHREAD_ONCE_INIT;$/;"	v	file:
+once_struct	tlpi/tlpi-dist/threads/one_time_init.c	/^struct once_struct {            \/* Our equivalent of pthread_once_t *\/$/;"	s	file:
+one_time_init	tlpi/tlpi-dist/threads/one_time_init.c	/^one_time_init(struct once_struct *once_control, void (*init)(void))$/;"	f	file:
+onexitFunc	tlpi/tlpi-dist/procexec/exit_handlers.c	/^onexitFunc(int exitStatus, void *arg)$/;"	f	file:
+outputError	tlpi/tlpi-dist/lib/error_functions.c	/^outputError(Boolean useErr, int err, Boolean flushStdout,$/;"	f	file:
+overflowStack	tlpi/tlpi-dist/signals/t_sigaltstack.c	/^overflowStack(int callNum)$/;"	f	file:
+parseACL	tlpi/tlpi-dist/acl/acl_update.c	/^parseACL(char *aclStr, struct AccessControlEntry aclist[],$/;"	f	file:
+parseEntrySpec	tlpi/tlpi-dist/acl/acl_update.c	/^parseEntrySpec(char *entryStr, struct AccessControlEntry *ace,$/;"	f	file:
+parseOps	tlpi/tlpi-dist/svsem/svsem_op.c	/^parseOps(char *arg, struct sembuf sops[])$/;"	f	file:
+path	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^    char path[PATH_MAX];        \/* Cached pathname *\/$/;"	m	struct:watch	file:
+pathname	tlpi/tlpi-dist/svmsg/svmsg_file.h	/^    char pathname[PATH_MAX];            \/* File to be returned *\/$/;"	m	struct:requestMsg
+pathnameInCache	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^pathnameInCache(const char *pathname)$/;"	f	file:
+pathnameToCacheSlot	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^pathnameToCacheSlot(const char *pathname)$/;"	f	file:
+pbuf	tlpi/tlpi-dist/altio/select_mq.c	/^struct pbuf {$/;"	s	file:
+perms	tlpi/tlpi-dist/acl/acl_update.c	/^    int         perms;          \/* Permissions bit mask *\/$/;"	m	struct:AccessControlEntry	file:
+pfd	tlpi/tlpi-dist/altio/self_pipe.c	/^static int pfd[2];                      \/* File descriptors for pipe *\/$/;"	v	file:
+pid	tlpi/tlpi-dist/pipes/fifo_seqnum.h	/^    pid_t pid;                  \/* PID of client *\/$/;"	m	struct:request
+pipe_fd	tlpi/tlpi-dist/namespaces/userns_child_exec.c	/^    int    pipe_fd[2];  \/* Pipe used to synchronize parent and child *\/$/;"	m	struct:child_args	file:
+posix_openpt	tlpi/tlpi-dist/lib/alt_functions.h	32;"	d
+posix_openpt	tlpi/tlpi-dist/lib/pty_master_open.c	/^posix_openpt(int flags)$/;"	f	file:
+posix_openpt	tlpi/tlpi-dist/pty/pty_master_open.c	/^posix_openpt(int flags)$/;"	f	file:
+pqr	tlpi/tlpi-dist/shlibs/version_scripts/sv_lib_v2.c	/^void pqr(void) { printf("v2 pqr\\n"); }$/;"	f
+primes	tlpi/tlpi-dist/proc/mem_segments.c	/^int primes[] = { 2, 3, 5, 7 };  \/* Initialized data segment *\/$/;"	v
+printAllCaps	tlpi/tlpi-dist/cap/cap_text.c	/^printAllCaps(cap_t capSets, int flags)$/;"	f	file:
+printCap	tlpi/tlpi-dist/cap/cap_text.c	/^printCap(cap_t capSets, cap_value_t cap, char *capStrName, int flags)$/;"	f	file:
+printChildRusage	tlpi/tlpi-dist/procres/rusage_wait.c	/^printChildRusage(const char *msg)$/;"	f	file:
+printPendingSigs	tlpi/tlpi-dist/lib/signal_functions.c	/^printPendingSigs(FILE *of, const char *msg)$/;"	f
+printPendingSigs	tlpi/tlpi-dist/signals/signal_functions.c	/^printPendingSigs(FILE *of, const char *msg)$/;"	f
+printRlimit	tlpi/tlpi-dist/lib/print_rlimit.c	/^printRlimit(const char *msg, int resource)$/;"	f
+printRlimit	tlpi/tlpi-dist/procres/print_rlimit.c	/^printRlimit(const char *msg, int resource)$/;"	f
+printRusage	tlpi/tlpi-dist/lib/print_rusage.c	/^printRusage(const char *leader, const struct rusage *ru)$/;"	f
+printRusage	tlpi/tlpi-dist/procres/print_rusage.c	/^printRusage(const char *leader, const struct rusage *ru)$/;"	f
+printShmDS	tlpi/tlpi-dist/svshm/svshm_mon.c	/^printShmDS(const struct shmid_ds *ds)$/;"	f	file:
+printSigMask	tlpi/tlpi-dist/lib/signal_functions.c	/^printSigMask(FILE *of, const char *msg)$/;"	f
+printSigMask	tlpi/tlpi-dist/signals/signal_functions.c	/^printSigMask(FILE *of, const char *msg)$/;"	f
+printSigset	tlpi/tlpi-dist/lib/signal_functions.c	/^printSigset(FILE *of, const char *prefix, const sigset_t *sigset)$/;"	f
+printSigset	tlpi/tlpi-dist/signals/signal_functions.c	/^printSigset(FILE *of, const char *prefix, const sigset_t *sigset)$/;"	f
+printStats	tlpi/tlpi-dist/dirs_links/file_type_stats.c	/^printStats(const char *msg, int num, int numFiles)$/;"	f	file:
+printWaitStatus	tlpi/tlpi-dist/lib/print_wait_status.c	/^printWaitStatus(const char *msg, int status)$/;"	f
+printWaitStatus	tlpi/tlpi-dist/procexec/print_wait_status.c	/^printWaitStatus(const char *msg, int status)$/;"	f
+printable	tlpi/tlpi-dist/getopt/t_getopt.c	20;"	d	file:
+proc_setgroups_write	tlpi/tlpi-dist/lib/userns_functions.c	/^proc_setgroups_write(pid_t child_pid, char *str)$/;"	f
+proc_setgroups_write	tlpi/tlpi-dist/namespaces/userns_functions.c	/^proc_setgroups_write(pid_t child_pid, char *str)$/;"	f
+processInotifyEvents	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^processInotifyEvents(int *inotifyFd)$/;"	f	file:
+processNextInotifyEvent	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^processNextInotifyEvent(int *inotifyFd, char *buf, int bufSize, int firstTry)$/;"	f	file:
+ptyFork	tlpi/tlpi-dist/lib/pty_fork.c	/^ptyFork(int *masterFd, char *slaveName, size_t snLen,$/;"	f
+ptyFork	tlpi/tlpi-dist/pty/pty_fork.c	/^ptyFork(int *masterFd, char *slaveName, size_t snLen,$/;"	f
+ptyMasterOpen	tlpi/tlpi-dist/lib/pty_master_open.c	/^ptyMasterOpen(char *slaveName, size_t snLen)$/;"	f
+ptyMasterOpen	tlpi/tlpi-dist/pty/pty_master_open.c	/^ptyMasterOpen(char *slaveName, size_t snLen)$/;"	f
+ptyMasterOpen	tlpi/tlpi-dist/pty/pty_master_open_bsd.c	/^ptyMasterOpen(char *slaveName, size_t snLen)$/;"	f
+qual	tlpi/tlpi-dist/acl/acl_update.c	/^    id_t        qual;           \/* Optional tag qualifier (UID or GID) *\/$/;"	m	struct:AccessControlEntry	file:
+raiseAmbientCaps	tlpi/tlpi-dist/namespaces/userns_child_exec.c	/^raiseAmbientCaps(void)$/;"	f	file:
+raiseCap	tlpi/tlpi-dist/cap/check_password_caps.c	/^raiseCap(int capability)$/;"	f	file:
+readBufferSize	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static int readBufferSize = 0;$/;"	v	file:
+readConfigFile	tlpi/tlpi-dist/daemons/daemon_SIGHUP.c	/^readConfigFile(const char *configFilename)$/;"	f	file:
+readLine	tlpi/tlpi-dist/lib/read_line.c	/^readLine(int fd, void *buffer, size_t n)$/;"	f
+readLine	tlpi/tlpi-dist/sockets/read_line.c	/^readLine(int fd, void *buffer, size_t n)$/;"	f
+readLineBuf	tlpi/tlpi-dist/lib/read_line_buf.c	/^readLineBuf(struct ReadLineBuf *rlbuf, char *buffer, size_t n)$/;"	f
+readLineBuf	tlpi/tlpi-dist/sockets/read_line_buf.c	/^readLineBuf(struct ReadLineBuf *rlbuf, char *buffer, size_t n)$/;"	f
+readLineBufInit	tlpi/tlpi-dist/lib/read_line_buf.c	/^readLineBufInit(int fd, struct ReadLineBuf *rlbuf)$/;"	f
+readLineBufInit	tlpi/tlpi-dist/sockets/read_line_buf.c	/^readLineBufInit(int fd, struct ReadLineBuf *rlbuf)$/;"	f
+readn	tlpi/tlpi-dist/lib/rdwrn.c	/^readn(int fd, void *buffer, size_t n)$/;"	f
+readn	tlpi/tlpi-dist/sockets/rdwrn.c	/^readn(int fd, void *buffer, size_t n)$/;"	f
+recur	tlpi/tlpi-dist/proc/bad_longjmp.c	/^recur(int n)$/;"	f	file:
+regionIsLocked	tlpi/tlpi-dist/filelock/region_locking.c	/^regionIsLocked(int fd, int type, int whence, int start, int len)$/;"	f
+regionIsLocked	tlpi/tlpi-dist/lib/region_locking.c	/^regionIsLocked(int fd, int type, int whence, int start, int len)$/;"	f
+reinitialize	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^reinitialize(int oldInotifyFd)$/;"	f	file:
+releaseSem	tlpi/tlpi-dist/lib/binary_sems.c	/^releaseSem(int semId, int semNum)$/;"	f
+releaseSem	tlpi/tlpi-dist/svsem/binary_sems.c	/^releaseSem(int semId, int semNum)$/;"	f
+removeFifo	tlpi/tlpi-dist/pipes/fifo_seqnum_client.c	/^removeFifo(void)$/;"	f	file:
+removeQueue	tlpi/tlpi-dist/svmsg/svmsg_file_client.c	/^removeQueue(void)$/;"	f	file:
+request	tlpi/tlpi-dist/pipes/fifo_seqnum.h	/^struct request {                \/* Request (client --> server) *\/$/;"	s
+requestMsg	tlpi/tlpi-dist/svmsg/svmsg_file.h	/^struct requestMsg {                     \/* Requests (client to server) *\/$/;"	s
+reserveSem	tlpi/tlpi-dist/lib/binary_sems.c	/^reserveSem(int semId, int semNum)$/;"	f
+reserveSem	tlpi/tlpi-dist/svsem/binary_sems.c	/^reserveSem(int semId, int semNum)$/;"	f
+response	tlpi/tlpi-dist/pipes/fifo_seqnum.h	/^struct response {               \/* Response (server --> client) *\/$/;"	s
+responseMsg	tlpi/tlpi-dist/svmsg/svmsg_file.h	/^struct responseMsg {                    \/* Responses (server to client) *\/$/;"	s
+rewriteCachedPaths	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^rewriteCachedPaths(const char *oldPathPrefix, const char *oldName,$/;"	f	file:
+rootDirPaths	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static char **rootDirPaths; \/* List of pathnames supplied on command line *\/$/;"	v	file:
+rootDirStat	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static struct stat *rootDirStat;$/;"	v	typeref:struct:stat	file:
+rwlock	tlpi/tlpi-dist/threads/thread_incr_rwlock.c	/^static pthread_rwlock_t rwlock;$/;"	v	file:
+secbits	tlpi/tlpi-dist/namespaces/userns_child_exec.c	/^static int secbits;             \/* If nonzero, then set process securebits$/;"	v	file:
+seccomp	tlpi/tlpi-dist/seccomp/seccomp_arg64.c	/^seccomp(unsigned int operation, unsigned int flags, void *args)$/;"	f	file:
+seccomp	tlpi/tlpi-dist/seccomp/seccomp_control_open.c	/^seccomp(unsigned int operation, unsigned int flags, void *args)$/;"	f	file:
+seccomp	tlpi/tlpi-dist/seccomp/seccomp_deny_open.c	/^seccomp(unsigned int operation, unsigned int flags, void *args)$/;"	f	file:
+seccomp	tlpi/tlpi-dist/seccomp/seccomp_logging.c	/^seccomp(unsigned int operation, unsigned int flags, void *args)$/;"	f	file:
+seccomp	tlpi/tlpi-dist/seccomp/seccomp_multiarch.c	/^seccomp(unsigned int operation, unsigned int flags, void *args)$/;"	f	file:
+seccomp	tlpi/tlpi-dist/seccomp/seccomp_perf.c	/^seccomp(unsigned int operation, unsigned int flags, void *arg)$/;"	f	file:
+seek_test	tlpi/tlpi-dist/seccomp/seccomp_arg64.c	/^seek_test(int fd, off_t offset)$/;"	f	file:
+sem	tlpi/tlpi-dist/psem/thread_incr_psem.c	/^static sem_t sem;$/;"	v	file:
+semun	tlpi/tlpi-dist/lib/semun.h	/^union semun {                   \/* Used in calls to semctl() *\/$/;"	u
+semun	tlpi/tlpi-dist/svsem/semun.h	/^union semun {                   \/* Used in calls to semctl() *\/$/;"	u
+sendfile	tlpi/tlpi-dist/sockets/sendfile.c	/^sendfile(int out_fd, int in_fd, off_t *offset, size_t count)$/;"	f
+senv	tlpi/tlpi-dist/signals/sigmask_longjmp.c	/^static sigjmp_buf senv;$/;"	v	file:
+seqLen	tlpi/tlpi-dist/pipes/fifo_seqnum.h	/^    int seqLen;                 \/* Length of desired sequence *\/$/;"	m	struct:request
+seqNum	tlpi/tlpi-dist/pipes/fifo_seqnum.h	/^    int seqNum;                 \/* Start of sequence *\/$/;"	m	struct:response
+serveRequest	tlpi/tlpi-dist/svmsg/svmsg_file_server.c	/^serveRequest(const struct requestMsg *req)$/;"	f	file:
+setEventFlag	tlpi/tlpi-dist/lib/event_flags.c	/^setEventFlag(int semId, int semNum)$/;"	f
+setEventFlag	tlpi/tlpi-dist/svsem/event_flags.c	/^setEventFlag(int semId, int semNum)$/;"	f
+setJump	tlpi/tlpi-dist/proc/bad_longjmp.c	/^setJump(void)$/;"	f	file:
+setJump2	tlpi/tlpi-dist/proc/bad_longjmp.c	/^setJump2(void)$/;"	f	file:
+setPerms	tlpi/tlpi-dist/acl/acl_update.c	/^setPerms(acl_entry_t entry, int perms)$/;"	f	file:
+setenv	tlpi/tlpi-dist/proc/setenv.c	/^setenv(const char *name, const char *value, int overwrite)$/;"	f
+shmseg	tlpi/tlpi-dist/svshm/svshm_xfr.h	/^struct shmseg {                 \/* Defines structure of shared memory segment *\/$/;"	s
+sigCnt	tlpi/tlpi-dist/signals/catch_rtsigs.c	/^static volatile int sigCnt = 0;         \/* Number of signals received *\/$/;"	v	file:
+sigCnt	tlpi/tlpi-dist/signals/sig_receiver.c	/^static int sigCnt[NSIG];                \/* Counts deliveries of each signal *\/$/;"	v	file:
+sigHandler	tlpi/tlpi-dist/signals/intquit.c	/^sigHandler(int sig)$/;"	f	file:
+sigHandler	tlpi/tlpi-dist/signals/ouch.c	/^sigHandler(int sig)$/;"	f	file:
+sigalrmHandler	tlpi/tlpi-dist/timers/real_timer.c	/^sigalrmHandler(int sig)$/;"	f	file:
+sigchldHandler	tlpi/tlpi-dist/procexec/multi_SIGCHLD.c	/^sigchldHandler(int sig)$/;"	f	file:
+sigfpeCatcher	tlpi/tlpi-dist/signals/demo_SIGFPE.c	/^sigfpeCatcher(int sig)$/;"	f	file:
+sighandler_t	tlpi/tlpi-dist/lib/signal.c	/^typedef void (*sighandler_t)(int);$/;"	t	file:
+sighandler_t	tlpi/tlpi-dist/signals/signal.c	/^typedef void (*sighandler_t)(int);$/;"	t	file:
+sighupHandler	tlpi/tlpi-dist/daemons/daemon_SIGHUP.c	/^sighupHandler(int sig)$/;"	f	file:
+siginfoHandler	tlpi/tlpi-dist/signals/catch_rtsigs.c	/^siginfoHandler(int sig, siginfo_t *si, void *ucontext)$/;"	f	file:
+sigintCnt	tlpi/tlpi-dist/signals/t_sigsuspend.c	/^static volatile int sigintCnt = 0;$/;"	v	file:
+sigintHandler	tlpi/tlpi-dist/timers/t_clock_nanosleep.c	/^sigintHandler(int sig)$/;"	f	file:
+sigintHandler	tlpi/tlpi-dist/timers/t_nanosleep.c	/^sigintHandler(int sig)$/;"	f	file:
+siginterrupt	tlpi/tlpi-dist/signals/siginterrupt.c	/^siginterrupt(int sig, int flag)$/;"	f
+sigioHandler	tlpi/tlpi-dist/altio/demo_sigio.c	/^sigioHandler(int sig)$/;"	f	file:
+signal	tlpi/tlpi-dist/lib/signal.c	/^signal(int sig, sighandler_t handler)$/;"	f
+signal	tlpi/tlpi-dist/procexec/demo_clone.c	/^    int    signal;$/;"	m	struct:__anon2	file:
+signal	tlpi/tlpi-dist/signals/signal.c	/^signal(int sig, sighandler_t handler)$/;"	f
+sigsegvHandler	tlpi/tlpi-dist/signals/t_sigaltstack.c	/^sigsegvHandler(int sig)$/;"	f	file:
+sigwinchHandler	tlpi/tlpi-dist/tty/demo_SIGWINCH.c	/^sigwinchHandler(int sig)$/;"	f	file:
+sival_int	tlpi/tlpi-dist/lib/tlpi_hdr.h	79;"	d
+sival_ptr	tlpi/tlpi-dist/lib/tlpi_hdr.h	80;"	d
+sleepTime	tlpi/tlpi-dist/threads/thread_multijoin.c	/^    int sleepTime;              \/* Number seconds to live before terminating *\/$/;"	m	struct:__anon3	file:
+socklen_t	tlpi/tlpi-dist/lib/tlpi_hdr.h	/^typedef int socklen_t;$/;"	t
+splock	tlpi/tlpi-dist/threads/thread_incr_spinlock.c	/^static pthread_spinlock_t splock;$/;"	v	file:
+splock	tlpi/tlpi-dist/threads/thread_lock_speed.c	/^static pthread_spinlock_t splock;$/;"	v	file:
+square	tlpi/tlpi-dist/proc/mem_segments.c	/^square(int x)                   \/* Allocated in frame for square() *\/$/;"	f	file:
+state	tlpi/tlpi-dist/threads/thread_multijoin.c	/^    enum tstate state;          \/* Thread state (TS_* constants above) *\/$/;"	m	struct:__anon3	typeref:enum:__anon3::tstate	file:
+stopFile	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static char *stopFile;$/;"	v	file:
+str2	tlpi/tlpi-dist/signals/nonreentrant.c	/^static char *str2;              \/* Set from argv[2] *\/$/;"	v	file:
+strerror	tlpi/tlpi-dist/threads/strerror.c	/^strerror(int err)$/;"	f
+strerror	tlpi/tlpi-dist/threads/strerror_tls.c	/^strerror(int err)$/;"	f
+strerror	tlpi/tlpi-dist/threads/strerror_tsd.c	/^strerror(int err)$/;"	f
+strerrorKey	tlpi/tlpi-dist/threads/strerror_tsd.c	/^static pthread_key_t strerrorKey;$/;"	v	file:
+strsignal	tlpi/tlpi-dist/lib/alt_functions.h	22;"	d
+sub_str	nbit_str.cpp	/^void sub_str(const string & s,int from,int start,int end)$/;"	f
+sysconfPrint	tlpi/tlpi-dist/syslim/t_sysconf.c	/^sysconfPrint(const char *msg, int name)$/;"	f	file:
+system	tlpi/tlpi-dist/procexec/simple_system.c	/^system(char *command)$/;"	f
+system	tlpi/tlpi-dist/procexec/system.c	/^system(const char *command)$/;"	f
+tag	tlpi/tlpi-dist/acl/acl_update.c	/^    acl_tag_t   tag;            \/* Tag type *\/$/;"	m	struct:AccessControlEntry	file:
+terminate	tlpi/tlpi-dist/lib/error_functions.c	/^terminate(Boolean useExit3)$/;"	f	file:
+test1	tlpi/tlpi-dist/shlibs/mod1.c	/^int test1[250000] = { 1, 2, 3 };$/;"	v
+test2	tlpi/tlpi-dist/shlibs/mod2.c	/^int test2[100000] = { 1, 2, 3 };$/;"	v
+test3	tlpi/tlpi-dist/shlibs/mod3.c	/^int test3[10000] = { 1, 2, 3 };$/;"	v
+test_setns	tlpi/tlpi-dist/namespaces/userns_setns_test.c	/^test_setns(char *pname, int fd)$/;"	f	file:
+thread	tlpi/tlpi-dist/threads/thread_multijoin.c	/^} *thread;$/;"	v	typeref:struct:__anon3	file:
+threadDied	tlpi/tlpi-dist/threads/thread_multijoin.c	/^static pthread_cond_t threadDied = PTHREAD_COND_INITIALIZER;$/;"	v	file:
+threadFunc	tlpi/tlpi-dist/pmsg/mq_notify_thread.c	/^threadFunc(union sigval sv)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/pmsg/mq_notify_via_thread.c	/^threadFunc(union sigval sv)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/psem/thread_incr_psem.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/detached_attrib.c	/^threadFunc(void *x)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/one_time_init.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/prod_condvar.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/prod_no_condvar.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/pthread_barrier_demo.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/simple_thread.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/strerror_test.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/thread_cancel.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/thread_cleanup.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/thread_incr.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/thread_incr_mutex.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/thread_incr_rwlock.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/thread_incr_spinlock.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/thread_lock_speed.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/threads/thread_multijoin.c	/^threadFunc(void *arg)$/;"	f	file:
+threadFunc	tlpi/tlpi-dist/timers/ptmr_sigev_thread.c	/^threadFunc(union sigval sv)$/;"	f	file:
+threadMutex	tlpi/tlpi-dist/threads/thread_multijoin.c	/^static pthread_mutex_t threadMutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+tid	tlpi/tlpi-dist/threads/thread_multijoin.c	/^    pthread_t tid;              \/* ID of this thread *\/$/;"	m	struct:__anon3	file:
+totThreads	tlpi/tlpi-dist/threads/thread_multijoin.c	/^static int totThreads = 0;      \/* Total number of threads created *\/$/;"	v	file:
+traverseTree	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^traverseTree(const char *pathname, const struct stat *sb, int tflag,$/;"	f	file:
+traverseTree	tlpi/tlpi-dist/inotify/rand_dtree.c	/^traverseTree(const char *pathname, const struct stat *sb, int tflag,$/;"	f	file:
+tstate	tlpi/tlpi-dist/threads/thread_multijoin.c	/^enum tstate {                   \/* Thread states *\/$/;"	g	file:
+tstpHandler	tlpi/tlpi-dist/pgsjc/handling_SIGTSTP.c	/^tstpHandler(int sig)$/;"	f	file:
+tstpHandler	tlpi/tlpi-dist/tty/test_tty_functions.c	/^tstpHandler(int sig)$/;"	f	file:
+ttyOrig	tlpi/tlpi-dist/pty/script.c	/^struct termios ttyOrig;$/;"	v	typeref:struct:termios
+ttyOrig	tlpi/tlpi-dist/pty/unbuffer.c	/^struct termios ttyOrig;$/;"	v	typeref:struct:termios
+ttyReset	tlpi/tlpi-dist/pty/script.c	/^ttyReset(void)$/;"	f	file:
+ttyReset	tlpi/tlpi-dist/pty/unbuffer.c	/^ttyReset(void)$/;"	f	file:
+ttySetCbreak	tlpi/tlpi-dist/lib/tty_functions.c	/^ttySetCbreak(int fd, struct termios *prevTermios)$/;"	f
+ttySetCbreak	tlpi/tlpi-dist/tty/tty_functions.c	/^ttySetCbreak(int fd, struct termios *prevTermios)$/;"	f
+ttySetRaw	tlpi/tlpi-dist/lib/tty_functions.c	/^ttySetRaw(int fd, struct termios *prevTermios)$/;"	f
+ttySetRaw	tlpi/tlpi-dist/tty/tty_functions.c	/^ttySetRaw(int fd, struct termios *prevTermios)$/;"	f
+ttyname	tlpi/tlpi-dist/tty/ttyname.c	/^ttyname(int fd)$/;"	f
+ttynameCheckDir	tlpi/tlpi-dist/tty/ttyname.c	/^ttynameCheckDir(const struct stat *fdStat, const char *devDir)$/;"	f	file:
+umask	tlpi/tlpi-dist/procexec/demo_clone.c	/^    mode_t umask;$/;"	m	struct:__anon2	file:
+unixBind	tlpi/tlpi-dist/lib/unix_sockets.c	/^unixBind(const char *path, int type)$/;"	f
+unixBind	tlpi/tlpi-dist/sockets/unix_sockets.c	/^unixBind(const char *path, int type)$/;"	f
+unixBuildAddress	tlpi/tlpi-dist/lib/unix_sockets.c	/^unixBuildAddress(const char *path, struct sockaddr_un *addr)$/;"	f
+unixBuildAddress	tlpi/tlpi-dist/sockets/unix_sockets.c	/^unixBuildAddress(const char *path, struct sockaddr_un *addr)$/;"	f
+unixConnect	tlpi/tlpi-dist/lib/unix_sockets.c	/^unixConnect(const char *path, int type)$/;"	f
+unixConnect	tlpi/tlpi-dist/sockets/unix_sockets.c	/^unixConnect(const char *path, int type)$/;"	f
+unixListen	tlpi/tlpi-dist/lib/unix_sockets.c	/^unixListen(const char *path, int backlog)$/;"	f
+unixListen	tlpi/tlpi-dist/sockets/unix_sockets.c	/^unixListen(const char *path, int backlog)$/;"	f
+unixPassiveSocket	tlpi/tlpi-dist/lib/unix_sockets.c	/^unixPassiveSocket(const char *path, int type, Boolean doListen, int backlog)$/;"	f	file:
+unixPassiveSocket	tlpi/tlpi-dist/sockets/unix_sockets.c	/^unixPassiveSocket(const char *path, int type, Boolean doListen, int backlog)$/;"	f	file:
+unsetenv	tlpi/tlpi-dist/proc/setenv.c	/^unsetenv(const char *name)$/;"	f
+update_map	tlpi/tlpi-dist/lib/userns_functions.c	/^update_map(char *mapping, char *map_file)$/;"	f
+update_map	tlpi/tlpi-dist/namespaces/userns_functions.c	/^update_map(char *mapping, char *map_file)$/;"	f
+usage	tlpi/tlpi-dist/namespaces/cred_launcher.c	/^usage(char *pname)$/;"	f	file:
+usage	tlpi/tlpi-dist/namespaces/ns_child_exec.c	/^usage(char *pname)$/;"	f	file:
+usage	tlpi/tlpi-dist/namespaces/ns_run.c	/^usage(char *pname)$/;"	f	file:
+usage	tlpi/tlpi-dist/namespaces/simple_init.c	/^usage(char *pname)$/;"	f	file:
+usage	tlpi/tlpi-dist/namespaces/unshare.c	/^usage(char *pname)$/;"	f	file:
+usage	tlpi/tlpi-dist/namespaces/userns_child_exec.c	/^usage(char *pname)$/;"	f	file:
+usageErr	tlpi/tlpi-dist/lib/error_functions.c	/^usageErr(const char *format, ...)$/;"	f
+usageError	tlpi/tlpi-dist/acl/acl_update.c	/^usageError(char *progName, char *msg, Boolean shortUsage)$/;"	f	file:
+usageError	tlpi/tlpi-dist/acl/acl_view.c	/^usageError(char *progName)$/;"	f	file:
+usageError	tlpi/tlpi-dist/altio/t_select.c	/^usageError(const char *progName)$/;"	f	file:
+usageError	tlpi/tlpi-dist/daemons/t_syslog.c	/^usageError(const char *progName)$/;"	f	file:
+usageError	tlpi/tlpi-dist/dirs_links/nftw_dir_tree.c	/^usageError(const char *progName, const char *msg)$/;"	f	file:
+usageError	tlpi/tlpi-dist/files/chiflag.c	/^usageError(const char *progName)$/;"	f	file:
+usageError	tlpi/tlpi-dist/filesys/t_mount.c	/^usageError(const char *progName, const char *msg)$/;"	f	file:
+usageError	tlpi/tlpi-dist/getopt/t_getopt.c	/^usageError(char *progName, char *msg, int opt)$/;"	f	file:
+usageError	tlpi/tlpi-dist/inotify/dnotify.c	/^usageError(const char *progName, const char *msg)$/;"	f	file:
+usageError	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^usageError(const char *pname)$/;"	f	file:
+usageError	tlpi/tlpi-dist/inotify/rand_dtree.c	/^usageError(char *pname)$/;"	f	file:
+usageError	tlpi/tlpi-dist/pmsg/pmsg_create.c	/^usageError(const char *progName)$/;"	f	file:
+usageError	tlpi/tlpi-dist/pmsg/pmsg_receive.c	/^usageError(const char *progName)$/;"	f	file:
+usageError	tlpi/tlpi-dist/pmsg/pmsg_send.c	/^usageError(const char *progName)$/;"	f	file:
+usageError	tlpi/tlpi-dist/procexec/demo_clone.c	/^usageError(char *progName)$/;"	f	file:
+usageError	tlpi/tlpi-dist/psem/psem_create.c	/^usageError(const char *progName)$/;"	f	file:
+usageError	tlpi/tlpi-dist/pshm/pshm_create.c	/^usageError(const char *progName)$/;"	f	file:
+usageError	tlpi/tlpi-dist/svmsg/svmsg_create.c	/^usageError(const char *progName, const char *msg)$/;"	f	file:
+usageError	tlpi/tlpi-dist/svmsg/svmsg_receive.c	/^usageError(const char *progName, const char *msg)$/;"	f	file:
+usageError	tlpi/tlpi-dist/svmsg/svmsg_send.c	/^usageError(const char *progName, const char *msg)$/;"	f	file:
+usageError	tlpi/tlpi-dist/svsem/svsem_create.c	/^usageError(const char *progName, const char *msg)$/;"	f	file:
+usageError	tlpi/tlpi-dist/svsem/svsem_op.c	/^usageError(const char *progName)$/;"	f	file:
+usageError	tlpi/tlpi-dist/svshm/svshm_attach.c	/^usageError(char *progName)$/;"	f	file:
+usageError	tlpi/tlpi-dist/svshm/svshm_create.c	/^usageError(const char *progName, const char *msg)$/;"	f	file:
+usageError	tlpi/tlpi-dist/threads/thread_lock_speed.c	/^usageError(char *pname)$/;"	f	file:
+usageError	tlpi/tlpi-dist/xattr/xattr_view.c	/^usageError(char *progName)$/;"	f	file:
+useAmbient	tlpi/tlpi-dist/namespaces/userns_child_exec.c	/^static int useAmbient = 0;      \/* If set, then push all possible capabilities$/;"	v	file:
+useCPU	tlpi/tlpi-dist/procpri/demo_sched_fifo.c	/^useCPU(char *msg)$/;"	f	file:
+useMutex	tlpi/tlpi-dist/threads/thread_lock_speed.c	/^static int useMutex = 0;$/;"	v	file:
+userIdFromName	tlpi/tlpi-dist/lib/ugid_functions.c	/^userIdFromName(const char *name)$/;"	f
+userIdFromName	tlpi/tlpi-dist/users_groups/ugid_functions.c	/^userIdFromName(const char *name)$/;"	f
+userNameFromId	tlpi/tlpi-dist/lib/ugid_functions.c	/^userNameFromId(uid_t uid)$/;"	f
+userNameFromId	tlpi/tlpi-dist/users_groups/ugid_functions.c	/^userNameFromId(uid_t uid)$/;"	f
+userTermios	tlpi/tlpi-dist/tty/test_tty_functions.c	/^static struct termios userTermios;$/;"	v	typeref:struct:termios	file:
+val	tlpi/tlpi-dist/lib/semun.h	/^    int                 val;$/;"	m	union:semun
+val	tlpi/tlpi-dist/svsem/semun.h	/^    int                 val;$/;"	m	union:semun
+verbose	tlpi/tlpi-dist/namespaces/simple_init.c	/^static int verbose = 0;$/;"	v	file:
+verbose	tlpi/tlpi-dist/namespaces/userns_child_exec.c	/^static int verbose;$/;"	v	file:
+verboseMask	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^static int verboseMask;$/;"	v	file:
+vis_comm	tlpi/tlpi-dist/shlibs/version_scripts/vis_comm.c	/^vis_comm(int j)$/;"	f
+vis_f1	tlpi/tlpi-dist/shlibs/version_scripts/vis_f1.c	/^vis_f1(int k)$/;"	f
+vis_f2	tlpi/tlpi-dist/shlibs/version_scripts/vis_f2.c	/^vis_f2(int k)$/;"	f
+visited	nbit_str.cpp	/^bool visited[MAX] = {false};$/;"	v
+waitForEventFlag	tlpi/tlpi-dist/lib/event_flags.c	/^waitForEventFlag(int semId, int semNum)$/;"	f
+waitForEventFlag	tlpi/tlpi-dist/svsem/event_flags.c	/^waitForEventFlag(int semId, int semNum)$/;"	f
+watch	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^struct watch {$/;"	s	file:
+watchDir	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^watchDir(int inotifyFd, const char *pathname)$/;"	f	file:
+watchSubtree	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^watchSubtree(int inotifyFd, char *path)$/;"	f	file:
+wd	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^    int wd;                     \/* Watch descriptor (-1 if slot unused) *\/$/;"	m	struct:watch	file:
+wlCache	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^struct watch *wlCache = NULL;   \/* Array of cached items *\/$/;"	v	typeref:struct:watch
+writen	tlpi/tlpi-dist/lib/rdwrn.c	/^writen(int fd, const void *buffer, size_t n)$/;"	f
+writen	tlpi/tlpi-dist/sockets/rdwrn.c	/^writen(int fd, const void *buffer, size_t n)$/;"	f
+x1	tlpi/tlpi-dist/shlibs/mod1.c	/^x1(void) {$/;"	f
+x1	tlpi/tlpi-dist/shlibs/rpath_demo/d1/modx1.c	/^x1(void) {$/;"	f
+x2	tlpi/tlpi-dist/shlibs/mod2.c	/^x2(void) {$/;"	f
+x2	tlpi/tlpi-dist/shlibs/rpath_demo/d2/modx2.c	/^x2(void) {$/;"	f
+x3	tlpi/tlpi-dist/shlibs/mod3.c	/^x3(void) {$/;"	f
+xyz	tlpi/tlpi-dist/shlibs/demo_Bsymbolic/foo1.c	/^xyz(void)$/;"	f
+xyz	tlpi/tlpi-dist/shlibs/demo_Bsymbolic/foo2.c	/^xyz(void)$/;"	f
+xyz	tlpi/tlpi-dist/shlibs/demo_Bsymbolic/foo3.c	/^xyz(void)$/;"	f
+xyz	tlpi/tlpi-dist/shlibs/demo_Bsymbolic/prog.c	/^xyz(void)$/;"	f
+xyz	tlpi/tlpi-dist/shlibs/version_scripts/sv_lib_v1.c	/^void xyz(void) { printf("v1 xyz()\\n"); }$/;"	f
+xyz_new	tlpi/tlpi-dist/shlibs/version_scripts/sv_lib_v2.c	/^void xyz_new(void) { printf("v2 xyz\\n"); }$/;"	f
+xyz_old	tlpi/tlpi-dist/shlibs/version_scripts/sv_lib_v2.c	/^void xyz_old(void) { printf("v1 xyz\\n"); }$/;"	f
+zapRootDirPath	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^zapRootDirPath(const char *path)$/;"	f	file:
+zapSubtree	tlpi/tlpi-dist/inotify/inotify_dtree.c	/^zapSubtree(int inotifyFd, char *path)$/;"	f	file:
