@@ -6,4 +6,8 @@
 int Open_r(const char * path,int flags);
 int Open_w(const char * path,int flags,int mode);
 FILE * Fopen(const char * path,const char * mode);
+ssize_t readn(int file,void * buf,size_t nbytes);
+ssize_t writen(int file,void * buf,size_t nbytes);
+ssize_t readline(int file,void * buf,size_t nbytes);
+
 #endif
