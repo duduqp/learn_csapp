@@ -1,15 +1,15 @@
 CC = gcc
-CFLAGS := -g  -Wall  -I../header -lunp
+CFLAGS := -g  -Wall  -I../header 
 SRCS = $(wildcard ./*.c)
 EXEC= app
-CPPFLAGS:= -I../header -lpthread -lunp
+CPPFLAGS:= -I../header -lpthread 
 OBJS = $(patsubst ./%.c,../obj/%.o,$(SRCS))
 
 $(EXEC):$(OBJS)
-	$(CC) $^  -o $@  
+	$(CC) $^  -o $@ -lunp 
 
 ../obj/%.o:%.c
-	$(CC)  $(CPPFLAGS) -c $< -o $@ $(CFLAGS) -lunp
+	$(CC)  $(CPPFLAGS) -c $< -o $@ $(CFLAGS) 
 
 .PHONY : clean
 clean:
