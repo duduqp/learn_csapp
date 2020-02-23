@@ -7,6 +7,7 @@
 #include <ctype.h>
 #include <unistd.h>
 #include <sys/socket.h>
+#include <sys/types.h>
 void perror_exit(const char * msg,int code)
 {
     perror(msg);
