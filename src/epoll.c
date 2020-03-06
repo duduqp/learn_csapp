@@ -60,7 +60,7 @@ int main(int argc,char **argv)
         for(int i=0;i<nready;++i)
         {
             //check evts returned
-            if(evts[i].events==EPOLLIN)
+            if((evts[i].events & EPOLLIN))
             {
                 if(evts[i].data.fd==listenfd)//a new connect client also mean a EPOLLIN
                 {
@@ -87,23 +87,26 @@ int main(int argc,char **argv)
                     {
                         //end client close connection
                        //delete from listen set(rb-tree)
-                       if(epoll_ctl(efd,EPOLL_CTL_DEL,sockfd,NULL)<0)
+                       if(epoll_ctl(efd,EPOLL_CTL_DEL,sockfd,NULL)<0)//no need to give struct because key in rbtree is filedescriptor
                        {
                             perror("epoll ctl");
                             exit(-1);
                        }
                        close(sockfd);//also close cli fd;
 
-                    }else{
+                    }else if(n>0){
                         //process read data
                         writen(sockfd,buf,n);
                         fprintf(stdout,"client write:%s",buf);
                         
+                    }else{
+                        //process EINTR EAGAIN ...
                     }
-                }//not listenfd
-            }else{
-                continue;
+                   }//not listenfd
             }
+            else{
+                    continue;
+                 }
         }
     }
 

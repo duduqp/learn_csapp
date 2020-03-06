@@ -12,8 +12,9 @@
 int main()
 {
     struct sockaddr_in serv_addr;
+    bzero(&serv_addr,sizeof(serv_addr));
     serv_addr.sin_family=AF_INET;
-    serv_addr.sin_port=8888;
+    serv_addr.sin_port=htons(8888);
     serv_addr.sin_addr.s_addr=htonl(INADDR_ANY);
     int conn_fd=Socket(AF_INET,SOCK_STREAM,0);
 
@@ -23,11 +24,15 @@ int main()
     //read from stdin
     char buf[BUF_SIZE];
     int stdincount=0;
-    while((stdincount=fscanf(stdin,"%s",buf))>0)
+    while(fgets(buf,BUF_SIZE,stdin)!=NULL)
     {
-        if(write(conn_fd,buf,stdincount)<stdincount)
+        
+        stdincount=sizeof(buf);
+        buf[stdincount]='\0';
+        printf("%s\n",buf);
+        if(write(conn_fd,buf,stdincount+1)<stdincount+1)
         {
-            perror("write error");
+            fprintf(stdout,"write error\n");
             close(conn_fd);
             exit(-1);
         }

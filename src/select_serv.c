@@ -52,7 +52,7 @@ void Tcpserverinit(int lfd,struct sockaddr_in * serv_addr,socklen_t serv_len,int
 int _accept(int listenfd,struct sockaddr_in * cli_addr,socklen_t * cli_addr_len)
 {
     int connect_fd;
-    if(connect_fd=accept(listenfd,(struct sockaddr *)cli_addr,cli_addr_len)<0)
+    if((connect_fd=accept(listenfd,(struct sockaddr *)cli_addr,cli_addr_len))<0)
     {
         perror("accept error");
         exit(-1);
@@ -87,6 +87,8 @@ int main()
         char buf[BUF_SIZE];
         lis_set=dft_set;
         trigger_count=select(upfd+1,&lis_set,NULL,NULL,NULL);//blocking 
+        
+        printf("%d returned\n",trigger_count);
         if(trigger_count<0)
         {
             perror("select error");
@@ -101,10 +103,13 @@ int main()
             //set into lis_set
             cli_addr_len=sizeof(cli_addr);
             new_connect_fd=_accept(lfd,&cli_addr,&cli_addr_len);
-
+            char cli_addr_txt[BUF_SIZE];
+            
+            fprintf(stdout,"%s connect \n",inet_ntop(AF_INET,&cli_addr.sin_addr,cli_addr_txt,sizeof(cli_addr)));
             //set into listen fd to be listened next round
             FD_SET(new_connect_fd,&dft_set);
 
+            printf("%d new connect fd\n",new_connect_fd);
             if(upfd<new_connect_fd)
             {
                 upfd=new_connect_fd;
@@ -112,6 +117,7 @@ int main()
 
             if(--trigger_count==0)
             {
+                printf("trigger count to zero\n");
                 continue;//back to while no more extra readable fd 
             }
         }
@@ -125,10 +131,12 @@ int main()
                 while((readcount=read(i,buf,BUF_SIZE))>0)
                 {
                     //write to stdout
-                    write(STDOUT_FILENO,buf,readcount);
+                    fprintf(stdout,"%s\n",buf);
                 }
                 if(readcount == 0)
                 {
+                    close(i);
+                    FD_CLR(i,&dft_set);
                     break;//EOF  
                 }else{
                     //readcount<0
