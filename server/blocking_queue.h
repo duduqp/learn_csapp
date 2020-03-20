@@ -24,8 +24,8 @@ public:
     bool back(T & t);
 
     bool enqueue(const T &);
-    bool pop() ;//stl style
-    bool popuntil(int secs=20);//20s
+    bool pop(T & t) ;//stl style
+    bool popuntil(T & t,int secs=20);//20s
 
 
 

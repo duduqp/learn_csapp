@@ -50,7 +50,7 @@ bool blocking_queue<T>::enqueue(const T & t)
 }
 
 template<typename T>
-bool blocking_queue<T>::pop()
+bool blocking_queue<T>::pop(T & t)
 {
     queue_mutex.Lock();
     while(queue_.size()<=0)
@@ -63,11 +63,37 @@ bool blocking_queue<T>::pop()
         }
     }
     //out queue
+    t=queue_.front();
     queue_.pop_front();
     queue_mutex.Unlock();
     return true;
 
 }
+
+template<typename T>
+bool blocking_queue<T>::popuntil(T & t,int secs)
+{
+    queue_mutex.Lock();
+    while(queue_.empty())
+    {
+        if(0!=queue_cond.WaitUntil(secs))
+        {
+            queue_mutex.Unlock();
+            return false;
+        }
+    }
+    t=queue_.front();
+    queue_.pop_front();
+    queue_mutex.Unlock();
+    return true;
+
+}
+
+
+
+
+
+
 
 template<typename T>
 bool  blocking_queue<T>::back(T & t)

@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DEBUG	logger.h	/^    DEBUG, $/;"	e	enum:Level
+ERROR	logger.h	/^    ERROR$/;"	e	enum:Level
+GetInstance	logger.h	/^    static std::shared_ptr<Logger> GetInstance(){$/;"	f	class:Logger
+Level	logger.h	/^enum Level{$/;"	g
+Lock	MutexLock_Util.h	/^    int Lock()$/;"	f	class:MutexLock
+Lock	MutexLock_Util.h	/^    void Lock()$/;"	f	class:MutexLockGuard
+Logger	logger.h	/^class Logger{$/;"	c
+MutexLock	MutexLock_Util.h	/^    MutexLock() {$/;"	f	class:MutexLock
+MutexLock	MutexLock_Util.h	/^class MutexLock$/;"	c
+MutexLockGuard	MutexLock_Util.h	/^class MutexLockGuard{$/;"	c
+Notify	SyncCondition.h	/^    int Notify()$/;"	f	class:SyncCondition
+NotifyAll	SyncCondition.h	/^    int NotifyAll()$/;"	f	class:SyncCondition
+SyncCondition	SyncCondition.h	/^    SyncCondition(MutexLock & m) :mutex_hold(m){  }$/;"	f	class:SyncCondition
+SyncCondition	SyncCondition.h	/^class SyncCondition$/;"	c
+Unlock	MutexLock_Util.h	/^    int Unlock()$/;"	f	class:MutexLock
+Unlock	MutexLock_Util.h	/^    void Unlock()$/;"	f	class:MutexLockGuard
+WARNING	logger.h	/^    WARNING, $/;"	e	enum:Level
+Wait	SyncCondition.h	/^    int Wait()$/;"	f	class:SyncCondition
+WaitUntil	SyncCondition.h	/^    bool WaitUntil(int secs)$/;"	f	class:SyncCondition
+_LOGGER_H_	logger.h	2;"	d
+async_write_log	logger.h	/^    void * async_write_log()$/;"	f	class:Logger
+back	blocking_queue.cpp	/^bool  blocking_queue<T>::back(T & t)$/;"	f	class:blocking_queue
+blocking_queue	blocking_queue.h	/^    blocking_queue(int expect_max_size=1000):$/;"	f	class:blocking_queue
+blocking_queue	blocking_queue.h	/^class blocking_queue$/;"	c
+capacity	blocking_queue.cpp	/^int blocking_queue<T>::capacity() const{$/;"	f	class:blocking_queue
+cond	SyncCondition.h	/^    pthread_cond_t cond;$/;"	m	class:SyncCondition
+cur_log_buffer_size	logger.h	/^    int cur_log_buffer_size;$/;"	m	class:Logger
+enqueue	blocking_queue.cpp	/^bool blocking_queue<T>::enqueue(const T & t)$/;"	f	class:blocking_queue
+flush_log_thread	logger.h	/^    static void * flush_log_thread(void * args)$/;"	f	class:Logger
+front	blocking_queue.cpp	/^bool blocking_queue<T>::front(T & t)$/;"	f	class:blocking_queue
+get_mutex	MutexLock_Util.h	/^    pthread_mutex_t * get_mutex()$/;"	f	class:MutexLock
+is_sync	logger.h	/^    bool is_sync;$/;"	m	class:Logger
+isempty	blocking_queue.cpp	/^bool blocking_queue<T>::isempty() const{$/;"	f	class:blocking_queue
+isfull	blocking_queue.cpp	/^bool blocking_queue<T>::isfull() const{$/;"	f	class:blocking_queue
+log_buffer	logger.h	/^    std::string log_buffer;$/;"	m	class:Logger
+log_file_name	logger.h	/^    std::string log_file_name;$/;"	m	class:Logger
+log_file_path	logger.h	/^    std::string log_file_path;$/;"	m	class:Logger
+log_mutex	logger.h	/^    MutexLock log_mutex;$/;"	m	class:Logger
+log_queue	logger.h	/^    blocking_queue<std::string> * log_queue;$/;"	m	class:Logger
+log_stream	logger.h	/^    FILE * log_stream;$/;"	m	class:Logger
+max_log_buffer_size	logger.h	/^    int max_log_buffer_size;$/;"	m	class:Logger
+max_queue_size	blocking_queue.h	/^    int max_queue_size;$/;"	m	class:blocking_queue
+mutex	MutexLock_Util.h	/^    pthread_mutex_t  mutex;$/;"	m	class:MutexLock
+mutex_hold	SyncCondition.h	/^    MutexLock & mutex_hold;$/;"	m	class:SyncCondition
+mutexhold	MutexLock_Util.h	/^    MutexLock & mutexhold;$/;"	m	class:MutexLockGuard
+pop	blocking_queue.cpp	/^bool blocking_queue<T>::pop()$/;"	f	class:blocking_queue
+queue_	blocking_queue.h	/^    std::list<T> queue_; $/;"	m	class:blocking_queue
+queue_cond	blocking_queue.h	/^    SyncCondition queue_cond;$/;"	m	class:blocking_queue
+queue_mutex	blocking_queue.h	/^    MutexLock queue_mutex;$/;"	m	class:blocking_queue
+size	blocking_queue.cpp	/^int blocking_queue<T>::size() const$/;"	f	class:blocking_queue
+~MutexLock	MutexLock_Util.h	/^     ~MutexLock(){$/;"	f	class:MutexLock
+~SyncCondition	SyncCondition.h	/^    ~SyncCondition() {$/;"	f	class:SyncCondition
+~blocking_queue	blocking_queue.h	/^    ~blocking_queue() {$/;"	f	class:blocking_queue

@@ -41,11 +41,17 @@ private:
     void * async_write_log()
     {
         std::string cur_log;
-        while(log_queue->pop(cur_log))
+        while(!log_queue->isempty())
         {
-           log_mutex.lock();
+            //bug critical section must combined get and outqueue ops
+            //need to combine them in blocking_queue.pop
+           if(!log_queue->front(cur_log))
+           {
+               break;
+           }
+           log_mutex.Lock();
            fputs(cur_log.c_str(),log_stream);
-           log_mutex.unlock();
+           log_mutex.Unlock();
         }
     }
 
@@ -63,5 +69,9 @@ private:
     blocking_queue<std::string> * log_queue;
 
 };
+
+#define LOG_DEBUG(format,...) Logger::GetInstance()->write_log(Level::DEBUG,fotmat,__VA_ARGS__)
+#define LOG_WARNING(format,...) Logger::GetInstance()->write_log(Level::WARNING,fotmat,__VA_ARGS__)
+#define LOG_ERROR(format,...) Logger::GetInstance()->write_log(Level::ERROR,fotmat,__VA_ARGS__)
 
 #endif
