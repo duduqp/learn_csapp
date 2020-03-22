@@ -3,7 +3,7 @@
 #include <map>
 #include <sys/epoll.h>
 #include <time.h>
-
+#include <memory>
 
 
 //const is better than enum for debugging
@@ -45,6 +45,14 @@ const int HTTP_VERSION_11 = 2;
 //epoll wait time limit
 const int EPOLL_WAIT_DURATION = 120 ; //120ms
 
+
+
+
+//connection state 
+const int CONNECTION_ON=0;
+const int CONNECTION_CLOSING=1;
+const int CONNECTION_OFF=2;
+
 class MIME{
 public:
     static std::string GetMIME(const std::string & suffix);
@@ -73,16 +81,66 @@ enum MSG_SYMBOL{
 
 
 
+class Event;
+class EventLoop;
+class TimeNode;
 
-
-
-class requestcontent
+class RequestContent:public std::enable_shared_from_this<RequestContent>//stl template characteristic
 {
 public:
-    requestcontent() {}
-    ~requestcontent() {}
+    RequestContent() {}
+    ~RequestContent() {}
+    RequestContent(int epoll_base_,int fd_,std::string path_);//parameter from right to left ,and we declare member by 
+                                                             //this order  
+    void LinkTimer(std::shared_ptr<TimeNode> tm);
+    void Reset();
+    void DetachTimer();
+    void Setfd(int fd_);
+    void Disable_RW();
+    void Disable_R();
+    void Disable_W();
+    void Enable_RW();
+    void Enable_R();
+    void Enable_W();
+
+    //handler
+    void Handle_Read();
+    void Handle_Write();
+    void Handle_Error();
+    void Handle_Connection();
+
+    int Getfd() const;
+    bool Readable() const;
+    bool Writable() const;
 
 private:
+    std::string path;
+    int fd;
+    //int epoll_base;//wrap in a EventLoop
+    EventLoop * eventloop;
+    std::shared_ptr<Event> event;
+
+    std::string read_buffer;
+    std::string write_buffer;
+    bool error_status;
+    //int epoll_event_type;//wrap in a Event
+
+    int connection_state;
+    int http_method;
+    int http_version;
+    std::string file_name;
+    int cursor;
+    int analysis_state;
+    int header_state;
+    bool finished;
+    bool keep_alive;//http opt
+
+    std::map<std::string,std::string> headers;
+    //std::shared_ptr<TimeNode> timer;//cyclic reference ,weakptr
+    std::weak_ptr<TimeNode> timer;
+
+    bool readable;
+    bool writeable;
 
 };
 
