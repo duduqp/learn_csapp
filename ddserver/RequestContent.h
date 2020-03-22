@@ -45,6 +45,14 @@ const int HTTP_VERSION_11 = 2;
 //epoll wait time limit
 const int EPOLL_WAIT_DURATION = 120 ; //120ms
 
+
+
+
+//connection state 
+const int CONNECTION_ON=0;
+const int CONNECTION_CLOSING=1;
+const int CONNECTION_OFF=2;
+
 class MIME{
 public:
     static std::string GetMIME(const std::string & suffix);
@@ -73,7 +81,8 @@ enum MSG_SYMBOL{
 
 
 
-
+class Event;
+class EventLoop;
 class TimeNode;
 
 class RequestContent:public std::enable_shared_from_this<RequestContent>//stl template characteristic
@@ -107,13 +116,16 @@ public:
 private:
     std::string path;
     int fd;
-    int epoll_base;
+    //int epoll_base;//wrap in a EventLoop
+    EventLoop * eventloop;
+    std::shared_ptr<Event> event;
 
     std::string read_buffer;
     std::string write_buffer;
     bool error_status;
-    int epoll_event_type;
+    //int epoll_event_type;//wrap in a Event
 
+    int connection_state;
     int http_method;
     int http_version;
     std::string file_name;
@@ -124,14 +136,11 @@ private:
     bool keep_alive;//http opt
 
     std::map<std::string,std::string> headers;
-    std::shared_ptr<TimeNode> timer;
+    //std::shared_ptr<TimeNode> timer;//cyclic reference ,weakptr
+    std::weak_ptr<TimeNode> timer;
 
     bool readable;
     bool writeable;
-
-
-
-
 
 };
 
