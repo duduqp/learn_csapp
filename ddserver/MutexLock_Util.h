@@ -40,13 +40,12 @@ private:
 class MutexLockGuard{
 //non-ctor and hold ref ,so must be construct with MutexLockGuard(MutexLock obj)
 public:
-    explicit MutexLockGuard(MutexLock &);
-    void Lock()
+    explicit MutexLockGuard(MutexLock & mutex):mutexhold(mutex)
     {
         mutexhold.Lock();
     }
 
-    void Unlock()
+    ~MutexLockGuard()
     {
         mutexhold.Unlock();
     }
