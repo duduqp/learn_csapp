@@ -4,7 +4,7 @@
 #include <sys/epoll.h>
 #include <time.h>
 #include <memory>
-
+#include <unistd.h>
 
 //const is better than enum for debugging
 //state of parsing procedure
@@ -89,10 +89,10 @@ class RequestContent:public std::enable_shared_from_this<RequestContent>//stl te
 {
 public:
     RequestContent() {}
-    ~RequestContent() {}
-    RequestContent(int epoll_base_,int fd_,std::string path_);//parameter from right to left ,and we declare member by 
+    ~RequestContent() { close(fd); }
+    RequestContent(EventLoop * eventloop_,int fd_);//parameter from right to left ,and we declare member by 
                                                              //this order  
-    void LinkTimer(std::shared_ptr<TimeNode> tm);
+    void LinkTimer(std::shared_ptr<TimeNode> tm){ timer=tm; }
     void Reset();
     void DetachTimer();
     void Setfd(int fd_);
@@ -106,12 +106,19 @@ public:
     //handler
     void Handle_Read();
     void Handle_Write();
-    void Handle_Error();
+    void Handle_Error(int fd,int http_code,const std::string & appendinfo);
     void Handle_Connection();
-
+    void Handle_Close();
     int Getfd() const;
     bool Readable() const;
     bool Writable() const;
+
+
+    int Parse_URI();
+    int Parse_Header();
+    int Analysis_Req();
+    void Init_Event();
+
 
 private:
     std::string path;
