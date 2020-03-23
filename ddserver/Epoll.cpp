@@ -104,7 +104,7 @@ std::vector<ptr_Event> Epoll::GetEventRequest(int num)
 
         if(cur_evt){
             cur_evt->SetEventType(0);
-            cur_evt->SetReventType(events[i].events);//returned eventtype
+            cur_evt->SetREventType(events[i].events);//returned eventtype
             ret_data.push_back(cur_evt);
         }else{
             LOG<<"Cur Event Invalid#";

@@ -53,11 +53,29 @@ public:
     void HandleWrite();
     void HandleConnection();
     void HandleError(int fd,int err_no,const std::string & msg);
-    
+    bool UpdateLastEvent(){
+        bool ret=(last_event_type==event_type);
+        last_event_type=event_type;
+        return ret;
+    }
+
     int GetEventType() const {return event_type;}
     int Getfd() const{ return fd;}
     int GetLastEvent() const{ return last_event_type; }
     std::shared_ptr<RequestContent> GetHolder() const{ return Holder.lock(); }
+
+    void SetEventType(int event_type_)
+    {
+        event_type=event_type_;
+    }
+    void SetREventType(int ret_event_type)
+    {
+        revent_type=ret_event_type;
+    }
+
+
+
+
 private:
     std::shared_ptr<EventLoop> Loop;
     int fd;
