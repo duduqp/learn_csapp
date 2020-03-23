@@ -53,7 +53,8 @@ public:
     void HandleWrite();
     void HandleConnection();
     void HandleError(int fd,int err_no,const std::string & msg);
-
+    
+    int GetEventType() const {return event_type;}
     int Getfd() const{ return fd;}
     int GetLastEvent() const{ return last_event_type; }
     std::shared_ptr<RequestContent> GetHolder() const{ return Holder.lock(); }
@@ -74,10 +75,6 @@ private:
     CallBack Error_Handler;
     CallBack Connection_Handler;
         
-
-
-
-
 
 };
 

@@ -12,8 +12,8 @@ class Epoll
 {
     
 public:
-    Epoll() {}
-    ~Epoll() {}
+    Epoll() ;
+    ~Epoll();
     void Epoll_Add(std::shared_ptr<Event> event,int timeout_msecs);
     void Epoll_Mod(std::shared_ptr<Event> event,int timeout_msecs);
     void Epoll_Delete(std::shared_ptr<Event> event);
