@@ -7,7 +7,8 @@
 #include <cstring>
 #include <signal.h>
 #include <errno.h>
-
+#include <stdlib.h>
+#include "logger.h"
 //blocking use only
 const int MAX_BUF = 4096;
 ssize_t readn(int fd,void * buffer,size_t n)
@@ -154,3 +155,10 @@ ssize_t writen(int fd,std::string & outbuffer)
     return writenum;
 }
 
+
+void Default_Error_Handler()
+{
+    LOG << "Default Error Handler";
+    perror("Error Occur");
+    exit(-1);
+}
