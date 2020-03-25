@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Logger.h"
 #include <functional>
+
 const char * LogLevel::ToString(LogLevel::Level level)
 {
     switch(level){
@@ -13,6 +14,7 @@ const char * LogLevel::ToString(LogLevel::Level level)
         XX(WARNING);
         XX(ERROR);
         XX(FATAL);
+#undef  XX
     }
 }
 
@@ -68,7 +70,7 @@ void Logger::Error(LogEvent::ptr event)
 
 void Logger::Fatal(LogEvent::ptr event)
 {
-
+    Log(LogLevel::FATAL,event);
 }
 
 void FileLoggerAppender::Log(std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event)
@@ -114,12 +116,11 @@ std::string LogFormatter::format(std::shared_ptr<Logger> logger,LogEvent::ptr ev
 void LogFormatter::init(){
     //str format type
     //parse pattern
-    std::string percent("%");
     for(size_t i = 0;i<m_pattern.size();++i)
     {
         if(m_pattern[i]!='%')
         {
-            m_items.push_back(formatter_mapping[percent+m_pattern[i]]);
+            m_items.push_back(formatter_mapping[std::to_string(m_pattern[i])]);
         }
     }
 }
@@ -132,13 +133,20 @@ public:
 
     }
 };
+class LevelFormatter:public LogFormatter::ItemFormat
+{
+public:
+    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
+        os<<logger->GetLevel();
+    }
+};
+
 
 class TimeFormatter:public LogFormatter::ItemFormat
 {
 public:
-    
+    explicit TimeFormatter(const std::string & timefmt="%Y:%m:%d %H:%M:%S"):time_format(timefmt){}
 
-    TimeFormatter(const std::string & format):time_format(format){}
     virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
         os<<event->GetTime();
     }
@@ -149,7 +157,7 @@ class WallTimeFormatter:public LogFormatter::ItemFormat
 {
 public:
     virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
-
+        os<<event->GetWallTime();
     }
 
 };
@@ -157,25 +165,35 @@ class FileFormatter:public LogFormatter::ItemFormat
 {
 public:
     virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
-
+        os<<event->GetFile();
     }
 };
 class ThreadIdFormatter:public LogFormatter::ItemFormat
 {
 public:
     virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
-
+        os<<event->GetThreadId();
     }
 };
 class LineFormatter:public LogFormatter::ItemFormat
 {
 public:
     virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
-
+        os<<event->GetLine();
     }
 };
 
 std::map<std::string,LogFormatter::ItemFormat::ptr> LogFormatter::formatter_mapping={
-    {"%m",std::shared_ptr<LogFormatter::ItemFormat>(new ContentFormatter)},
+#define XX(str,CLASS)  \
+    {#str,std::shared_ptr<LogFormatter::ItemFormat>(new CLASS)}
+
+
+    XX(m,ContentFormatter),
+    XX(l,LineFormatter),
+    XX(f,FileFormatter),
+    XX(t,TimeFormatter),
+    XX(e,WallTimeFormatter),
+    XX(i,ThreadIdFormatter)
+#undef XX
 };
 
