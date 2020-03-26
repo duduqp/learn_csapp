@@ -77,7 +77,7 @@ void FileLoggerAppender::Log(std::shared_ptr<Logger> logger,LogLevel::Level leve
 {
     if(m_level<=level)
     {
-        m_fstream<<m_formatter->format(logger,event);
+        m_fstream<<m_formatter->format(logger,level,event);
     }
 }
 
@@ -94,17 +94,17 @@ void StdoutLoggerAppender::Log(std::shared_ptr<Logger> logger,LogLevel::Level le
 {
     if(m_level<=level)
     {
-        std::cout << m_formatter->format(logger,event); 
+        std::cout << m_formatter->format(logger,level,event); 
     }
 }
 
 
-std::string LogFormatter::format(std::shared_ptr<Logger> logger,LogEvent::ptr event)
+std::string LogFormatter::format(std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event)
 {
     std::stringstream ss;
     for(auto &i:m_items)
     {
-        i->format(ss,logger,event);
+        i->format(ss,logger,level,event);
     }
     return ss.str();
 }
@@ -129,15 +129,18 @@ void LogFormatter::init(){
 class ContentFormatter:public LogFormatter::ItemFormat
 {
 public:
-    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
-
+    ContentFormatter(const std::string & c="default msg"):msg(c){  }
+    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event) override{
+        os<<msg;
     }
+private:
+    std::string msg;
 };
 class LevelFormatter:public LogFormatter::ItemFormat
 {
 public:
-    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
-        os<<logger->GetLevel();
+    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event) override{
+        os<<LogLevel::ToString(level);
     }
 };
 
@@ -147,7 +150,7 @@ class TimeFormatter:public LogFormatter::ItemFormat
 public:
     explicit TimeFormatter(const std::string & timefmt="%Y:%m:%d %H:%M:%S"):time_format(timefmt){}
 
-    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
+    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event) override{
         os<<event->GetTime();
     }
 private:
@@ -156,7 +159,7 @@ private:
 class WallTimeFormatter:public LogFormatter::ItemFormat
 {
 public:
-    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
+    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event) override{
         os<<event->GetWallTime();
     }
 
@@ -164,21 +167,21 @@ public:
 class FileFormatter:public LogFormatter::ItemFormat
 {
 public:
-    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
+    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event) override{
         os<<event->GetFile();
     }
 };
 class ThreadIdFormatter:public LogFormatter::ItemFormat
 {
 public:
-    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
+    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger, LogLevel::Level level,LogEvent::ptr event) override{
         os<<event->GetThreadId();
     }
 };
 class LineFormatter:public LogFormatter::ItemFormat
 {
 public:
-    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event) override{
+    virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event) override{
         os<<event->GetLine();
     }
 };

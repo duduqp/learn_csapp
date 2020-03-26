@@ -8,18 +8,29 @@ LIBS :=
 #SHARE := -fPIC -shared -o
 
 #your application name
-APP := main
+APP := myapp
 CC := g++#append g++
 #use for c
 CFLAGS := -g -Wall -O3 $(DEFINES) $(INCLUDE)
 CXXFLAGS  := $(CFLAGS) 
+$(APP):$(OBJ)
+	$(CC) $(CFLAGS) $^ -o $@
+
+
+.c:.o
+
+
+
+
+
+
 .PHONY: cleanall buildall all objs cleanobj rebuild 
 
 cleanall:
 	rm -rf $(OBJS) $(APP)
 buildall:$(APP)
 
-all: $(APP)
+all: buildall
 
 objs:$(OBJS)
 

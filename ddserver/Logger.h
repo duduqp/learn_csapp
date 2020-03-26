@@ -47,13 +47,13 @@ class LogFormatter{
 public:
     typedef std::shared_ptr<LogFormatter> ptr;
     LogFormatter(const std::string & pattern):m_pattern(pattern){ init(); }
-    std::string format(std::shared_ptr<Logger> logger,LogEvent::ptr event);
+    std::string format(std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event);
 public:
     class ItemFormat{
     public:
         typedef std::shared_ptr<ItemFormat> ptr;
         virtual ~ItemFormat(){}
-        virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogEvent::ptr event)=0;
+        virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event)=0;
     };
 private:
     static std::map<std::string,ItemFormat::ptr> formatter_mapping;
