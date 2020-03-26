@@ -1,0 +1,4 @@
+/home/ddqp/csapp/ddserver/build/CMakeFiles/rebuild_cache.dir
+/home/ddqp/csapp/ddserver/build/CMakeFiles/edit_cache.dir
+/home/ddqp/csapp/ddserver/build/CMakeFiles/ddserver.dir
+/home/ddqp/csapp/ddserver/build/CMakeFiles/test.dir

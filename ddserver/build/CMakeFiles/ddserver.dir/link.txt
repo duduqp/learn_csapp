@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -rdynamic -g -std=c++11 -Wall -Wno-unused-function  -shared -Wl,-soname,libddserver.so -o ../lib/libddserver.so CMakeFiles/ddserver.dir/Logger.cpp.o 

@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ddqp/csapp/ddserver/Logger.cpp
+iostream
+-
+Logger.h
+/home/ddqp/csapp/ddserver/Logger.h
+functional
+-
+map
+-
+memory
+-
+
+/home/ddqp/csapp/ddserver/Logger.h
+string
+-
+memory
+-
+list
+-
+sstream
+-
+fstream
+-
+vector
+-
+map
+-
+

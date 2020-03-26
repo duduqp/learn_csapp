@@ -54,7 +54,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/ddqp/csapp/ddserver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ddqp/csapp/ddserver
+CMAKE_BINARY_DIR = /home/ddqp/csapp/ddserver/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,9 +83,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ddqp/csapp/ddserver/CMakeFiles /home/ddqp/csapp/ddserver/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ddqp/csapp/ddserver/build/CMakeFiles /home/ddqp/csapp/ddserver/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ddqp/csapp/ddserver/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ddqp/csapp/ddserver/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -139,6 +139,33 @@ test/fast:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+Logger.o: Logger.cpp.o
+
+.PHONY : Logger.o
+
+# target to build an object file
+Logger.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Logger.cpp.o
+.PHONY : Logger.cpp.o
+
+Logger.i: Logger.cpp.i
+
+.PHONY : Logger.i
+
+# target to preprocess a source file
+Logger.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Logger.cpp.i
+.PHONY : Logger.cpp.i
+
+Logger.s: Logger.cpp.s
+
+.PHONY : Logger.s
+
+# target to generate assembly for a file
+Logger.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Logger.cpp.s
+.PHONY : Logger.cpp.s
+
 tests/test.o: tests/test.cpp.o
 
 .PHONY : tests/test.o
@@ -176,6 +203,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... ddserver"
 	@echo "... test"
+	@echo "... Logger.o"
+	@echo "... Logger.i"
+	@echo "... Logger.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"

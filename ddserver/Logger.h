@@ -13,6 +13,11 @@ class LogFormatter;
 class LogEvent{
 public:
     typedef std::shared_ptr<LogEvent> ptr;
+    LogEvent(const char * file,uint32_t line,uint32_t walltime
+            , uint32_t ThreadId,uint64_t tm,std::string msg="default msg"):
+        m_file(file),m_line(line),m_walltime(walltime),m_threadid(ThreadId),m_time(tm)
+        ,m_content(msg){}
+
     const char * GetFile() const{ return m_file; }
 
     uint32_t GetLine() const{ return m_line; }
@@ -26,7 +31,7 @@ private:
     uint32_t m_walltime; 
     uint32_t m_threadid=0;
     std::string m_content;
-    uint32_t m_time;
+    uint64_t m_time;
 };
 
 
@@ -46,14 +51,14 @@ public:
 class LogFormatter{
 public:
     typedef std::shared_ptr<LogFormatter> ptr;
-    LogFormatter(const std::string & pattern):m_pattern(pattern){ init(); }
+    LogFormatter(const std::string & pattern):m_pattern(pattern){ init(); }//must init!
     std::string format(std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event);
 public:
     class ItemFormat{
     public:
         typedef std::shared_ptr<ItemFormat> ptr;
         virtual ~ItemFormat(){}
-        virtual std::string format(std::ostream & os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event)=0;
+        virtual void format(std::ostream & os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event)=0;
     };
 private:
     static std::map<std::string,ItemFormat::ptr> formatter_mapping;
@@ -67,7 +72,7 @@ class LogAppender
 public:
     typedef std::shared_ptr<LogAppender> ptr;
     virtual void Log(std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr logEvent)=0;
-    virtual ~LogAppender();
+    virtual ~LogAppender(){};
 
     void SetFormatter(LogFormatter::ptr formatter)
     {
@@ -81,13 +86,15 @@ protected:
     LogFormatter::ptr m_formatter;
 };
 
-class Logger:std::enable_shared_from_this<Logger>
+class Logger:public std::enable_shared_from_this<Logger>
 {
 public:
     typedef std::shared_ptr<Logger> ptr;
 
     void Log(LogLevel::Level level,LogEvent::ptr  event);
-    Logger(const std::string & name):m_name(name){}
+    Logger( std::string name):m_name(name),m_level(LogLevel::DEBUG){
+        m_logformatter.reset(new LogFormatter("%f%s%l%s%t"));
+    }
     ~Logger() {}
 
     void Debug(LogEvent::ptr event);
@@ -114,7 +121,7 @@ private:
     std::string m_name;
     LogLevel::Level m_level;
     std::list<LogAppender::ptr> m_appenders;
-
+    LogFormatter::ptr m_logformatter;
 
 };
 
