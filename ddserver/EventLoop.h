@@ -12,8 +12,8 @@ public:
     ~EventLoop();
     void Loop();
     void Quit();
-    void RunInLoop();
-    void QueueInLoop();
+    void RunInLoop(Func );
+    void QueueInLoop(Func f);
     void AssertInLoopThread();
     void ShutDownEvent(std::shared_ptr<Event> event);
 

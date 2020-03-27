@@ -20,10 +20,10 @@ public:
     
     void Setfd(int fd_);
     void SetHolder(std::shared_ptr<RequestContent> holder_);
-    void SetReadHandler(CallBack & cb){ Read_Handler=cb; }
-    void SetWriteHandler(CallBack & cb){ Write_Handler=cb; }
-    void SetErrorHandler(CallBack & cb){ Error_Handler=cb; }
-    void SetConnectionHandler(CallBack & cb){ Connection_Handler=cb; }
+    void SetReadHandler(CallBack  cb){ Read_Handler=cb; }
+    void SetWriteHandler(CallBack  cb){ Write_Handler=cb; }
+    void SetErrorHandler(CallBack  cb){ Error_Handler=cb; }
+    void SetConnectionHandler(CallBack  cb){ Connection_Handler=cb; }
 
 
     void HandleEvent(){
