@@ -14,8 +14,8 @@ class Event
 {
     typedef std::function<void()> CallBack;
 public:
-    Event(std::shared_ptr<EventLoop>,int fd) ;
-    Event(std::shared_ptr<EventLoop> );
+    Event(EventLoop *,int fd) ;
+    Event(EventLoop *);
     ~Event();
     
     void Setfd(int fd_);
@@ -77,7 +77,7 @@ public:
 
 
 private:
-    std::shared_ptr<EventLoop> Loop;
+    EventLoop * Loop;
     int fd;
     int event_type;
     int revent_type;

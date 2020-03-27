@@ -4,13 +4,8 @@
 #include <sys/prctl.h>
 #include "CurrentThread.h"
 namespace CurrentThread{
-__thread int t_cached_tid=0;
+ __thread int t_cached_tid;
 void Cachetid();
-
-inline int tid()
-{
-    return t_cached_tid;
-}
 }
 pid_t gettid() { return static_cast<pid_t>(::syscall(SYS_gettid)); }
 void CurrentThread::Cachetid()
@@ -78,7 +73,7 @@ void Thread::Start(){
 int Thread::Join(){
     assert(started&&!joined);
     joined=true;
-    return pthread_join(&ThreadId,NULL);
+    return pthread_join(ThreadId,NULL);
 }
 
 
