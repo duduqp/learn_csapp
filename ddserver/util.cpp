@@ -1,4 +1,3 @@
-#include <iostream>
 #include "util.h"
 #include <memory>
 #include <unistd.h>
@@ -8,7 +7,10 @@
 #include <signal.h>
 #include <errno.h>
 #include <stdlib.h>
-#include "logger.h"
+#include "Logger.h"
+#include <sys/types.h>
+#include <fcntl.h>
+#include <sys/socket.h>
 //blocking use only
 const int MAX_BUF = 4096;
 ssize_t readn(int fd,void * buffer,size_t n)
@@ -159,6 +161,54 @@ ssize_t writen(int fd,std::string & outbuffer)
 void Default_Error_Handler()
 {
     LOG << "Default Error Handler";
-    perror("Error Occur");
     exit(-1);
+}
+
+void SignalHandler_PIPE()
+{
+   struct sigaction sa;
+   memset(&sa,0,sizeof(sa));
+   sa.sa_handler=SIG_IGN;
+   sa.sa_flags=0;
+   if(sigaction(SIGPIPE,&sa,NULL))
+   {
+        LOG<<"sigaction error";
+   }
+}
+
+void SetSocketOpt_NonLinger(int fd){
+    struct linger linger_;
+    linger_.l_onoff=1;
+    linger_.l_linger=30;
+    setsockopt(fd,SOL_SOCKET,SO_LINGER,(const char *)&linger_,sizeof(linger_));
+}
+
+void SetSocketOpt_NonDelay(int fd)
+{
+    int flag=1;
+    setsockopt(fd,IPPROTO_TCP,TCP_NODELAY,(void *)&flag,sizeof(flag));
+}
+
+void SetSocketOpt_NonBlock(int fd)
+{
+    int flag=fcntl(fd,F_GETFL,0);
+    flag|=O_NONBLOCK;
+    if(fcntl(fd,F_SETFL,flag)<0)
+    {
+        LOG<<"SetSocketOpt_NonLinger";
+    }
+
+}
+
+void ShutDownWR(int fd)
+{
+    shutdown(fd,SHUT_RDWR);
+}
+void ShutDownW(int fd)
+{
+    shutdown(fd,SHUT_WR);
+}
+void ShutDownR(int fd)
+{
+    shutdown(fd,SHUT_RD);
 }
