@@ -6,7 +6,7 @@
 #include <fstream>
 #include <vector>
 #include <map>
-
+#define LOG std::cout
 class LogAppender;
 class Logger;
 class LogFormatter;
