@@ -39,12 +39,13 @@ const int ANALYSIS_STATUS_SUCCESS= 0;
 //method of http and http version
 const int HTTP_METHOD_GET = 1;
 const int HTTP_METHOD_POST = 2;
+const int HTTP_METHOD_HEAD = 3;
 const int HTTP_VERSION_10 = 1;
 const int HTTP_VERSION_11 = 2;
 
 //epoll wait time limit
 const int EPOLL_WAIT_DURATION = 120 ; //120ms
-
+const int PEERCLOSED= 0;
 
 
 

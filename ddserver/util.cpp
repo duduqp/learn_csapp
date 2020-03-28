@@ -12,7 +12,6 @@
 #include <fcntl.h>
 #include <sys/socket.h>
 //blocking use only
-const int MAX_BUF = 4096;
 ssize_t readn(int fd,void * buffer,size_t n)
 {
     char * buf=static_cast<char *>(buffer);
