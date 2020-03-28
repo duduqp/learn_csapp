@@ -7,7 +7,7 @@
 #include <functional>
 #include "CountDownLatch.h"
 #include "Uncopyable.h"
-class Thread:public Uncopyable
+class Thread:private Uncopyable
 {
 public:
     typedef std::function<void()> ThreadFunc; 
