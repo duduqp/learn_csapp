@@ -3,7 +3,8 @@
 #include "EventLoop.h"
 #include  "EventLoopThread.h"
 #include "Logger.h"
-class EventLoopThreadPooL
+#include "Uncopyable.h"
+class EventLoopThreadPooL:public Uncopyable 
 {
 public:
     EventLoopThreadPooL(EventLoop * baseloop_,int numthreads_):baseloop(baseloop_),numthreads(numthreads_){}
@@ -14,8 +15,8 @@ public:
 private:
     bool started;
     EventLoop * baseloop;
-    std::vector<EventLoopThread> threads;
-    std::vector<EventLoop> loops;
+    std::vector<std::shared_ptr<EventLoopThread>> threads;
+    std::vector<EventLoop*> loops;
     int numthreads;
     int next_;
 

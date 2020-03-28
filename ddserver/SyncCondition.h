@@ -1,9 +1,9 @@
 #pragma once
 #include <ctime>
 #include "MutexLock_Util.h"
+#include "Uncopyable.h"
 
-
-class SyncCondition
+class SyncCondition:public Uncopyable
 {
 public:
     SyncCondition(MutexLock & m) :mutex_hold(m){  }
@@ -39,8 +39,8 @@ public:
 
 private:
     //non-copyable
-    SyncCondition & operator=(const SyncCondition & )=delete ;
-    SyncCondition(const SyncCondition &)=delete ;
+//    SyncCondition & operator=(const SyncCondition & )=delete ;
+//  SyncCondition(const SyncCondition &)=delete ;
 
     //posix condition
     pthread_cond_t cond;

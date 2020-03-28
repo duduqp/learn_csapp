@@ -1,8 +1,8 @@
 #pragma once
 #include <pthread.h>
 #include <cstdlib>
-
-class MutexLock
+#include "Uncopyable.h"
+class MutexLock:public Uncopyable
 {
 public:
     MutexLock() {
@@ -32,8 +32,8 @@ private:
     pthread_mutex_t  mutex;
     
     //noncopyable
-    MutexLock(const MutexLock &) = delete;
-    MutexLock & operator=(const MutexLock & )=delete;
+   // MutexLock(const MutexLock &) = delete;
+   // MutexLock & operator=(const MutexLock & )=delete;
 };
 
 
