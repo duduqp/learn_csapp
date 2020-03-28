@@ -19,7 +19,7 @@ public:
 
     void AddToEpoll(std::shared_ptr<Event> event,int timeout_msecs);
     void RemoveFromEpoll(std::shared_ptr<Event> event);
-    void UpdateEpoll(std::shared_ptr<Event> event,int timeout_msecs);
+    void UpdateEpoll(std::shared_ptr<Event> event,int timeout_msecs=0);
 
     bool BeInLoopThread() const { return loopthreadid==CurrentThread::tid(); }
     

@@ -91,8 +91,12 @@ class RequestContent:public std::enable_shared_from_this<RequestContent>//stl te
 public:
     RequestContent() {}
     ~RequestContent() { close(fd); }
-    RequestContent(EventLoop * eventloop_,int fd_);//parameter from right to left ,and we declare member by 
-                                                             //this order  
+    RequestContent(EventLoop * eventloop_,int fd_);//parameter from right to left ,and we declare member by this order
+
+
+    std::shared_ptr<Event> GetEvent(){
+        return event;
+    }
     void LinkTimer(std::shared_ptr<TimeNode> tm){ timer=tm; }
     void Reset();
     void DetachTimer();
@@ -110,10 +114,10 @@ public:
     void Handle_Error(int fd,int http_code,const std::string & appendinfo);
     void Handle_Connection();
     void Handle_Close();
-    int Getfd() const;
+    int  Getfd() const;
     bool Readable() const;
     bool Writable() const;
-
+    
 
     int Parse_URI();
     int Parse_Header();

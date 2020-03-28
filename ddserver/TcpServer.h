@@ -4,12 +4,15 @@
 class TcpServer
 {
 public:
-    TcpServer() {}
+    TcpServer(EventLoop * masterloop_,int numthreads_,short port_);
     ~TcpServer() {}
-
+    EventLoop *getLoop() const { return masterloop; }
+    void Start();
+    void HandleNewConn();
+    void HandleCurrentConn() { masterloop->UpdateEpoll(acceptor); }
 private:
     EventLoop * masterloop;
-    int numthread;
+    int numthreads;
     bool started;
     short port;
     int listenfd;
