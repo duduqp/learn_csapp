@@ -35,7 +35,7 @@ void MIME::init(){
 
 
 void RequestContent::Handle_Read(){
-    int * eventtype=event->GetEvent();
+    int * eventtype=&event->GetEventType();
     do{
         int readnum=readn(fd,read_buffer);
         LOG << "Request:"<<read_buffer;
@@ -134,7 +134,7 @@ void RequestContent::Handle_Read(){
 void RequestContent::Handle_Write(){
     if(!error_status&&connection_state!=CONNECTION_OFF)
     {
-        int & events=event->GetEvent();
+        int & events=event->GetEventType();
         if(writen(fd,write_buffer)<0)
         {
             LOG << "fd :" <<fd <<"WRITE#";
@@ -289,10 +289,188 @@ int RequestContent::Parse_URI(){
 
 
 
+int RequestContent::Parse_Header(){
+    string & str=read_buffer;
+    int key_start = -1, key_end = -1, value_start = -1, value_end = -1;
+    int now_read_line_begin = 0;
+    bool notFinish = true;
+    size_t i = 0;
+    for (; i < str.size() && notFinish; ++i) {
+        switch (header_state) {
+        case H_START: {
+                          if (str[i] == '\n' || str[i] == '\r') break;
+                          header_state = H_KEY;
+                          key_start = i;
+                          now_read_line_begin = i;
+                          break;
 
+                      }
+        case H_KEY: {
+                        if (str[i] == ':') {
+                            key_end = i;
+                            if (key_end - key_start <= 0) return HEADER_STATUS_ERROR;
+                            header_state = H_COLON;
 
+                        } else if (str[i] == '\n' || str[i] == '\r')
+                            return HEADER_STATUS_ERROR;
+                        break;
 
+                    }
+        case H_COLON: {
+                          if (str[i] == ' ') {
+                              header_state = H_SPACE_AFTER_COLON;
 
+                          } else
+                              return HEADER_STATUS_ERROR;
+                          break;
+
+                      }
+        case H_SPACE_AFTER_COLON: {
+                                       header_state = H_VALUE;
+                                       value_start = i;
+                                       break;
+
+                                   }
+        case H_VALUE: {
+                          if (str[i] == '\r') {
+                              header_state = H_CR;
+                              value_end = i;
+                              if (value_end - value_start <= 0) return HEADER_STATUS_ERROR;
+
+                          } else if (i - value_start > 255)
+                              return HEADER_STATUS_ERROR;
+                          break;
+
+                      }
+        case H_CR: {
+                       if (str[i] == '\n') {
+                           header_state = H_LF;
+                           string key(str.begin() + key_start, str.begin() + key_end);
+                           string value(str.begin() + value_start, str.begin() + value_end);
+                           headers[key] = value;
+                           now_read_line_begin = i;
+
+                       } else
+                           return HEADER_STATUS_ERROR;
+                       break;
+
+                   }
+        case H_LF: {
+                       if (str[i] == '\r') {
+                           header_state = H_END_CR;
+
+                       } else {
+                           key_start = i;
+                           header_state = H_KEY;
+
+                       }
+                       break;
+
+                   }
+        case H_END_CR: {
+                           if (str[i] == '\n') {
+                               header_state = H_END_LF;
+
+                           } else
+                               return HEADER_STATUS_ERROR;
+                           break;
+
+                       }
+        case H_END_LF: {
+                           notFinish = false;
+                           key_start = i;
+                           now_read_line_begin = i;
+                           break;
+
+                       }
+
+        }
+
+    }
+    if (header_state == H_END_LF) {
+        str = str.substr(i);
+        return HEADER_STATUS_SUCCESS;
+
+    }
+    str = str.substr(now_read_line_begin);
+    return  HEADER_STATUS_AGAIN;
+}
+
+void RequestContent::Analysis_Req()
+{
+    if (http_method == HTTP_METHOD_POST) {
+        //TODO
+    } else if (http_method == HTTP_METHOD_GET || http_method == HTTP_METHOD_GET) {
+        string header;
+        header += "HTTP/1.1 200 OK\r\n";
+        if (headers.find("Connection") != headers.end() &&
+            (headers["Connection"] == "Keep-Alive" ||
+             headers["Connection"] == "keep-alive")) {
+            keep_alive = true;
+            header += string("Connection: Keep-Alive\r\n") + "Keep-Alive: timeout=" +
+                to_string(DEFAULT_KEEP_ALIVE_TIME) + "\r\n";
+        }
+        int dot_pos = file_name.find('.');
+        string filetype;
+        if (dot_pos < 0)
+            filetype = MIME::GetMIME("default");
+        else
+            filetype = MIME::GetMIME(file_name.substr(dot_pos));
+
+        // echo test
+        if (file_name == "hello") {
+            write_buffer =
+                "HTTP/1.1 200 OK\r\nContent-type: text/plain\r\n\r\nHello World";
+            return ANALYSIS_STATUS_SUCCESS;
+        }
+        if (file_name == "favicon.ico") {
+            header += "Content-Type: image/png\r\n";
+            header += "Content-Length: " + to_string(sizeof favicon) + "\r\n";
+            header += "Server: DD Server\r\n";
+
+            header += "\r\n";
+            write_buffer += header;
+            write_buffer += string(favicon, favicon + sizeof favicon);
+            ;
+            return ANALYSIS_STATUS_SUCCESS;
+        }
+
+        struct stat sbuf;
+        if (stat(file_name.c_str(), &sbuf) < 0) {
+            header.clear();
+            handleError(fd_, 404, "Not Found!");
+            return ANALYSIS_STATUS_ERROR;
+        }
+        header += "Content-Type: " + filetype + "\r\n";
+        header += "Content-Length: " + to_string(sbuf.st_size) + "\r\n";
+        header += "Server: DDServer\r\n";
+        // 头部结束
+        header += "\r\n";
+        write_buffer += header;
+
+        if (method_ == METHOD_HEAD) return ANALYSIS_STATUS_SUCCESS;
+
+        int src_fd = open(file_name.c_str(), O_RDONLY, 0);
+        if (src_fd < 0) {
+            write_buffer.clear();
+            handleError(fd_, 404, "Not Found!");
+            return ANALYSIS_STATUS_ERROR;
+        }
+        void *mmapRet = mmap(NULL, sbuf.st_size, PROT_READ, MAP_PRIVATE, src_fd, 0);
+        close(src_fd);
+        if (mmapRet == (void *)-1) {
+            munmap(mmapRet, sbuf.st_size);
+            write_buffer.clear();
+            handleError(fd, 404, "Not Found!");
+            return ANALYSIS_STATUS_ERROR;
+        }
+        char *src_addr = static_cast<char *>(mmapRet);
+        write_buffer += string(src_addr, src_addr + sbuf.st_size);
+        
+        munmap(mmapRet, sbuf.st_size);
+        return ANALYSIS_STATUS_SUCCESS;
+    }
+}
 
 
 

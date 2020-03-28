@@ -59,7 +59,7 @@ public:
         return ret;
     }
 
-    int GetEventType() const {return event_type;}
+    int GetEventType()  {return event_type;}
     int Getfd() const{ return fd;}
     int GetLastEvent() const{ return last_event_type; }
     std::shared_ptr<RequestContent> GetHolder() const{ return Holder.lock(); }
