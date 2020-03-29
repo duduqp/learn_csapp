@@ -6,10 +6,13 @@
 #include <fstream>
 #include <vector>
 #include <map>
-#define LOG std::cout
+#include "Singleton.h"
+class StdoutLoggerAppender;
 class LogAppender;
 class Logger;
+class LoggerManager;
 class LogFormatter;
+typedef Singleton<LoggerManager> LogMgr;
 class LogEvent{
 public:
     typedef std::shared_ptr<LogEvent> ptr;
@@ -92,9 +95,7 @@ public:
     typedef std::shared_ptr<Logger> ptr;
 
     void Log(LogLevel::Level level,LogEvent::ptr  event);
-    Logger( std::string name):m_name(name),m_level(LogLevel::DEBUG){
-        m_logformatter.reset(new LogFormatter("%f%s%l%s%t"));
-    }
+    Logger( std::string name);
     ~Logger() {}
 
     void Debug(LogEvent::ptr event);
@@ -124,6 +125,22 @@ private:
     LogFormatter::ptr m_logformatter;
 
 };
+
+
+class LoggerManager{
+    public:
+        LoggerManager();
+        Logger::ptr GetLogger(const std::string & loggername);
+        Logger::ptr GetDefaultLogger();
+    private:
+        std::map<std::string,Logger::ptr> m_loggers;
+        void Init();
+        Logger::ptr m_default_logger;
+};
+
+
+
+
 
 class StdoutLoggerAppender:public LogAppender{
 public:

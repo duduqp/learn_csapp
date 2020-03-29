@@ -3,7 +3,7 @@
 #include <functional>
 #include <map>
 #include <memory>
-
+#include <list>
 
 const char * LogLevel::ToString(LogLevel::Level level)
 {
@@ -20,6 +20,11 @@ const char * LogLevel::ToString(LogLevel::Level level)
 #undef  XX
     }
 }
+Logger::Logger( std::string name):m_name(name),m_level(LogLevel::DEBUG){
+        m_logformatter.reset(new LogFormatter("%f%s%l%s%t"));
+        //default m_appender has a stdout
+        m_appenders.push_back(std::make_shared<StdoutLoggerAppender>());
+    }
 
 
 void Logger::SetAppender(LogAppender::ptr appender)
@@ -79,6 +84,35 @@ void Logger::Fatal(LogEvent::ptr event)
 {
     Log(LogLevel::FATAL,event);
 }
+
+LoggerManager::LoggerManager()
+{
+    Init();
+    m_loggers["dudu"]=std::make_shared<Logger>();
+}
+
+Logger::ptr LoggerManager::GetDefaultLogger()
+{
+    return m_default_logger;
+}
+
+void LoggerManager::Init(){
+    m_default_logger=std::make_shared<Logger>();
+}
+
+Logger::ptr LoggerManager::GetLogger(const std::string & name)
+{
+    if(m_loggers.count(name)==0)
+    {
+        std::cout << "No Such Logger ,I will give you a default"<<std::endl;
+        return m_default_logger;
+    }
+    return m_loggers[name]; 
+}
+
+
+
+
 
 void FileLoggerAppender::Log(std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event)
 {
