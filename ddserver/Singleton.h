@@ -3,6 +3,7 @@
 //singleton wrapper
 template<class T,class X=void,int N=0>
 class Singleton{
+public:
     static T * GetInstanceRaw()
     {
         static T * v=new T;

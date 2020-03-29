@@ -6,13 +6,13 @@
 #include <fstream>
 #include <vector>
 #include <map>
-#include "Singleton.h"
+//#include "Singleton.h"
 class StdoutLoggerAppender;
 class LogAppender;
 class Logger;
 class LoggerManager;
 class LogFormatter;
-typedef Singleton<LoggerManager> LogMgr;
+//typedef Singleton<LoggerManager> LogMgr;
 class LogEvent{
 public:
     typedef std::shared_ptr<LogEvent> ptr;
@@ -127,18 +127,19 @@ private:
 };
 
 
-class LoggerManager{
+/*class LoggerManager{
     public:
         LoggerManager();
         Logger::ptr GetLogger(const std::string & loggername);
         Logger::ptr GetDefaultLogger();
+
     private:
         std::map<std::string,Logger::ptr> m_loggers;
         void Init();
         Logger::ptr m_default_logger;
 };
 
-
+*/
 
 
 
@@ -153,7 +154,7 @@ private:
 
 class FileLoggerAppender:public LogAppender{
 public:
-    typedef std::shared_ptr<StdoutLoggerAppender> ptr;
+    typedef std::shared_ptr<FileLoggerAppender> ptr;
     explicit FileLoggerAppender(const std::string & filename):m_filename(filename){}
     virtual void Log(std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event) override;
     

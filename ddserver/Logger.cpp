@@ -4,7 +4,9 @@
 #include <map>
 #include <memory>
 #include <list>
-
+#include <cstring>
+#include <time.h>
+#include <stdio.h>
 const char * LogLevel::ToString(LogLevel::Level level)
 {
     switch(level){
@@ -21,9 +23,13 @@ const char * LogLevel::ToString(LogLevel::Level level)
     }
 }
 Logger::Logger( std::string name):m_name(name),m_level(LogLevel::DEBUG){
-        m_logformatter.reset(new LogFormatter("%f%s%l%s%t"));
+        m_logformatter.reset(new LogFormatter("%f%s%l%s%t%s%m"));
         //default m_appender has a stdout
-        m_appenders.push_back(std::make_shared<StdoutLoggerAppender>());
+        auto ret=LogAppender::ptr(new StdoutLoggerAppender);
+        std::cout << "default stdout's formatter: "<<ret->GetFormatter()<<std::endl;
+        std::cout<<"i will set in manually"<<std::endl;
+        ret->SetFormatter(this->m_logformatter);
+        m_appenders.push_back(ret);
     }
 
 
@@ -51,11 +57,14 @@ void Logger::RemoveAppender(LogAppender::ptr appender)
 
 void Logger::Log(LogLevel::Level level,LogEvent::ptr event)
 {
+    std::cout << "Logger Log" <<m_appenders.size()<<std::endl;
     if(level>=m_level)
     {
         auto ret=shared_from_this();
         for(auto &i:m_appenders)
         {
+            std::cout << i <<std::endl;
+            std::cout << __FILE__ << __LINE__ << std::endl;
             i->Log(ret,level,event);
         }
     }
@@ -84,11 +93,10 @@ void Logger::Fatal(LogEvent::ptr event)
 {
     Log(LogLevel::FATAL,event);
 }
-
+/*
 LoggerManager::LoggerManager()
 {
     Init();
-    m_loggers["dudu"]=std::make_shared<Logger>();
 }
 
 Logger::ptr LoggerManager::GetDefaultLogger()
@@ -97,7 +105,7 @@ Logger::ptr LoggerManager::GetDefaultLogger()
 }
 
 void LoggerManager::Init(){
-    m_default_logger=std::make_shared<Logger>();
+    m_default_logger=std::make_shared<Logger>("dudu");
 }
 
 Logger::ptr LoggerManager::GetLogger(const std::string & name)
@@ -110,7 +118,7 @@ Logger::ptr LoggerManager::GetLogger(const std::string & name)
     return m_loggers[name]; 
 }
 
-
+*/
 
 
 
@@ -137,6 +145,7 @@ void StdoutLoggerAppender::Log(std::shared_ptr<Logger> logger,LogLevel::Level le
     if(m_level<=level)
     {
         std::cout << __FILE__ << __LINE__ << std::endl;
+        std::cout << m_formatter<<std::endl;
         std::cout << m_formatter->format(logger,level,event); 
     }
 }
@@ -144,7 +153,10 @@ void StdoutLoggerAppender::Log(std::shared_ptr<Logger> logger,LogLevel::Level le
 
 std::string LogFormatter::format(std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event)
 {
+    std::cout <<this<<std::endl;
+    std::cout << __FILE__ << __LINE__ << std::endl;
     std::stringstream ss;
+    std::cout <<m_items.empty()<<std::endl;
     for(auto &i:m_items)
     {
         std::cout << __FILE__ << __LINE__ << std::endl;
@@ -190,7 +202,7 @@ public:
     ContentFormatter(const std::string & c="default msg"):msg(c){  }
     virtual void format(std::ostream & os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event) override{
         std::cout << __FILE__ << __LINE__ << std::endl;
-        os<<msg;
+        os<<event->GetContent();
     }
     void SetContent(const std::string msg_)
     {
@@ -216,8 +228,12 @@ public:
     }
 
     virtual void format(std::ostream & os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event) override{
-         
-        os<<event->GetTime();
+         char buffer[64];
+         time_t rawtm=event->GetTime();
+        struct tm * tmdetails=localtime(&rawtm);
+        strftime(buffer,sizeof(buffer),this->time_format.c_str(),tmdetails);
+        std::string outputtm(buffer,strlen(buffer));
+        os<<outputtm;
     }
     void SetTimeFmt(const std::string & fmt)
     {
@@ -267,6 +283,7 @@ public:
 std::map<std::string,LogFormatter::ItemFormat::ptr> LogFormatter::formatter_mapping={
 #define XX(str,CLASS)  \
     {#str,std::shared_ptr<LogFormatter::ItemFormat>(new CLASS)}
+    
 
     XX(s,TabFormatter),
     XX(m,ContentFormatter),

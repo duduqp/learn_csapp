@@ -17,6 +17,14 @@ map
 -
 memory
 -
+list
+-
+cstring
+-
+time.h
+-
+stdio.h
+-
 
 /home/ddqp/csapp/ddserver/Logger.h
 string
