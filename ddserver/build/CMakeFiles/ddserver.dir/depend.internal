@@ -4,3 +4,4 @@
 CMakeFiles/ddserver.dir/Logger.cpp.o
  /home/ddqp/csapp/ddserver/Logger.cpp
  /home/ddqp/csapp/ddserver/Logger.h
+ /home/ddqp/csapp/ddserver/Singleton.h

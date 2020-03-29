@@ -3,4 +3,5 @@
 
 CMakeFiles/ddserver.dir/Logger.cpp.o: ../Logger.cpp
 CMakeFiles/ddserver.dir/Logger.cpp.o: ../Logger.h
+CMakeFiles/ddserver.dir/Logger.cpp.o: ../Singleton.h
 

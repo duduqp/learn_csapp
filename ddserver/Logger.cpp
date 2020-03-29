@@ -93,7 +93,7 @@ void Logger::Fatal(LogEvent::ptr event)
 {
     Log(LogLevel::FATAL,event);
 }
-/*
+
 LoggerManager::LoggerManager()
 {
     Init();
@@ -118,7 +118,7 @@ Logger::ptr LoggerManager::GetLogger(const std::string & name)
     return m_loggers[name]; 
 }
 
-*/
+
 
 
 
@@ -295,3 +295,4 @@ std::map<std::string,LogFormatter::ItemFormat::ptr> LogFormatter::formatter_mapp
 #undef XX
 };
 
+extern Logger::ptr dudulogger=LogMgr::GetInstanceSMT()->GetDefaultLogger();

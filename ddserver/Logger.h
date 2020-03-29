@@ -6,13 +6,13 @@
 #include <fstream>
 #include <vector>
 #include <map>
-//#include "Singleton.h"
+#include "Singleton.h"
 class StdoutLoggerAppender;
 class LogAppender;
 class Logger;
 class LoggerManager;
 class LogFormatter;
-//typedef Singleton<LoggerManager> LogMgr;
+typedef Singleton<LoggerManager> LogMgr;
 class LogEvent{
 public:
     typedef std::shared_ptr<LogEvent> ptr;
@@ -127,7 +127,7 @@ private:
 };
 
 
-/*class LoggerManager{
+class LoggerManager{
     public:
         LoggerManager();
         Logger::ptr GetLogger(const std::string & loggername);
@@ -139,7 +139,7 @@ private:
         Logger::ptr m_default_logger;
 };
 
-*/
+
 
 
 
@@ -167,6 +167,10 @@ private:
 };
 
 
+extern Logger::ptr dudulogger;
+#define LOG(X) dudulogger->Log(LogLevel::DEBUG,LogEvent::ptr(new LogEvent(__FILE__\
+                                                                          ,__LINE__\
+                                                                          ,0,1,time(0),X)))
 
 
 

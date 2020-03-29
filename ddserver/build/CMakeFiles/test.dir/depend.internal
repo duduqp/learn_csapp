@@ -3,4 +3,5 @@
 
 CMakeFiles/test.dir/tests/test.cpp.o
  /home/ddqp/csapp/ddserver/Logger.h
+ /home/ddqp/csapp/ddserver/Singleton.h
  /home/ddqp/csapp/ddserver/tests/test.cpp

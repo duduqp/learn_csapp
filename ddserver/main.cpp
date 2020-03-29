@@ -42,8 +42,8 @@ int main(int argc, char *argv[]) {
 #endif
   EventLoop mainLoop;
   TcpServer myHTTPServer(&mainLoop, threadNum, port);
-  myHTTPServer.start();
-  mainLoop.loop();
+  myHTTPServer.Start();
+  mainLoop.Loop();
   return 0;
 }
 
