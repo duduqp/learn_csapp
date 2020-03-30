@@ -48,6 +48,7 @@ CMakeFiles/ddserver.dir/EventLoop.cpp.o: ../SyncCondition.h
 CMakeFiles/ddserver.dir/EventLoop.cpp.o: ../Thread.h
 CMakeFiles/ddserver.dir/EventLoop.cpp.o: ../Timer.h
 CMakeFiles/ddserver.dir/EventLoop.cpp.o: ../Uncopyable.h
+CMakeFiles/ddserver.dir/EventLoop.cpp.o: ../util.h
 
 CMakeFiles/ddserver.dir/EventLoopThread.cpp.o: ../CountDownLatch.h
 CMakeFiles/ddserver.dir/EventLoopThread.cpp.o: ../CurrentThread.h

@@ -14,7 +14,7 @@ TcpServer::TcpServer(EventLoop * loop,int num,short port_):
     started(false),
     port(port_),
     eventloopthreadpool(new EventLoopThreadPool(masterloop,num)),
-    acceptor(new Event(loop)),
+    acceptor(new Event(masterloop)),
     listenfd(Socket_Bind_Listen(port))
 {
     
@@ -26,11 +26,13 @@ TcpServer::TcpServer(EventLoop * loop,int num,short port_):
 }
 
 void TcpServer::Start(){
+    std::cout <<"TcpServer will Start()"<<std::endl;
     eventloopthreadpool->Start();
+    std::cout << "TcpServer Start "<<listenfd << std::endl;
     acceptor->SetEventType(EPOLLIN | EPOLLET);
     acceptor->SetReadHandler(std::bind(&TcpServer::HandleNewConn, this));
     acceptor->SetConnectionHandler(std::bind(&TcpServer::HandleCurrentConn, this));
-    masterloop->AddToEpoll(acceptor, 0);
+    masterloop->AddToEpoll(acceptor, 0);// 0???
     started = true;
     std::cout << __FILE__ << __LINE__ <<std::endl;
 }

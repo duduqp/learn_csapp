@@ -22,13 +22,20 @@ struct ThreadData{
    pid_t * tid_;
    CountDownLatch * latch_;
 
-   ThreadData(const ThreadFunc & func,pid_t * tid,CountDownLatch* latch):
-    func_(func),tid_(tid),latch_(latch){}
+   ThreadData(const ThreadFunc  & func,pid_t * tid,CountDownLatch* latch):
+       func_(func),tid_(tid),latch_(latch){
+           std::cout<<__FUNCTION__<<std::endl;
+           std::cout <<&func_<<std::endl;
+       }
 
    void RunInLocal()
    {
+       std::cout<< "Thread Data RunInLocal"<<std::endl;
      *tid_=CurrentThread::tid();
+     std::cout << "Thread Data RunInLocal :tid"<<*tid_<<std::endl;
      tid_=nullptr;
+     latch_->DropOne();
+     latch_=nullptr;
      func_();
    }
 
@@ -37,6 +44,7 @@ struct ThreadData{
 
 void * startthread(void * data)
 {
+    std::cout << "startthread hook" << std::endl;
     ThreadData * threaddata=static_cast<ThreadData *>(data);
     threaddata->RunInLocal();
     delete threaddata;
@@ -46,7 +54,7 @@ void * startthread(void * data)
 Thread::Thread(const ThreadFunc & func_):ThreadId(0), tid(0),started(false)
                                         ,joined(false),func(func_), latch(1)
 {
-
+    std::cout <<  "thread ctor"<<std::endl;
 }
 
 
@@ -58,17 +66,23 @@ Thread::~Thread(){
 
 void Thread::Start(){
     assert(!started);
+   
     started=true;
+    std::cout << "Thread Start  tid:"<<tid<<std::endl;
     ThreadData * data=new ThreadData(func,&tid,&latch);
     if(pthread_create(&ThreadId,NULL,startthread,data))
     {
         //return errorno!=0
+        std::cout << "Thread Start create fail"<<std::endl;
         started=false;
         delete data;
         return ;
     }else{
+        std::cout << "Thread Start create ok"<<std::endl;
+        std::cout << ThreadId<<std::endl;
         latch.Wait();
-        std::cout << tid << std::endl;
+        std::cout << __FUNCTION__<<"tid:"<<tid << std::endl;
+        std::cout <<__FUNCTION__ << "thread func?"<<&func<<std::endl;
         assert(tid>0);
     }
 }

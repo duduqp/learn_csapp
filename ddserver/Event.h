@@ -12,10 +12,10 @@ class RequestContent;
 
 class Event
 {
-    typedef std::function<void()> CallBack;
 public:
-    Event(EventLoop * loop_,int fd_):Loop(loop_),fd(fd_),event_type(0),last_event_type(0){} 
-    Event(EventLoop * loop_):Loop(loop_),fd(0),event_type(0),last_event_type(0){}
+    typedef std::function<void()> CallBack;
+    Event(EventLoop * loop_,int fd_):Loop(loop_),fd(fd_),event_type(0),last_event_type(0){std::cout << __func__<<"fd:"<<fd_ <<std::endl;} 
+    Event(EventLoop * loop_):Loop(loop_),fd(0),event_type(0),last_event_type(0){std::cout << __func__ << std::endl;}
     ~Event(){}
     
     void Setfd(int fd_){ fd=fd_; }
@@ -27,6 +27,8 @@ public:
 
 
     void HandleEvent(){
+
+    std::cout << __func__<<std::endl;
         event_type=0;
         if((revent_type&EPOLLHUP)&&!(revent_type&EPOLLIN))
         {
@@ -49,9 +51,13 @@ public:
     }
 
 
-    void HandleRead(){ if(Read_Handler) Read_Handler(); }
+    void HandleRead(){
+        std::cout << __func__<<std::endl;
+        if(Read_Handler) Read_Handler(); }
     void HandleWrite(){ if(Write_Handler) Write_Handler(); }
-    void HandleConnection(){ if(Connection_Handler) Connection_Handler(); }
+    void HandleConnection(){
+        std::cout << __func__<<std::endl;
+        if(Connection_Handler) Connection_Handler(); }
   //  void HandleError(int fd,int err_no,const std::string & msg);
     bool UpdateLastEvent(){
         bool ret=(last_event_type==event_type);
@@ -59,16 +65,16 @@ public:
         return ret;
     }
 
-    int &GetEventType()  {return this->event_type;}
-    int Getfd() const{ return fd;}
-    int GetLastEvent() { return this->last_event_type; }
+    uint32_t &GetEventType()  {return this->event_type;}
+    uint32_t Getfd() const{ return fd;}
+    uint32_t GetLastEvent() { return this->last_event_type; }
     std::shared_ptr<RequestContent> GetHolder() const{ return Holder.lock(); }
 
-    void SetEventType(int event_type_)
+    void SetEventType(uint32_t event_type_)
     {
         event_type=event_type_;
     }
-    void SetREventType(int ret_event_type)
+    void SetREventType(uint32_t ret_event_type)
     {
         revent_type=ret_event_type;
     }
@@ -79,9 +85,9 @@ public:
 private:
     EventLoop * Loop;
     int fd;
-    int event_type;
-    int revent_type;
-    int last_event_type;
+    uint32_t event_type;
+    uint32_t revent_type;
+    uint32_t last_event_type;
 
     std::weak_ptr<RequestContent> Holder;
    /* int Parse_URI();

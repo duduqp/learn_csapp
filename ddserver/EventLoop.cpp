@@ -8,7 +8,7 @@
 #include "Epoll.h"
 #include "Logger.h"
 #include "MutexLock_Util.h"
-
+#include "util.h"
 
 __thread EventLoop * t_currentthreadloop=nullptr;
 int eventfdinit(){
@@ -25,34 +25,44 @@ EventLoop::EventLoop():looping(false),quit(false),
                         epoller(new Epoll()),wakeupfd(eventfdinit()),
                         wakeupevent(new Event(this,wakeupfd)),loopthreadid(CurrentThread::tid())
 {
-        assert(t_currentthreadloop==nullptr);
-        t_currentthreadloop=this;
-    
+        if(t_currentthreadloop==nullptr)
+        {
+            t_currentthreadloop=this;
+        }
+
+        std::cout <<"EventlOOP cTOR"<<std::endl;
         //init wakeupevent
         wakeupevent->SetEventType(EPOLLIN|EPOLLET);
         wakeupevent->SetReadHandler(std::bind(&EventLoop::handleread,this));
         wakeupevent->SetConnectionHandler(std::bind(&EventLoop::handleconnection,this));
 
         //add to epoller
+        std::cout << "eventloop wakeupfd :"<<wakeupfd<<std::endl; 
         epoller->Epoll_Add(wakeupevent,0);
+//        std::cout<< "epoller base?"<<epoller->GetEpollBase()<<std::endl;
 }
 EventLoop:: ~EventLoop() {
     //note : i ignore the rest funcs in pending
     close(wakeupfd);
     t_currentthreadloop=nullptr;
 }
-void EventLoop::EventLoop::EventLoop::Loop(){
+void EventLoop::Loop(){
+    std::cout << "Event LOOP START LOOP"<<std::endl;
     assert(!looping);
     assert(BeInLoopThread());
     looping=true;
     quit=false;
     std::vector<std::shared_ptr<Event>> ret;
+    std::cout << "EventLoop will start loop"<<std::endl;
+
     while(!quit)
     {
         ret.clear();
         ret=epoller->Poll();
+        std::cout << "eventloop loop returned from epoller poll"<<ret.size()<<std::endl;
         //begin processing events returned from io multplexing
         handling=true;
+        std::cout <<"epoller poll() return "<<ret.size()<<std::endl;
         for(auto & it:ret)
         {
             it->HandleEvent();
@@ -64,7 +74,7 @@ void EventLoop::EventLoop::EventLoop::Loop(){
     }
     looping=false;//but not quit yet
 }
-void EventLoop::EventLoop::Quit(){
+void EventLoop::Quit(){
     quit=true;
     //async quit;
     //we should wakeup to ensure primal thread can 
@@ -75,15 +85,18 @@ void EventLoop::EventLoop::Quit(){
         wakeup();
     }
 }
-void EventLoop::EventLoop::RunInLoop(Func func){
+void EventLoop::RunInLoop(Func &&func){
     if(BeInLoopThread())
     {
+        std::cout << "eventloop runinloop()"<<std::endl;
         func();
     }else{
-        QueueInLoop(func);//append to the async queue 
+        std::cout << "eventloop queueinloop()"<<std::endl;
+        QueueInLoop(std::move(func));//append to the async queue 
     }
 }
-void EventLoop::EventLoop::QueueInLoop(Func func){
+void EventLoop::QueueInLoop(Func &&func){
+    std::cout <<" eventloop queueinloop"<<std::endl;
     {
         MutexLockGuard mutexguard(mutex);
         pendingfunc.emplace_back(func);
@@ -95,27 +108,29 @@ void EventLoop::EventLoop::QueueInLoop(Func func){
         wakeup();
     }
 }
-void EventLoop::EventLoop::AssertInLoopThread(){
+void EventLoop::AssertInLoopThread(){
     assert(BeInLoopThread());
 }
-void EventLoop::EventLoop::ShutDownEvent(std::shared_ptr<Event> event){
+void EventLoop::ShutDownEvent(std::shared_ptr<Event> event){
 //todo in util.h
   //  ShutDownWR(event->Getfd());
 }
-void EventLoop::EventLoop::AddToEpoll(std::shared_ptr<Event> event,int timeout_msecs)
+void EventLoop::AddToEpoll(std::shared_ptr<Event> event,int timeout_msecs)
 {
+    std::cout << epoller->GetEpollBase()<<std::endl;
+    std::cout << "eventloop addtoepoll"<<std::endl;
     epoller->Epoll_Add(event,timeout_msecs);
 }
-void EventLoop::EventLoop::RemoveFromEpoll(std::shared_ptr<Event> event){
+void EventLoop::RemoveFromEpoll(std::shared_ptr<Event> event){
     epoller->Epoll_Delete(event);
 }
-void EventLoop::EventLoop::UpdateEpoll(std::shared_ptr<Event> event,int timeout_msecs)
+void EventLoop::UpdateEpoll(std::shared_ptr<Event> event,int timeout_msecs)
 {
     epoller->Epoll_Mod(event,timeout_msecs);
 }
 void EventLoop::wakeup(){
  uint64_t one=1;
- ssize_t ret=write(wakeupfd,&one,sizeof(one));
+ ssize_t ret=writen(wakeupfd,&one,sizeof(one));
  if(ret!=sizeof(one))
  {
      LOG<<"wakeup error";
@@ -135,7 +150,7 @@ void EventLoop::dopendingfunc(){
 }
 void EventLoop::handleread(){
     uint64_t one=1;
-    ssize_t ret=read(wakeupfd,&one,sizeof(one));
+    ssize_t ret=readn(wakeupfd,&one,sizeof(one));
     if(ret!=sizeof(one))
     {
         LOG<<"read wakeupevent error";

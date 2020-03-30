@@ -109,7 +109,9 @@ char favicon[555] = {
 
 
 void RequestContent::Handle_Read(){
-    int & eventtype=event->GetEventType();
+    std::cout << "RequestContent Handle_Read"<<std::endl;
+    uint32_t & eventtype=event->GetEventType();
+    std::cout << __func__<<std::endl;
     do{
         int readnum=readn(fd,read_buffer);
         LOG << "Request:"<<read_buffer;
@@ -208,7 +210,7 @@ void RequestContent::Handle_Read(){
 void RequestContent::Handle_Write(){
     if(!error_status&&connection_state!=CONNECTION_OFF)
     {
-        int & events=event->GetEventType();
+        uint32_t & events=event->GetEventType();
         if(writen(fd,write_buffer)<0)
         {
             LOG << "fd :" <<fd <<"WRITE#";
@@ -225,8 +227,9 @@ void RequestContent::Handle_Write(){
 }
 
 void RequestContent::Handle_Connection(){
+    std::cout << __func__<<std::endl;
     DetachTimer();//guard operation
-    int & events=event->GetEventType();
+    uint32_t & events=event->GetEventType();
     if(!error_status&&connection_state==CONNECTION_ON)
     {
         if(events!=0)
@@ -262,6 +265,7 @@ void RequestContent::Handle_Connection(){
 
 
 int RequestContent::Parse_URI(){
+    std::cout << __func__<<std::endl;
     string & str=read_buffer;
     string backup=str;
     //GET /index...HTTP1.0 \r\n
@@ -365,6 +369,7 @@ int RequestContent::Parse_URI(){
 
 int RequestContent::Parse_Header(){
     string & str=read_buffer;
+    std::cout << __func__<<std::endl;
     int key_start = -1, key_end = -1, value_start = -1, value_end = -1;
     int now_read_line_begin = 0;
     bool notFinish = true;
@@ -472,6 +477,7 @@ int RequestContent::Parse_Header(){
 
 int RequestContent::Analysis_Req()
 {
+    std::cout << __func__<<std::endl;
     if (http_method == HTTP_METHOD_POST) {
         //TODO
     } else if (http_method == HTTP_METHOD_GET || http_method == HTTP_METHOD_HEAD) {
@@ -548,6 +554,7 @@ int RequestContent::Analysis_Req()
 
 void RequestContent::Handle_Error(int fd,int http_code,const std::string & msg)
 {
+    std::cout << __func__<<std::endl;
     std::string msg_=msg+" ";
     char send_buffer[MAX_BUF];
     std::string body,header;
@@ -575,11 +582,13 @@ void RequestContent::Handle_Close()
 }
 
 void RequestContent::Init_Event(){
+    std::cout << __func__<<std::endl;
     event->SetEventType(DEFAULT_EVENT_TYPE);
     eventloop->AddToEpoll(event,DEFAULT_EXPIRED_TIME);
 } 
 
 void RequestContent::DetachTimer(){
+    std::cout << __func__<<std::endl;
   read_buffer.clear();
   file_name.clear();
   path.clear();
@@ -596,6 +605,7 @@ void RequestContent::DetachTimer(){
 }
 
 void RequestContent::Reset(){
+    std::cout << __func__<<std::endl;
     if (timer.lock()) {
         std::shared_ptr<TimeNode> my_timer(timer.lock());
         my_timer->ClearReq();
@@ -608,6 +618,7 @@ RequestContent::RequestContent(EventLoop * baseloop,int fd_):eventloop(baseloop)
     http_method(HTTP_METHOD_GET),http_version(HTTP_VERSION_11),cursor(0),analysis_state(PARSE_STATUS_URI),
     header_state(H_START),finished(false),keep_alive(false)
 {
+    std::cout << __func__<<std::endl;
 event->SetReadHandler(std::bind(&RequestContent::Handle_Read, this));
 event->SetWriteHandler(std::bind(&RequestContent::Handle_Write, this));
 event->SetConnectionHandler(std::bind(&RequestContent::Handle_Connection, this));

@@ -6,7 +6,7 @@
 
 EventLoopThread::EventLoopThread():exiting(false),loop(nullptr),
 thread_(std::bind(&EventLoopThread::threadfunc,this)),mutex(),cond(mutex){
-
+    std::cout<<"EventLoopCTOR"<<std::endl;
 }
 EventLoopThread::~EventLoopThread(){
     exiting=true;
@@ -17,6 +17,7 @@ EventLoopThread::~EventLoopThread(){
     }
 }
 EventLoop * EventLoopThread::StartLoop(){
+    std::cout << "EventLoopThread Start" <<std::endl;
     assert(!thread_.starting());
     thread_.Start();
     {
@@ -25,7 +26,6 @@ EventLoop * EventLoopThread::StartLoop(){
         {
             cond.Wait();
         }
-        loop->Loop();
     }
     return loop;
 }
@@ -33,6 +33,7 @@ EventLoop * EventLoopThread::StartLoop(){
 
 void EventLoopThread::threadfunc(){
     EventLoop loop_;//stack scope obj
+    std::cout << "EventLoopThread threadfunc"<<std::endl;
     {
         MutexLockGuard mutexguard(mutex);
         loop=&loop_;
@@ -40,7 +41,10 @@ void EventLoopThread::threadfunc(){
         cond.NotifyAll();
     }
     
-    MutexLockGuard mutexguard(mutex);
+    std::cout << "EventLoopThread threadfunc after notify"<<std::endl;
+    //MutexLockGuard mutexguard(mutex);
+    loop_.Loop();
+    std::cout << "EventLoopThread threadfunc after local loop over"<<std::endl;
     loop=NULL;
 
 }

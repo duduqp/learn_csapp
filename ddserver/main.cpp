@@ -8,7 +8,7 @@
 
 int main(int argc, char *argv[]) {
   int threadNum = 2;
-  int port = 6666;
+  int port = 9999;
   std::string logPath = "./WebServer.log";
 
   // parse args
@@ -43,6 +43,7 @@ int main(int argc, char *argv[]) {
   EventLoop mainLoop;
   TcpServer myHTTPServer(&mainLoop, threadNum, port);
   myHTTPServer.Start();
+  std::cout << "start return "<<std::endl;
   mainLoop.Loop();
   return 0;
 }
