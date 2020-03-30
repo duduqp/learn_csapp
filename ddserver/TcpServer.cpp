@@ -27,6 +27,7 @@ TcpServer::TcpServer(EventLoop * loop,int num,short port_):
 }
 
 void TcpServer::Start(){
+    eventloopthreadpool->Start();
     std::cout <<"TcpServer will Start()"<<std::endl;
     std::cout << "TcpServer Start "<<listenfd << std::endl;
     acceptor->SetEventType(EPOLLIN | EPOLLET);
@@ -34,7 +35,6 @@ void TcpServer::Start(){
     acceptor->SetConnectionHandler(std::bind(&TcpServer::HandleCurrentConn, this));
     masterloop->AddToEpoll(acceptor, 0);// 0???
     started = true;
-    eventloopthreadpool->Start();
     std::cout << __FILE__ << __LINE__ <<std::endl;
 }
 

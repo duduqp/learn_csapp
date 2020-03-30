@@ -36,9 +36,6 @@ void TimeNode::ClearReq(){
 }
 
 
-bool TimeNode::Valid() const{
-    return isvalid;
-}
 
 bool TimeNode::Valid(){
     struct timeval tv;
@@ -60,7 +57,9 @@ void TimeNode::SetDeleted(){
 
 void Timer::AddTimeNode(std::shared_ptr<RequestContent> req,int timeout_secs)
 {
-    event_timenodes.push(ptr_TimeNode(new TimeNode(req,timeout_secs)));
+    ptr_TimeNode new_node(new TimeNode(req,timeout_secs));
+    event_timenodes.push(new_node);
+    req->LinkTimer(new_node);
 }
 
 //call for lazy delete
@@ -70,8 +69,16 @@ void Timer::Handle_Expired(){
     {
         //must use another sharedptr to judge
         ptr_TimeNode tmp=event_timenodes.top();
-        if(!tmp->Deleted()&&tmp->Valid()) break;
-        event_timenodes.pop();
+        if(tmp->Deleted())
+        {
+            event_timenodes.pop();
+        }else if(!tmp->Valid())
+        {
+            event_timenodes.pop();
+        }else{
+            break;
+        }
+
     }
 }
 

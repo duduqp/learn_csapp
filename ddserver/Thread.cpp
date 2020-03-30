@@ -4,9 +4,9 @@
 #include <sys/prctl.h>
 #include "CurrentThread.h"
 #include <iostream>
+#include <linux/unistd.h>
 namespace CurrentThread{
  __thread int t_cached_tid=0;
-void Cachetid();
 }
 pid_t gettid() { return static_cast<pid_t>(::syscall(SYS_gettid)); }
 void CurrentThread::Cachetid()

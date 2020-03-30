@@ -3,7 +3,8 @@
 #include <string>
 const int MAX_BUF = 4096;
 ssize_t readn(int fd,void * buf,size_t n); 
-ssize_t readn(int fd,std::string & inbuffer); 
+ssize_t readn(int fd,std::string & inbuffer);
+ssize_t readn(int fd,std::string & inbuffer,bool & zero);
 ssize_t writen(int fd,void * buf,size_t n); 
 ssize_t writen(int fd,std::string & outbuffer); 
 ssize_t readline(int fd,void * buf,size_t maxline);

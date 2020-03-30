@@ -5,7 +5,7 @@
 #include <time.h>
 #include <memory>
 #include <unistd.h>
-
+#include "Timer.h"
 //const is better than enum for debugging
 //state of parsing procedure
 const int PARSE_STATUS_URI= 1 ;

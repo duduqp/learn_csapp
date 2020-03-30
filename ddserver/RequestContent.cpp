@@ -13,7 +13,7 @@ using namespace std;
 pthread_once_t MIME::once_ctl=PTHREAD_ONCE_INIT;
 map<string,string>MIME::mime;
 
-const int DEFAULT_EVENT_TYPE=EPOLLIN|EPOLLET;
+const uint32_t DEFAULT_EVENT_TYPE=EPOLLIN|EPOLLET|EPOLLONESHOT;
 const int DEFAULT_EXPIRED_TIME=2000;//ms
 const int DEFAULT_KEEP_ALIVE_TIME=5*60*1000;//5min
 
@@ -113,7 +113,8 @@ void RequestContent::Handle_Read(){
     uint32_t & eventtype=event->GetEventType();
     std::cout << __func__<<std::endl;
     do{
-        int readnum=readn(fd,read_buffer);
+        bool zero=false;
+        int readnum=readn(fd,read_buffer,zero);
         LOG << "Request:"<<readnum;
         if(connection_state==CONNECTION_CLOSING)
         {
@@ -121,10 +122,11 @@ void RequestContent::Handle_Read(){
             break;
         }
 
-        if(readnum==PEERCLOSED)
+        if(zero)
         {
             //peer closed
             connection_state=CONNECTION_CLOSING;
+            if(readnum==0) break;
         }else if(readnum<0)
         {
             LOG << "Bad Request" ;
@@ -159,7 +161,9 @@ void RequestContent::Handle_Read(){
             }else if(ret==HEADER_STATUS_ERROR)
             {
                 LOG << "fd: "<<fd <<"HEADER#";
+                
                 error_status=true;
+                Handle_Error(fd,400,"bad request");
                 break;
             }
             //!post todo
@@ -279,7 +283,7 @@ int RequestContent::Parse_URI(){
     string requestline=str.substr(0,pos);//exclude "\r\n"
     if(str.size()>pos+1)
     {
-        str=str.substr(pos+2);//have more than this line
+        str=str.substr(pos+1);//have more than this line
     }else{
         str.clear();
     }
@@ -528,7 +532,7 @@ int RequestContent::Analysis_Req()
         header += "\r\n";
         write_buffer += header;
 
-        if (http_method == HTTP_METHOD_GET||http_method==HTTP_METHOD_HEAD) return ANALYSIS_STATUS_SUCCESS;
+        if (http_method==HTTP_METHOD_HEAD) return ANALYSIS_STATUS_SUCCESS;
 
         int src_fd = open(file_name.c_str(), O_RDONLY, 0);
         if (src_fd < 0) {
@@ -550,6 +554,7 @@ int RequestContent::Analysis_Req()
         munmap(mmapRet, sbuf.st_size);
         return ANALYSIS_STATUS_SUCCESS;
     }
+    return ANALYSIS_STATUS_ERROR;
 }
 
 void RequestContent::Handle_Error(int fd,int http_code,const std::string & msg)
@@ -567,9 +572,9 @@ void RequestContent::Handle_Error(int fd,int http_code,const std::string & msg)
     header+="Content-Length: "+std::to_string(body.size())+"\r\n";
     header+="DDSERVER\r\n\r\n";
 
-    sprintf(send_buffer,"%s",body.c_str());
-    writen(fd,send_buffer,sizeof(send_buffer));
     sprintf(send_buffer,"%s",header.c_str());
+    writen(fd,send_buffer,sizeof(send_buffer));
+    sprintf(send_buffer,"%s",body.c_str());
     writen(fd,send_buffer,sizeof(send_buffer));
 
 }
@@ -588,15 +593,6 @@ void RequestContent::Init_Event(){
 } 
 
 void RequestContent::DetachTimer(){
-    std::cout << __func__<<std::endl;
-  read_buffer.clear();
-  file_name.clear();
-  path.clear();
-  cursor = 0;
-  analysis_state = PARSE_STATUS_URI;
-  header_state = H_START;
-  headers.clear();
-  keep_alive = false;
   if (timer.lock()) {
     shared_ptr<TimeNode> my_timer(timer.lock());
     my_timer->ClearReq();
@@ -606,6 +602,12 @@ void RequestContent::DetachTimer(){
 
 void RequestContent::Reset(){
     std::cout << __func__<<std::endl;
+    file_name.clear();
+    path.clear();
+    cursor = 0;
+    analysis_state= PARSE_STATUS_URI;
+    header_state = H_START;
+    headers.clear();
     if (timer.lock()) {
         std::shared_ptr<TimeNode> my_timer(timer.lock());
         my_timer->ClearReq();

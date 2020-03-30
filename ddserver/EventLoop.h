@@ -4,7 +4,8 @@
 #include "Epoll.h"
 #include "Thread.h"
 #include "CurrentThread.h"
-class EventLoop
+#include "Uncopyable.h"
+class EventLoop:Uncopyable
 {
 public:
     typedef std::function<void()> Func;

@@ -142,7 +142,7 @@ void Epoll::Add_Timer(ptr_Event req,int timeout_msecs)
     std::cout << "epoll addtimer"<<std::endl;
     std::shared_ptr<RequestContent> content=req->GetHolder();
     if(!content) LOG<<"Add_Timer Error#";
-    timer.AddTimeNode(content,timeout_msecs);
+    else timer.AddTimeNode(content,timeout_msecs);
 }
 
 

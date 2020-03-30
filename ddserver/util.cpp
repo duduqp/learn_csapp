@@ -216,7 +216,34 @@ void ShutDownR(int fd)
 {
     shutdown(fd,SHUT_RD);
 }
-
+ssize_t readn(int fd, std::string &inBuffer, bool &zero) {
+  ssize_t nread = 0;
+  ssize_t readSum = 0;
+  while (true) {
+    char buff[MAX_BUF];
+    if ((nread = read(fd, buff, MAX_BUF)) < 0) {
+      if (errno == EINTR)
+        continue;
+      else if (errno == EAGAIN) {
+        return readSum;
+      } else {
+        perror("read error");
+        return -1;
+      }
+    } else if (nread == 0) {
+      // printf("redsum = %d\n", readSum);
+      zero = true;
+      break;
+    }
+    // printf("before inBuffer.size() = %d\n", inBuffer.size());
+    // printf("nread = %d\n", nread);
+    readSum += nread;
+    // buff += nread;
+    inBuffer += std::string(buff, buff + nread);
+    // printf("after inBuffer.size() = %d\n", inBuffer.size());
+  }
+  return readSum;
+}
 int Socket_Bind_Listen(short port)
 {
   // 检查port值，取正确区间范围

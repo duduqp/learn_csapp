@@ -19,14 +19,11 @@ public:
     void ClearReq();//for reuse
     void SetDeleted();
 
-    bool Valid() const;
-    bool Valid() ;
     bool Deleted() const{ return isdeleted; }
-
+    bool Valid();
     size_t GetExpired() const { return expiredtime; }
 
 private:
-    bool isvalid;
     bool isdeleted;
 
     size_t expiredtime;
@@ -39,8 +36,8 @@ private:
 
 class Timer
 {
-    typedef std::shared_ptr<TimeNode> ptr_TimeNode;
 public:
+    typedef std::shared_ptr<TimeNode> ptr_TimeNode;
     Timer() {}
     ~Timer() {}
     void AddTimeNode(std::shared_ptr<RequestContent> req_content,int timeout_secs);

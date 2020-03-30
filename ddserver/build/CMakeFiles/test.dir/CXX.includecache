@@ -63,6 +63,8 @@ Thread.h
 /home/ddqp/csapp/ddserver/Thread.h
 CurrentThread.h
 /home/ddqp/csapp/ddserver/CurrentThread.h
+Uncopyable.h
+/home/ddqp/csapp/ddserver/Uncopyable.h
 
 /home/ddqp/csapp/ddserver/EventLoopThread.h
 Thread.h
@@ -125,6 +127,8 @@ memory
 -
 unistd.h
 -
+Timer.h
+/home/ddqp/csapp/ddserver/Timer.h
 
 /home/ddqp/csapp/ddserver/Singleton.h
 memory
