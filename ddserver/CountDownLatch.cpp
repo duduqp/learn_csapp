@@ -5,7 +5,10 @@
 
 void CountDownLatch::Wait(){
     mutex.Lock();
-    while(count>0&&cond.Wait());
+    while(count>0)
+    {
+        cond.Wait();
+    }
 }
 
 void CountDownLatch::DropOne(){

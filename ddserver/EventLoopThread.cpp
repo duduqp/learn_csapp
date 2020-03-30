@@ -10,7 +10,7 @@ thread_(std::bind(&EventLoopThread::threadfunc,this)),mutex(),cond(mutex){
 }
 EventLoopThread::~EventLoopThread(){
     exiting=true;
-    if(!loop)
+    if(loop)
     {
         loop->Quit();
         thread_.Join();//otherwise it will detach in its dtor
