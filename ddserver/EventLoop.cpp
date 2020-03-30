@@ -30,14 +30,12 @@ EventLoop::EventLoop():looping(false),quit(false),
             t_currentthreadloop=this;
         }
 
-        std::cout <<"EventlOOP cTOR"<<std::endl;
         //init wakeupevent
         wakeupevent->SetEventType(EPOLLIN|EPOLLET);
         wakeupevent->SetReadHandler(std::bind(&EventLoop::handleread,this));
         wakeupevent->SetConnectionHandler(std::bind(&EventLoop::handleconnection,this));
 
         //add to epoller
-        std::cout << "eventloop wakeupfd :"<<wakeupfd<<std::endl; 
         epoller->Epoll_Add(wakeupevent,0);
 //        std::cout<< "epoller base?"<<epoller->GetEpollBase()<<std::endl;
 }
@@ -53,8 +51,6 @@ void EventLoop::Loop(){
     looping=true;
     quit=false;
     std::vector<std::shared_ptr<Event>> ret;
-    std::cout << "EventLoop will start loop"<<std::endl;
-
     while(!quit)
     {
         ret.clear();
@@ -65,6 +61,7 @@ void EventLoop::Loop(){
         std::cout <<"epoller poll() return "<<ret.size()<<std::endl;
         for(auto & it:ret)
         {
+            std::cout << "because :"<<it->Getfd()<<"has"<<"event_type:"<<it->GetEventType()<<std::endl;
             it->HandleEvent();
         }
         handling=false;
@@ -72,6 +69,7 @@ void EventLoop::Loop(){
         dopendingfunc();//some racing may happen
         epoller->HandleExpired();
     }
+    std::cout << "eventloop quit"<<std::endl;
     looping=false;//but not quit yet
 }
 void EventLoop::Quit(){
@@ -88,15 +86,12 @@ void EventLoop::Quit(){
 void EventLoop::RunInLoop(Func &&func){
     if(BeInLoopThread())
     {
-        std::cout << "eventloop runinloop()"<<std::endl;
         func();
     }else{
-        std::cout << "eventloop queueinloop()"<<std::endl;
         QueueInLoop(std::move(func));//append to the async queue 
     }
 }
 void EventLoop::QueueInLoop(Func &&func){
-    std::cout <<" eventloop queueinloop"<<std::endl;
     {
         MutexLockGuard mutexguard(mutex);
         pendingfunc.emplace_back(func);
@@ -117,8 +112,6 @@ void EventLoop::ShutDownEvent(std::shared_ptr<Event> event){
 }
 void EventLoop::AddToEpoll(std::shared_ptr<Event> event,int timeout_msecs)
 {
-    std::cout << epoller->GetEpollBase()<<std::endl;
-    std::cout << "eventloop addtoepoll"<<std::endl;
     epoller->Epoll_Add(event,timeout_msecs);
 }
 void EventLoop::RemoveFromEpoll(std::shared_ptr<Event> event){

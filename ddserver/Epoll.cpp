@@ -35,14 +35,17 @@ void Epoll::Epoll_Add(ptr_Event req,int timeout_msecs)
         Add_Timer(req,timeout_msecs);
         fd2RequestContent[fd]=req->GetHolder();
     }
-    struct epoll_event event;
-    event.data.fd=fd;
-    event.events=req->GetEventType();
+    struct epoll_event event_;
+    event_.data.fd=fd;
+    event_.events=req->GetEventType();
     
     req->UpdateLastEvent();
 
     fd2Event[fd]=req;
-    if(epoll_ctl(epoll_base,EPOLL_CTL_ADD,fd,&event)<0)
+    std::cout <<"current event"<<req<<std::endl;
+    std::cout << "event type :"<<event_.events<<std::endl;
+    std::cout << "while EPOLLIN|EPOLLET:"<<(EPOLLIN|EPOLLET)<<std::endl;
+    if(epoll_ctl(epoll_base,EPOLL_CTL_ADD,fd,&event_)<0)
     {
         LOG << "Epoll_Add Error#";
         fd2Event[fd].reset();
@@ -85,17 +88,26 @@ void Epoll::Epoll_Delete(ptr_Event req)
 
 std::vector<ptr_Event> Epoll::Poll()
 {
-    std::cout << __func__<<std::endl;
+    for(int i=0;i<40;++i)
+    {   
+        if(!fd2Event[i])
+        {
+            continue;
+        }
+        auto &item=fd2Event[i];
+        std::cout << "item  " << item << std::endl;
+        std::cout << "fd: "<<item->Getfd() <<item->GetEventType()<<std::endl;
+    }
     while(true){
         std::cout <<"events size:"<< events.size() <<std::endl;
         int event_count=epoll_wait(epoll_base,&*events.begin(),events.size(),EPOLLWAIT_TIME);
         if(event_count<0) LOG<<"Epoll_Wait Error#";
         std::cout << "eventreturned count:"<<event_count<<std::endl;
         std::vector<ptr_Event> req_data=GetEventRequest(event_count);
+        HandleExpired();
         std::cout << "req_data size"<<req_data.size()<<std::endl;
         if(req_data.size()>0) return req_data;
     }
-
 }
 
 

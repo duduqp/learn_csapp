@@ -14,16 +14,16 @@ class Event
 {
 public:
     typedef std::function<void()> CallBack;
-    Event(EventLoop * loop_,int fd_):Loop(loop_),fd(fd_),event_type(0),last_event_type(0){std::cout << __func__<<"fd:"<<fd_ <<std::endl;} 
-    Event(EventLoop * loop_):Loop(loop_),fd(0),event_type(0),last_event_type(0){std::cout << __func__ << std::endl;}
+    Event(EventLoop * loop_,int fd_):Loop(loop_),fd(fd_),event_type(0),last_event_type(0){} 
+    Event(EventLoop * loop_):Loop(loop_),fd(0),event_type(0),last_event_type(0){}
     ~Event(){}
     
     void Setfd(int fd_){ fd=fd_; }
     void SetHolder(std::shared_ptr<RequestContent> holder_){ Holder=holder_; }
-    void SetReadHandler(CallBack  cb){ Read_Handler=cb; }
-    void SetWriteHandler(CallBack  cb){ Write_Handler=cb; }
-    void SetErrorHandler(CallBack  cb){ Error_Handler=cb; }
-    void SetConnectionHandler(CallBack  cb){ Connection_Handler=cb; }
+    void SetReadHandler(CallBack && cb){ Read_Handler=cb; }
+    void SetWriteHandler(CallBack && cb){ Write_Handler=cb; }
+    void SetErrorHandler(CallBack &&  cb){ Error_Handler=cb; }
+    void SetConnectionHandler(CallBack && cb){ Connection_Handler=cb; }
 
 
     void HandleEvent(){
@@ -41,18 +41,24 @@ public:
         }
         if(revent_type&(EPOLLIN|EPOLLPRI|EPOLLRDHUP))
         {
+            std::cout << "HandleEVENT find call handle read"<<std::endl;
             HandleRead();
         }
         if(revent_type&EPOLLOUT)
         {
             HandleWrite();
         }
+        std::cout << "HandleEVENT find call handleconnection"<<std::endl;
         HandleConnection();
     }
 
 
     void HandleRead(){
         std::cout << __func__<<std::endl;
+        if(Read_Handler==nullptr)
+        {
+            std::cout << "Read Handler empty!"<<std::endl;
+        }
         if(Read_Handler) Read_Handler(); }
     void HandleWrite(){ if(Write_Handler) Write_Handler(); }
     void HandleConnection(){

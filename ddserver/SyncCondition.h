@@ -3,10 +3,10 @@
 #include "MutexLock_Util.h"
 #include "Uncopyable.h"
 
-class SyncCondition:public Uncopyable
+class SyncCondition: Uncopyable
 {
 public:
-    SyncCondition(MutexLock & m) :mutex_hold(m){  }
+    SyncCondition(MutexLock & m) :mutex_hold(m){ pthread_cond_init(&cond,NULL); }
     ~SyncCondition() {
         pthread_cond_destroy(&cond);
     }
@@ -43,7 +43,7 @@ private:
 //  SyncCondition(const SyncCondition &)=delete ;
 
     //posix condition
-    pthread_cond_t cond;
     MutexLock & mutex_hold;
+    pthread_cond_t cond;
 };
 

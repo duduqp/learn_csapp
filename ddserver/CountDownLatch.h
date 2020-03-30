@@ -5,10 +5,10 @@
 #include <pthread.h>
 
 
-class CountDownLatch:public Uncopyable
+class CountDownLatch: Uncopyable
 {
 public:
-     CountDownLatch(int count_):mutex(),cond(mutex),count(count_) {}
+    explicit CountDownLatch(int count_):mutex(),cond(mutex),count(count_) {}
     ~CountDownLatch() {}
     void Wait();
     void DropOne();

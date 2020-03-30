@@ -59,6 +59,7 @@ Thread::Thread(const ThreadFunc & func_):ThreadId(0), tid(0),started(false)
 
 
 Thread::~Thread(){
+    std::cout << "Thread dtor"<<tid<<std::endl;
     if(started&&!joined){
         pthread_detach(ThreadId);
     }

@@ -114,7 +114,7 @@ void RequestContent::Handle_Read(){
     std::cout << __func__<<std::endl;
     do{
         int readnum=readn(fd,read_buffer);
-        LOG << "Request:"<<read_buffer;
+        LOG << "Request:"<<readnum;
         if(connection_state==CONNECTION_CLOSING)
         {
             read_buffer.clear();

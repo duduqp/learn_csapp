@@ -37,7 +37,7 @@ private:
 };
 
 
-class MutexLockGuard{
+class MutexLockGuard:Uncopyable{
 //non-ctor and hold ref ,so must be construct with MutexLockGuard(MutexLock obj)
 public:
     explicit MutexLockGuard(MutexLock & mutex):mutexhold(mutex)

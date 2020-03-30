@@ -289,6 +289,10 @@ stdio.h
 -
 cstring
 -
+CurrentThread.h
+/home/ddqp/csapp/ddserver/CurrentThread.h
+Logger.h
+/home/ddqp/csapp/ddserver/Logger.h
 
 /home/ddqp/csapp/ddserver/TcpServer.h
 EventLoopThreadPool.h

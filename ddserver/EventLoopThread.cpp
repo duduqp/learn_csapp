@@ -6,7 +6,6 @@
 
 EventLoopThread::EventLoopThread():exiting(false),loop(nullptr),
 thread_(std::bind(&EventLoopThread::threadfunc,this)),mutex(),cond(mutex){
-    std::cout<<"EventLoopCTOR"<<std::endl;
 }
 EventLoopThread::~EventLoopThread(){
     exiting=true;
@@ -41,10 +40,8 @@ void EventLoopThread::threadfunc(){
         cond.NotifyAll();
     }
     
-    std::cout << "EventLoopThread threadfunc after notify"<<std::endl;
     //MutexLockGuard mutexguard(mutex);
     loop_.Loop();
-    std::cout << "EventLoopThread threadfunc after local loop over"<<std::endl;
     loop=NULL;
 
 }

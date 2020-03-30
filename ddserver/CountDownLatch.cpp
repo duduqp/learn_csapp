@@ -4,7 +4,7 @@
 #include "SyncCondition.h"
 
 void CountDownLatch::Wait(){
-    mutex.Lock();
+    MutexLockGuard guard(mutex);
     while(count>0)
     {
         cond.Wait();
@@ -12,7 +12,7 @@ void CountDownLatch::Wait(){
 }
 
 void CountDownLatch::DropOne(){
-    mutex.Lock();
+    MutexLockGuard guard(mutex);
     count--;
     if(count==0)
     {

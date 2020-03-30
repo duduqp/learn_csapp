@@ -9,7 +9,9 @@ public:
     EventLoop *getLoop() const { return masterloop; }
     void Start();
     void HandleNewConn();
-    void HandleCurrentConn() { masterloop->UpdateEpoll(acceptor); }
+    void HandleCurrentConn() {
+    std::cout << "TcpSERVER handle new conn"<<std::endl;
+    masterloop->UpdateEpoll(acceptor); }
 private:
     EventLoop * masterloop;
     int numthreads;
