@@ -1,6 +1,6 @@
 #include <iostream>
 #include "../Logger.h"
-//#include "../Singleton.h"
+#include "../Singleton.h"
 #include <time.h>
 using namespace std;
 int main()
@@ -14,7 +14,7 @@ int main()
    // LogEvent::ptr eventptr(new LogEvent(__FILE__,__LINE__,0,1,time(0),"DUDU HELLO"));
    // dudulogger->Log(LogLevel::DEBUG,eventptr);
     
-    LOG("HELLO");
+    LOG<<"HELLO";
     std::cout << std::endl;
     return 0;
 }

@@ -122,7 +122,16 @@ void EventLoop::wakeup(){
  }
 }
 void EventLoop::dopendingfunc(){
+    std::vector<Func> funcs;
+    handling_pendingfunc=true;
+    {
+        MutexLockGuard guard(mutex);
+        funcs.swap(pendingfunc);
+    }
 
+    for(auto & f:funcs) f();
+
+    handling_pendingfunc=false;
 }
 void EventLoop::handleread(){
     uint64_t one=1;

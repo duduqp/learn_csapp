@@ -34,6 +34,13 @@ void MIME::init(){
     mime["default"]="text/html";
 }
 
+std::string MIME::GetMIME(const std::string &suffix) {
+  pthread_once(&once_ctl, &MIME::init);
+  if (mime.find(suffix) == mime.end())
+    return mime["default"];
+  else
+    return mime[suffix];
+}
 
 char favicon[555] = {
     '\x89', 'P',    'N',    'G',    '\xD',  '\xA',  '\x1A', '\xA',  '\x0',
@@ -572,10 +579,39 @@ void RequestContent::Init_Event(){
     eventloop->AddToEpoll(event,DEFAULT_EXPIRED_TIME);
 } 
 
+void RequestContent::DetachTimer(){
+  read_buffer.clear();
+  file_name.clear();
+  path.clear();
+  cursor = 0;
+  analysis_state = PARSE_STATUS_URI;
+  header_state = H_START;
+  headers.clear();
+  keep_alive = false;
+  if (timer.lock()) {
+    shared_ptr<TimeNode> my_timer(timer.lock());
+    my_timer->ClearReq();
+    timer.reset();
+  }
+}
 
+void RequestContent::Reset(){
+    if (timer.lock()) {
+        std::shared_ptr<TimeNode> my_timer(timer.lock());
+        my_timer->ClearReq();
+        timer.reset();
+    }
+}
 
-
-
+RequestContent::RequestContent(EventLoop * baseloop,int fd_):eventloop(baseloop),
+    fd(fd_),event(new Event(baseloop,fd_)),error_status(false),connection_state(CONNECTION_ON),
+    http_method(HTTP_METHOD_GET),http_version(HTTP_VERSION_11),cursor(0),analysis_state(PARSE_STATUS_URI),
+    header_state(H_START),finished(false),keep_alive(false)
+{
+event->SetReadHandler(std::bind(&RequestContent::Handle_Read, this));
+event->SetWriteHandler(std::bind(&RequestContent::Handle_Write, this));
+event->SetConnectionHandler(std::bind(&RequestContent::Handle_Connection, this));
+}
 
 
 

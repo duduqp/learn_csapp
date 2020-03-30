@@ -23,9 +23,6 @@ SUFFIXES =
 .SUFFIXES: .hpux_make_needs_suffix_list
 
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -139,6 +136,168 @@ test/fast:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+CountDownLatch.o: CountDownLatch.cpp.o
+
+.PHONY : CountDownLatch.o
+
+# target to build an object file
+CountDownLatch.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/CountDownLatch.cpp.o
+.PHONY : CountDownLatch.cpp.o
+
+CountDownLatch.i: CountDownLatch.cpp.i
+
+.PHONY : CountDownLatch.i
+
+# target to preprocess a source file
+CountDownLatch.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/CountDownLatch.cpp.i
+.PHONY : CountDownLatch.cpp.i
+
+CountDownLatch.s: CountDownLatch.cpp.s
+
+.PHONY : CountDownLatch.s
+
+# target to generate assembly for a file
+CountDownLatch.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/CountDownLatch.cpp.s
+.PHONY : CountDownLatch.cpp.s
+
+Epoll.o: Epoll.cpp.o
+
+.PHONY : Epoll.o
+
+# target to build an object file
+Epoll.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Epoll.cpp.o
+.PHONY : Epoll.cpp.o
+
+Epoll.i: Epoll.cpp.i
+
+.PHONY : Epoll.i
+
+# target to preprocess a source file
+Epoll.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Epoll.cpp.i
+.PHONY : Epoll.cpp.i
+
+Epoll.s: Epoll.cpp.s
+
+.PHONY : Epoll.s
+
+# target to generate assembly for a file
+Epoll.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Epoll.cpp.s
+.PHONY : Epoll.cpp.s
+
+Event.o: Event.cpp.o
+
+.PHONY : Event.o
+
+# target to build an object file
+Event.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Event.cpp.o
+.PHONY : Event.cpp.o
+
+Event.i: Event.cpp.i
+
+.PHONY : Event.i
+
+# target to preprocess a source file
+Event.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Event.cpp.i
+.PHONY : Event.cpp.i
+
+Event.s: Event.cpp.s
+
+.PHONY : Event.s
+
+# target to generate assembly for a file
+Event.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Event.cpp.s
+.PHONY : Event.cpp.s
+
+EventLoop.o: EventLoop.cpp.o
+
+.PHONY : EventLoop.o
+
+# target to build an object file
+EventLoop.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/EventLoop.cpp.o
+.PHONY : EventLoop.cpp.o
+
+EventLoop.i: EventLoop.cpp.i
+
+.PHONY : EventLoop.i
+
+# target to preprocess a source file
+EventLoop.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/EventLoop.cpp.i
+.PHONY : EventLoop.cpp.i
+
+EventLoop.s: EventLoop.cpp.s
+
+.PHONY : EventLoop.s
+
+# target to generate assembly for a file
+EventLoop.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/EventLoop.cpp.s
+.PHONY : EventLoop.cpp.s
+
+EventLoopThread.o: EventLoopThread.cpp.o
+
+.PHONY : EventLoopThread.o
+
+# target to build an object file
+EventLoopThread.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/EventLoopThread.cpp.o
+.PHONY : EventLoopThread.cpp.o
+
+EventLoopThread.i: EventLoopThread.cpp.i
+
+.PHONY : EventLoopThread.i
+
+# target to preprocess a source file
+EventLoopThread.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/EventLoopThread.cpp.i
+.PHONY : EventLoopThread.cpp.i
+
+EventLoopThread.s: EventLoopThread.cpp.s
+
+.PHONY : EventLoopThread.s
+
+# target to generate assembly for a file
+EventLoopThread.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/EventLoopThread.cpp.s
+.PHONY : EventLoopThread.cpp.s
+
+EventLoopThreadPool.o: EventLoopThreadPool.cpp.o
+
+.PHONY : EventLoopThreadPool.o
+
+# target to build an object file
+EventLoopThreadPool.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/EventLoopThreadPool.cpp.o
+.PHONY : EventLoopThreadPool.cpp.o
+
+EventLoopThreadPool.i: EventLoopThreadPool.cpp.i
+
+.PHONY : EventLoopThreadPool.i
+
+# target to preprocess a source file
+EventLoopThreadPool.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/EventLoopThreadPool.cpp.i
+.PHONY : EventLoopThreadPool.cpp.i
+
+EventLoopThreadPool.s: EventLoopThreadPool.cpp.s
+
+.PHONY : EventLoopThreadPool.s
+
+# target to generate assembly for a file
+EventLoopThreadPool.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/EventLoopThreadPool.cpp.s
+.PHONY : EventLoopThreadPool.cpp.s
+
 Logger.o: Logger.cpp.o
 
 .PHONY : Logger.o
@@ -166,32 +325,194 @@ Logger.cpp.s:
 	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Logger.cpp.s
 .PHONY : Logger.cpp.s
 
-tests/test.o: tests/test.cpp.o
+RequestContent.o: RequestContent.cpp.o
 
-.PHONY : tests/test.o
+.PHONY : RequestContent.o
 
 # target to build an object file
-tests/test.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cpp.o
-.PHONY : tests/test.cpp.o
+RequestContent.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/RequestContent.cpp.o
+.PHONY : RequestContent.cpp.o
 
-tests/test.i: tests/test.cpp.i
+RequestContent.i: RequestContent.cpp.i
 
-.PHONY : tests/test.i
+.PHONY : RequestContent.i
 
 # target to preprocess a source file
-tests/test.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cpp.i
-.PHONY : tests/test.cpp.i
+RequestContent.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/RequestContent.cpp.i
+.PHONY : RequestContent.cpp.i
 
-tests/test.s: tests/test.cpp.s
+RequestContent.s: RequestContent.cpp.s
 
-.PHONY : tests/test.s
+.PHONY : RequestContent.s
 
 # target to generate assembly for a file
-tests/test.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cpp.s
-.PHONY : tests/test.cpp.s
+RequestContent.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/RequestContent.cpp.s
+.PHONY : RequestContent.cpp.s
+
+TcpServer.o: TcpServer.cpp.o
+
+.PHONY : TcpServer.o
+
+# target to build an object file
+TcpServer.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/TcpServer.cpp.o
+.PHONY : TcpServer.cpp.o
+
+TcpServer.i: TcpServer.cpp.i
+
+.PHONY : TcpServer.i
+
+# target to preprocess a source file
+TcpServer.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/TcpServer.cpp.i
+.PHONY : TcpServer.cpp.i
+
+TcpServer.s: TcpServer.cpp.s
+
+.PHONY : TcpServer.s
+
+# target to generate assembly for a file
+TcpServer.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/TcpServer.cpp.s
+.PHONY : TcpServer.cpp.s
+
+Thread.o: Thread.cpp.o
+
+.PHONY : Thread.o
+
+# target to build an object file
+Thread.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Thread.cpp.o
+.PHONY : Thread.cpp.o
+
+Thread.i: Thread.cpp.i
+
+.PHONY : Thread.i
+
+# target to preprocess a source file
+Thread.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Thread.cpp.i
+.PHONY : Thread.cpp.i
+
+Thread.s: Thread.cpp.s
+
+.PHONY : Thread.s
+
+# target to generate assembly for a file
+Thread.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Thread.cpp.s
+.PHONY : Thread.cpp.s
+
+ThreadPool.o: ThreadPool.cpp.o
+
+.PHONY : ThreadPool.o
+
+# target to build an object file
+ThreadPool.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/ThreadPool.cpp.o
+.PHONY : ThreadPool.cpp.o
+
+ThreadPool.i: ThreadPool.cpp.i
+
+.PHONY : ThreadPool.i
+
+# target to preprocess a source file
+ThreadPool.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/ThreadPool.cpp.i
+.PHONY : ThreadPool.cpp.i
+
+ThreadPool.s: ThreadPool.cpp.s
+
+.PHONY : ThreadPool.s
+
+# target to generate assembly for a file
+ThreadPool.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/ThreadPool.cpp.s
+.PHONY : ThreadPool.cpp.s
+
+Timer.o: Timer.cpp.o
+
+.PHONY : Timer.o
+
+# target to build an object file
+Timer.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Timer.cpp.o
+.PHONY : Timer.cpp.o
+
+Timer.i: Timer.cpp.i
+
+.PHONY : Timer.i
+
+# target to preprocess a source file
+Timer.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Timer.cpp.i
+.PHONY : Timer.cpp.i
+
+Timer.s: Timer.cpp.s
+
+.PHONY : Timer.s
+
+# target to generate assembly for a file
+Timer.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/Timer.cpp.s
+.PHONY : Timer.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+util.o: util.cpp.o
+
+.PHONY : util.o
+
+# target to build an object file
+util.cpp.o:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/util.cpp.o
+.PHONY : util.cpp.o
+
+util.i: util.cpp.i
+
+.PHONY : util.i
+
+# target to preprocess a source file
+util.cpp.i:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/util.cpp.i
+.PHONY : util.cpp.i
+
+util.s: util.cpp.s
+
+.PHONY : util.s
+
+# target to generate assembly for a file
+util.cpp.s:
+	$(MAKE) -f CMakeFiles/ddserver.dir/build.make CMakeFiles/ddserver.dir/util.cpp.s
+.PHONY : util.cpp.s
 
 # Help Target
 help:
@@ -203,12 +524,48 @@ help:
 	@echo "... edit_cache"
 	@echo "... ddserver"
 	@echo "... test"
+	@echo "... CountDownLatch.o"
+	@echo "... CountDownLatch.i"
+	@echo "... CountDownLatch.s"
+	@echo "... Epoll.o"
+	@echo "... Epoll.i"
+	@echo "... Epoll.s"
+	@echo "... Event.o"
+	@echo "... Event.i"
+	@echo "... Event.s"
+	@echo "... EventLoop.o"
+	@echo "... EventLoop.i"
+	@echo "... EventLoop.s"
+	@echo "... EventLoopThread.o"
+	@echo "... EventLoopThread.i"
+	@echo "... EventLoopThread.s"
+	@echo "... EventLoopThreadPool.o"
+	@echo "... EventLoopThreadPool.i"
+	@echo "... EventLoopThreadPool.s"
 	@echo "... Logger.o"
 	@echo "... Logger.i"
 	@echo "... Logger.s"
-	@echo "... tests/test.o"
-	@echo "... tests/test.i"
-	@echo "... tests/test.s"
+	@echo "... RequestContent.o"
+	@echo "... RequestContent.i"
+	@echo "... RequestContent.s"
+	@echo "... TcpServer.o"
+	@echo "... TcpServer.i"
+	@echo "... TcpServer.s"
+	@echo "... Thread.o"
+	@echo "... Thread.i"
+	@echo "... Thread.s"
+	@echo "... ThreadPool.o"
+	@echo "... ThreadPool.i"
+	@echo "... ThreadPool.s"
+	@echo "... Timer.o"
+	@echo "... Timer.i"
+	@echo "... Timer.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... util.o"
+	@echo "... util.i"
+	@echo "... util.s"
 .PHONY : help
 
 

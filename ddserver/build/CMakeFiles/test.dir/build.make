@@ -18,9 +18,6 @@ SUFFIXES =
 .SUFFIXES: .hpux_make_needs_suffix_list
 
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -60,38 +57,38 @@ include CMakeFiles/test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test.dir/flags.make
 
-CMakeFiles/test.dir/tests/test.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/tests/test.cpp.o: ../tests/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ddqp/csapp/ddserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/tests/test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/tests/test.cpp.o -c /home/ddqp/csapp/ddserver/tests/test.cpp
+CMakeFiles/test.dir/main.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ddqp/csapp/ddserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/main.cpp.o -c /home/ddqp/csapp/ddserver/main.cpp
 
-CMakeFiles/test.dir/tests/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/tests/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ddqp/csapp/ddserver/tests/test.cpp > CMakeFiles/test.dir/tests/test.cpp.i
+CMakeFiles/test.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ddqp/csapp/ddserver/main.cpp > CMakeFiles/test.dir/main.cpp.i
 
-CMakeFiles/test.dir/tests/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/tests/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ddqp/csapp/ddserver/tests/test.cpp -o CMakeFiles/test.dir/tests/test.cpp.s
+CMakeFiles/test.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ddqp/csapp/ddserver/main.cpp -o CMakeFiles/test.dir/main.cpp.s
 
-CMakeFiles/test.dir/tests/test.cpp.o.requires:
+CMakeFiles/test.dir/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/test.dir/tests/test.cpp.o.requires
+.PHONY : CMakeFiles/test.dir/main.cpp.o.requires
 
-CMakeFiles/test.dir/tests/test.cpp.o.provides: CMakeFiles/test.dir/tests/test.cpp.o.requires
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cpp.o.provides.build
-.PHONY : CMakeFiles/test.dir/tests/test.cpp.o.provides
+CMakeFiles/test.dir/main.cpp.o.provides: CMakeFiles/test.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/test.dir/main.cpp.o.provides
 
-CMakeFiles/test.dir/tests/test.cpp.o.provides.build: CMakeFiles/test.dir/tests/test.cpp.o
+CMakeFiles/test.dir/main.cpp.o.provides.build: CMakeFiles/test.dir/main.cpp.o
 
 
 # Object files for target test
 test_OBJECTS = \
-"CMakeFiles/test.dir/tests/test.cpp.o"
+"CMakeFiles/test.dir/main.cpp.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
-../bin/test: CMakeFiles/test.dir/tests/test.cpp.o
+../bin/test: CMakeFiles/test.dir/main.cpp.o
 ../bin/test: CMakeFiles/test.dir/build.make
 ../bin/test: ../lib/libddserver.so
 ../bin/test: CMakeFiles/test.dir/link.txt
@@ -103,7 +100,7 @@ CMakeFiles/test.dir/build: ../bin/test
 
 .PHONY : CMakeFiles/test.dir/build
 
-CMakeFiles/test.dir/requires: CMakeFiles/test.dir/tests/test.cpp.o.requires
+CMakeFiles/test.dir/requires: CMakeFiles/test.dir/main.cpp.o.requires
 
 .PHONY : CMakeFiles/test.dir/requires
 

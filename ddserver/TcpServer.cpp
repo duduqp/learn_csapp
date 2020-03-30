@@ -17,18 +17,22 @@ TcpServer::TcpServer(EventLoop * loop,int num,short port_):
     acceptor(new Event(loop)),
     listenfd(Socket_Bind_Listen(port))
 {
-    SetSocketOpt_NonBlock(listenfd);
+    
     acceptor->Setfd(listenfd);
+    std::cout << "after set fd"<<listenfd << std::endl;
     SignalHandler_PIPE();
+    std::cout << "begin set non blocking "<<listenfd << std::endl;
+    SetSocketOpt_NonBlock(listenfd);
 }
 
 void TcpServer::Start(){
     eventloopthreadpool->Start();
-  acceptor->SetEventType(EPOLLIN | EPOLLET);
-  acceptor->SetReadHandler(std::bind(&TcpServer::HandleNewConn, this));
-  acceptor->SetConnectionHandler(std::bind(&TcpServer::HandleCurrentConn, this));
-  masterloop->AddToEpoll(acceptor, 0);
-  started = true;
+    acceptor->SetEventType(EPOLLIN | EPOLLET);
+    acceptor->SetReadHandler(std::bind(&TcpServer::HandleNewConn, this));
+    acceptor->SetConnectionHandler(std::bind(&TcpServer::HandleCurrentConn, this));
+    masterloop->AddToEpoll(acceptor, 0);
+    started = true;
+    std::cout << __FILE__ << __LINE__ <<std::endl;
 }
 void TcpServer::HandleNewConn() {
   struct sockaddr_in client_addr;

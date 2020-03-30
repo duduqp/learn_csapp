@@ -59,8 +59,8 @@ void * ThreadPool::ThreadPool_Routine(void * args){
     {
         threadpool->NotEmpty.Wait();
     }
-    Task t=threadpool->tasks.top();
-    tasks.pop_front();
+    Task t=threadpool->tasks.front();
+    threadpool->tasks.pop_front();
     threadpool->NotFull.Notify();
     threadpool->mutex.Unlock();
     t.func(t.args);

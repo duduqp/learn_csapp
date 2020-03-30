@@ -1,4 +1,4 @@
-#include "timer.h"
+#include "Timer.h"
 #include <sys/time.h>
 #include <unistd.h>
 #include <memory>
@@ -52,6 +52,9 @@ bool TimeNode::Valid(){
     return tmp<expiredtime;
 }
 
+void TimeNode::SetDeleted(){
+    isdeleted=true;
+}
 
 //Timer
 

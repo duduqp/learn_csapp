@@ -89,7 +89,7 @@ class TimeNode;
 class RequestContent:public std::enable_shared_from_this<RequestContent>//stl template characteristic
 {
 public:
-    RequestContent() {}
+    
     ~RequestContent() { close(fd); }
     RequestContent(EventLoop * eventloop_,int fd_);//parameter from right to left ,and we declare member by this order
 
@@ -100,13 +100,12 @@ public:
     void LinkTimer(std::shared_ptr<TimeNode> tm){ timer=tm; }
     void Reset();
     void DetachTimer();
-    void Setfd(int fd_);
-    void Disable_RW();
+    /*void Disable_RW();
     void Disable_R();
     void Disable_W();
     void Enable_RW();
     void Enable_R();
-    void Enable_W();
+    void Enable_W();*/
 
     //handler
     void Handle_Read();
@@ -151,8 +150,8 @@ private:
     //std::shared_ptr<TimeNode> timer;//cyclic reference ,weakptr
     std::weak_ptr<TimeNode> timer;
 
-    bool readable;
-    bool writeable;
+    //bool readable;
+    //bool writeable;
 
 };
 

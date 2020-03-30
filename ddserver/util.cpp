@@ -12,6 +12,9 @@
 #include <fcntl.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <iostream>
 //blocking use only
 ssize_t readn(int fd,void * buffer,size_t n)
 {
@@ -193,11 +196,12 @@ void SetSocketOpt_NonBlock(int fd)
 {
     int flag=fcntl(fd,F_GETFL,0);
     flag|=O_NONBLOCK;
-    if(fcntl(fd,F_SETFL,flag)<0)
-    {
-        LOG<<"SetSocketOpt_NonLinger";
-    }
 
+    if((fcntl(fd,F_SETFL,flag))==-1)
+    {
+        LOG<<"SetSocketOpt_NonBLOCK";
+    }
+    std::cout << "return from set non block"<<fd<<std::endl;
 }
 
 void ShutDownWR(int fd)
@@ -216,12 +220,15 @@ void ShutDownR(int fd)
 int Socket_Bind_Listen(short port)
 {
   // 检查port值，取正确区间范围
+    std::cout << __LINE__<<"in sock init"<<port << std::endl;
   if (port < 0 || port > 65535) return -1;
 
+    std::cout << __LINE__<<"in sock init"<<port << std::endl;
   // 创建socket(IPv4 + TCP)，返回监听描述符
   int listen_fd = 0;
   if ((listen_fd = socket(AF_INET, SOCK_STREAM, 0)) == -1) return -1;
 
+    std::cout << __LINE__<<"in sock init"<<port << std::endl;
   // 消除bind时"Address already in use"错误
   int optval = 1;
   if (setsockopt(listen_fd, SOL_SOCKET, SO_REUSEADDR, &optval,
@@ -230,6 +237,7 @@ int Socket_Bind_Listen(short port)
     return -1;
   }
 
+    std::cout <<__LINE__<< "in sock init"<<port << std::endl;
   // 设置服务器IP和Port，和监听描述副绑定
   struct sockaddr_in server_addr;
   bzero((char *)&server_addr, sizeof(server_addr));
@@ -242,15 +250,18 @@ int Socket_Bind_Listen(short port)
     return -1;
   }
 
+    std::cout <<__LINE__<< "in sock init"<<port << std::endl;
   // 开始监听，最大等待队列长为LISTENQ
   if (listen(listen_fd, 2048) == -1) {
     close(listen_fd);
     return -1;
   }
 
+    std::cout <<__LINE__<< "in sock init"<<port << std::endl;
   // 无效监听描述符
   if (listen_fd == -1) {
     close(listen_fd);
     return -1;
   }
+  return listen_fd;
 }

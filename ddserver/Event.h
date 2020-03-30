@@ -14,12 +14,12 @@ class Event
 {
     typedef std::function<void()> CallBack;
 public:
-    Event(EventLoop *,int fd) ;
-    Event(EventLoop *);
-    ~Event();
+    Event(EventLoop * loop_,int fd_):Loop(loop_),fd(fd_),event_type(0),last_event_type(0){} 
+    Event(EventLoop * loop_):Loop(loop_),fd(0),event_type(0),last_event_type(0){}
+    ~Event(){}
     
-    void Setfd(int fd_);
-    void SetHolder(std::shared_ptr<RequestContent> holder_);
+    void Setfd(int fd_){ fd=fd_; }
+    void SetHolder(std::shared_ptr<RequestContent> holder_){ Holder=holder_; }
     void SetReadHandler(CallBack  cb){ Read_Handler=cb; }
     void SetWriteHandler(CallBack  cb){ Write_Handler=cb; }
     void SetErrorHandler(CallBack  cb){ Error_Handler=cb; }
@@ -49,10 +49,10 @@ public:
     }
 
 
-    void HandleRead();
-    void HandleWrite();
-    void HandleConnection();
-    void HandleError(int fd,int err_no,const std::string & msg);
+    void HandleRead(){ if(Read_Handler) Read_Handler(); }
+    void HandleWrite(){ if(Write_Handler) Write_Handler(); }
+    void HandleConnection(){ if(Connection_Handler) Connection_Handler(); }
+  //  void HandleError(int fd,int err_no,const std::string & msg);
     bool UpdateLastEvent(){
         bool ret=(last_event_type==event_type);
         last_event_type=event_type;
@@ -84,10 +84,9 @@ private:
     int last_event_type;
 
     std::weak_ptr<RequestContent> Holder;
-    int Parse_URI();
+   /* int Parse_URI();
     int Parse_Headers();
-    int AnalysisRequest();
-
+    int AnalysisRequest();*/
     CallBack Read_Handler;
     CallBack Write_Handler;
     CallBack Error_Handler;

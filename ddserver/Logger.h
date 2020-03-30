@@ -16,8 +16,8 @@ typedef Singleton<LoggerManager> LogMgr;
 class LogEvent{
 public:
     typedef std::shared_ptr<LogEvent> ptr;
-    LogEvent(const char * file,uint32_t line,uint32_t walltime
-            , uint32_t ThreadId,uint64_t tm,std::string msg="default msg"):
+    LogEvent(uint32_t walltime, uint32_t ThreadId,uint64_t tm,
+             std::string msg="default msg",const char * file=__FILE__,uint32_t line=__LINE__):
         m_file(file),m_line(line),m_walltime(walltime),m_threadid(ThreadId),m_time(tm)
         ,m_content(msg){}
 
@@ -94,6 +94,15 @@ class Logger:public std::enable_shared_from_this<Logger>
 public:
     typedef std::shared_ptr<Logger> ptr;
 
+    Logger & operator<<(const std::string & msg)
+    {
+        this->Log(LogLevel::DEBUG,LogEvent::ptr(new LogEvent(0,1,time(0),msg,m_in_file.c_str(),m_in_line)));
+    }
+
+    Logger & operator<<(int i)
+    {
+        this->operator<<(std::to_string(i));
+    }
     void Log(LogLevel::Level level,LogEvent::ptr  event);
     Logger( std::string name);
     ~Logger() {}
@@ -116,9 +125,16 @@ public:
     }
 
     const std::string GetName() const{return m_name;}
-
+    Logger & SetContext(const char * in_file,uint32_t in_line)
+    {
+        m_in_file=std::string(in_file);
+        m_in_line=in_line;
+        return *this;
+    }
 
 private:
+    std::string m_in_file;
+    uint32_t m_in_line;
     std::string m_name;
     LogLevel::Level m_level;
     std::list<LogAppender::ptr> m_appenders;
@@ -168,9 +184,7 @@ private:
 
 
 extern Logger::ptr dudulogger;
-#define LOG(X) dudulogger->Log(LogLevel::DEBUG,LogEvent::ptr(new LogEvent(__FILE__\
-                                                                          ,__LINE__\
-                                                                          ,0,1,time(0),X)))
+#define LOG (*dudulogger).SetContext(__FILE__,__LINE__)
 
 
 

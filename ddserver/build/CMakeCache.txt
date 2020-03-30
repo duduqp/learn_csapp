@@ -184,8 +184,8 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Value Computed by CMake
 ddserver_BINARY_DIR:STATIC=/home/ddqp/csapp/ddserver/build
 
-//Dependencies for target
-ddserver_LIB_DEPENDS:STATIC=
+//Dependencies for the target
+ddserver_LIB_DEPENDS:STATIC=general;pthread;
 
 //Value Computed by CMake
 ddserver_SOURCE_DIR:STATIC=/home/ddqp/csapp/ddserver

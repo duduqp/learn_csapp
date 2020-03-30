@@ -6,7 +6,7 @@
 #include <sys/socket.h>
 #include <sys/epoll.h>
 #include "util.h"
-#include "logger.h"
+#include "Logger.h"
 #include "Epoll.h"
 
 #include <arpa/inet.h>

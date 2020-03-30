@@ -7,10 +7,10 @@
 #include <memory>
 #include "MutexLock_Util.h"
 #include "SyncCondition.h"
-
+#include "Logger.h"
 typedef enum{
     IMMEDIATE = 1,
-    GRACEFULLY
+    GRACEFULLY=2
 } ShutDownOpt;
 
 
@@ -31,15 +31,15 @@ struct Task{
 class ThreadPool
 {
 public:
-    explicit ThreadPool(int max_task_num_,int worker_num_=4):
-    mutex(MutexLock()),NotFull(mutex),NotEmpty(mutex),running(false)
+    ThreadPool(int max_task_num_,int worker_num_=4):
+    mutex(),NotFull(mutex),NotEmpty(mutex),running(false)
     ,shutdownopt(ShutDownOpt::GRACEFULLY){
         workers.reserve(worker_num);
     }
     ~ThreadPool() {
         if(shutdownopt==ShutDownOpt::IMMEDIATE)
         {
-
+            LOG<<"SHUTDOWN IMMEDIATE";
         }else{
 
         }

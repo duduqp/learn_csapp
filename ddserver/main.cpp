@@ -7,8 +7,8 @@
 #include <ctype.h>
 
 int main(int argc, char *argv[]) {
-  int threadNum = 4;
-  int port = 80;
+  int threadNum = 2;
+  int port = 6666;
   std::string logPath = "./WebServer.log";
 
   // parse args
@@ -37,9 +37,9 @@ int main(int argc, char *argv[]) {
     }
   }
 // STL库在多线程上应用
-#ifndef _PTHREADS
+/*#ifndef _PTHREADS
   LOG << "_PTHREADS is not defined !";
-#endif
+#endif*/
   EventLoop mainLoop;
   TcpServer myHTTPServer(&mainLoop, threadNum, port);
   myHTTPServer.Start();

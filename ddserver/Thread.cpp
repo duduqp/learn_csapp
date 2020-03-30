@@ -3,8 +3,9 @@
 #include <assert.h>
 #include <sys/prctl.h>
 #include "CurrentThread.h"
+#include <iostream>
 namespace CurrentThread{
- __thread int t_cached_tid;
+ __thread int t_cached_tid=0;
 void Cachetid();
 }
 pid_t gettid() { return static_cast<pid_t>(::syscall(SYS_gettid)); }
@@ -65,9 +66,11 @@ void Thread::Start(){
         started=false;
         delete data;
         return ;
+    }else{
+        latch.Wait();
+        std::cout << tid << std::endl;
+        assert(tid>0);
     }
-    latch.Wait();
-    assert(tid>0);
 }
 
 int Thread::Join(){

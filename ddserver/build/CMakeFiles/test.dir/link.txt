@@ -1,1 +1,1 @@
-/usr/bin/c++   -rdynamic -g -std=c++11 -Wall -Wno-unused-function  -rdynamic CMakeFiles/test.dir/tests/test.cpp.o  -o ../bin/test -Wl,-rpath,/home/ddqp/csapp/ddserver/lib ../lib/libddserver.so 
+/usr/bin/c++   -rdynamic -g -std=c++11 -D_PHTREADS -Wall -Wno-unused-function -lpthread  -rdynamic CMakeFiles/test.dir/main.cpp.o  -o ../bin/test -Wl,-rpath,/home/ddqp/csapp/ddserver/lib ../lib/libddserver.so -lpthread 
